@@ -4,7 +4,7 @@ https://keybase.io/amycodes
 
 I hereby claim:
 
-  * I am an admin of https://nullishamy.github.io
+  * I am an admin of https://amy.is-a.dev
   * I am amycodes (https://keybase.io/amycodes) on keybase.
   * I have a public key with fingerprint 4F7C 3865 5D31 1637 FA9B  FA2E 3288 346D 0C03 E891
 
@@ -22,16 +22,16 @@ To do so, I am signing this object:
       "username": "amycodes"
     },
     "service": {
-      "hostname": "nullishamy.github.io",
+      "hostname": "amy.is-a.dev",
       "protocol": "https:"
     },
     "type": "web_service_binding",
     "version": 1
   },
-  "ctime": 1654042058,
+  "ctime": 1654189223,
   "expire_in": 157680000,
-  "prev": "eca22abdb36746ffda9da86099670f3558350d73ce7e49b94e8e1bb256db88c4",
-  "seqno": 19,
+  "prev": "6a6118bf8a05f393f0eb19b5ae7359c3f871b27a2f6d71180991877a15228b04",
+  "seqno": 20,
   "tag": "signature"
 }
 
@@ -41,30 +41,30 @@ which yields the signature:
 Version: Keybase OpenPGP v2.1.13
 Comment: https://keybase.io/crypto
 
-yMN4AnicbZJ/UBRlGMfvvNDYESF0RMwkthGkQd3dd39exqRMKIpdJ+E0al777r57
-t3Dcwf1AT0QjJ0bRMkHEcZqSkLSYIlN+awRmOkCkycQINRY5SYAQgo4BYbuk//X+
-8877zPf5vN/v877fhpgMmJHaR2fONvUdNrY1n/Ab4NHPW3Nx6JYDuDkXz0DTG3LK
-yOuzZagybsYJkiJohhSRxDEAIokGpECQvECxLOAUhSdZEVA0AyWO5QFHEBzJkqxM
-kTTiWUhKUJYkghDxeFxRXXbkyfKoLp+GpRVOAjzLMDIgSZ0kClARKQQongc0KxMS
-ARAvkFqjw+3VOzRzUPSi5apbq2kH27S9/9E/9k2QLE8qEMiiIpIKTXCaGZGjEBQ5
-IEBAQYQ4npdpntBisJQCKJlhCAYIjCwDXgIymPbtn8aJgOdFjkMEQ0JBUAhKEkVA
-cLLE8Fp2UtCFXuRxiZlIV2cGJLc2RDwvHteqOaqE9MHqSR4pXH6nU/U6NOFyu+pz
-+OF/ubI8bp9bcjs1hcPny/KadYIvkKW3bEfQ9ghmg6pL1uapdeQgj1d1u3AzqSkl
-n6rTSZahCZoiGD4eRzuyVA+yqbqC0d6I0JZ+D8rRkEgSKUqEMgQsR7OKIouCLPIs
-IQgsRyiAYXjAEDIHJMQhWoCC9qiIhJBiWBnyvETjerxsl1tjC5pP0a4xvardJfr8
-HoTntTRvfcJgxAwzg2boH82ABYc9/n5r/gl9mFf6pqWzFjN1R1YmDcw9U/R345qP
-8+vrqrKdQ+MRf1aPWbGo50p+f/Xs6Q4lgD04nZvdUBd8Ne1UX8HUxLzUKMtFqies
-7JmWRGlrfZvnwh93I4c/uLp/k7P9XcvmzlumqorrZWW1i9Umc+2eK/CNgqfCCm3F
-5VNdIY3pZmWk9dmbv+Us6VxpyEgV9iTV9J5ctai1yFb4INnvkpouDfbslex7SxcB
-umN2ZFzCluH5VdILc+jo+RuPhWBLvlp2MnFVMWY6ntA/vunhsvzJQvLLg69lnptM
-K13a9fqxH9gGEJ20Ofbn+2ZLQeoXSR1YypP99yK/Mc96r/unHmxQUK0fjiY4DcK8
-mBc/+jHWvnPy+CdBq+OHxjbsWDF6KuAw3WBdM/AjJe9EdM9cP/fAgn387cGBpoEU
-x8ue98tDsYPr1t8bS2WxxK+Lt13OO2eN64v0Xe+9hudvfClo0n+Lm1phLWv6K7ji
-yMqUSjCYGBJbbTVGpR16+85ta39pyZnzE2ebG4brYoaMu2XY60ueGEm/c5Tb3Xr3
-krEOfJ/a0hd6yGvz3ywfez42ZbCyILwzeVZgbPGVFrnk153R382pOzG+IPf8xbWj
-rzTG9YZ/msOG/zJ8uC2kXbTUmBbmp2y3XK5Y+Nbqpzsb+2t2FV6rhiOfVfRE3N8S
-RYk3DlRtc8YUbbjg6arf1ZTuxJa2/wsBY8QI
-=FnS8
+yMNxAnicbVJrTBRXGIXyCC4UK0hJIJE4vBpdcO7cea6PSkMRfNCUYkKRAndm7uDw
+2F13F4QSjIpWIwaEVgQkENmCbdQYwWJRsLJBasVARRuqGEtpWqtFi6Gp0C3aGVLT
+P71/bu53zznf+R4Dr3p5GDypg3RRgNevtZ5D/Q3FHmLD1MlyQrTIZYSpnCjACxcu
+lLHdkVOgyoSJIAFF0gxAWOIYKGKJhkAgAS9QLAs5ReEBiyBFM6LEsTzkSJIDLGBl
+CtCYZ0UgibIkkSQijISimvOwzWpTzQ5NllY4CfIsw8gQAF0JCaKCKAwpnoc0K5MS
+CTEvAI243WLXGZo5EdlxvGrRYtojZ8He/+Bf+iYBywNFhDJSEFBoktPMII7CIuKg
+IEJKxJjjeZnmSa0MllIgJTMMyUCBkWXIS1CGC76LF+QQ5HnEcZhkgCgICklJCEGS
+kyWG12oHgg60Y5sZFWEdXVQmWbQmEhVGQouWqBLWG6tX8h8iXrXHoXgZl2hcq83i
+sEiWQu1nu8NhtZt0pqPMqkN3YjHnX5EcUTXLWh81Rgm22VWLmTABDSk5VF0VsAyt
+j4aCRgKXWlUbzlF1BKPNhtSOnkdLZyJYxALAiwqPSEaBAlRILAJBZBDmICNIUOE5
+IFIcohRW5jQkKQiA5zgEGIriRZIm9LJ2mC2EidJEHShP07SreWbkKLZhosLVn+Xt
+4Wnw8PV5RV8wD8Oi116uXfCexfNB9bsPf+/0n12ZGTadaMhf/LM3l/z6jZSs3O5t
+mX1jke5q25XMic3+U4cOltd+HJe4OtdV2BE6Il69FbtmfUHC2tL7lqeL1217DnwH
+y+Z3VFeqVx6srRJNF1t8Vy//Nn/TxH1j+rLUINhWPfyJayoaNY8+3vWdq0iZ7Lho
+DsyL/OqbucuPupcSzjU47Ij7/dK9b4qdGb80t4gRI/awsVPRSV1Lz1zbYnqRcTY1
+6U74zA0b3dA1EfFT3rsDoZVVgrEdD112rvBxFp4zHVrec+KtggDrj2HPbh1o7G1V
+l8RUzkWf5ytuLhr4SJkdbbd79x5zuze27a/ZcGry0hdnDFFHTo8MMQlyRJtSG53Y
+bsYX3nFJwwX5IYP3+NG+k4GzzXMxM8b0z6db9wzX4SXW8ObWwZa5LveKuvP71m3t
+cT/c1/1kY//1ztit5Gx48tjRcf83EvzubaoNfnx9biTQVtPYIu31/q2o8YfsuAmP
+z3bCpoxVy9L234yLNxj+iPIsSOkYv/Psg+yqwtzdd/MjE27XvHB0p/jFRPcil89K
+/0//OtsX2xM1HxzX0tqUXX6YPUqneW05Ph9wuznAduBqU/FYbgfMIOZO/H3OOfjo
+y/dmkgP90lyTp50fNs6U2dJLqjf/fultU3pW0vMLw3/uSq2vzD827Vn/MBReexKU
+0rl+/Gnd3ZAHx0NWBXz9DwbGv8k=
+=IJdE
 -----END PGP MESSAGE-----
 
 And finally, I am proving ownership of this host by posting or
