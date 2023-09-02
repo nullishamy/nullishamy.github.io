@@ -8,7 +8,7 @@ interface Props {
 
 const { entry } = Astro.props;
 ---
-<BaseLayout title={entry.data.title}>
+<BaseLayout title={`${entry.data.title} - Amy Erskine`}>
   <h1 class="text-3xl self-center mt-4">{entry.data.title}</h1>
   <style is:inline>
     a {

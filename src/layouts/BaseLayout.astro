@@ -1,22 +1,54 @@
 ---
 import Icon from 'astro-icon'
+import { SEO } from 'astro-seo';
  
 interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+const description = 'Check out my personal website. I share my current work, and any interesting tidbits of information I find'
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<SEO
+			title,
+			description={description},
+			charset='UTF-8',
+			openGraph={{
+				basic: {
+					title,
+					type: 'profile',
+					image: '/avatar.png',
+				},
+				optional: {
+					description
+				}
+			}},
+			twitter={{
+				card: 'summary',
+				creator: '@nullishamy',
+				title,
+				description,
+				image: '/avatar.png',
+				imageAlt: "Amy Erskine's profile picture"
+			}},
+			extend={{
+				link: [{ rel: "icon", href: "/favicon.svg" }],
+				meta: [
+					{ name: 'generator', content: Astro.generator },
+					{ name: 'profile:first_name', content: 'Amy' },
+					{ name: 'profile:last_name', content: 'Erskine' },
+					{ name: 'profile:username', content: 'nullishamy' },
+					{ name: 'profile:gender', content: 'female' },
+					{ name: 'viewport', content: 'width=device-width' },
+					{ name: 'color-scheme', content: 'dark' },
+					{ name: 'theme-color', content: '#f5c2e7' },
+				]
+			}}
+		/>
 	</head>
 	<body class="mocha text-text bg-base flex flex-col h-screen overflow-auto">
 		<nav class="w-full h-12 mb-4 p-2">

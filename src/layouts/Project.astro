@@ -8,7 +8,7 @@ interface Props {
 
 const { entry } = Astro.props;
 ---
-<BaseLayout title={entry.data.name}>
+<BaseLayout title={`${entry.data.name} - Amy Erskine`}>
   <h1 class="text-3xl self-center mt-4">{entry.data.name}</h1>
   <a class="text-xl self-center" href={entry.data.repoUrl}>{entry.data.repoUrl}</a>
   <style is:inline>
