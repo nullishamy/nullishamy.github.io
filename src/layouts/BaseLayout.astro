@@ -1,0 +1,51 @@
+---
+import Icon from 'astro-icon'
+ 
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="mocha text-text bg-base flex flex-col h-screen overflow-auto">
+		<nav class="w-full h-12 mb-4 p-2">
+			<a href="/" class="w-content text-text">
+				<Icon class="w-8 h-8" name="mdi:home-export-outline"></Icon>
+			</a>
+		</nav>
+
+		<slot />
+
+		<div class="grow"></div>
+
+		<footer class="w-full">
+			<div class="flex flex-col items-center gap-2">
+				<p class="text-lg">Made with great pain by Amy</p>
+				<div class="flex flex-row justify-items-center gap-6 mb-2">
+					<a class="group" href="https://github.com/nullishamy">
+						<Icon class="w-12 h-12 text-surface2 group-hover:text-pink" name="mdi:github"></Icon>
+					</a>
+
+					<a class="group" href="discord://-/users/637032376731566082">
+						<Icon class="w-12 h-12 text-surface2 group-hover:text-pink" name="ic:baseline-discord"></Icon>
+					</a>
+
+					<a class="group" href="https://git.amy.mov">
+						<Icon class="w-12 h-12 text-surface2 group-hover:text-pink" name="cib:gitea"></Icon>
+					</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

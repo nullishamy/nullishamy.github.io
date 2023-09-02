@@ -1,0 +1,24 @@
+--- 
+import { type CollectionEntry } from 'astro:content'
+import BaseLayout from './BaseLayout.astro'
+
+interface Props {
+  entry: CollectionEntry<'project'>
+}
+
+const { entry } = Astro.props;
+---
+<BaseLayout title={entry.data.name}>
+  <h1 class="text-3xl self-center mt-4">{entry.data.name}</h1>
+  <a class="text-xl self-center" href={entry.data.repoUrl}>{entry.data.repoUrl}</a>
+  <style is:inline>
+    a {
+      color: rgba(var(--ctp-teal));
+      text-decoration-line: underline;
+    }
+  </style>
+
+  <div class="w-auto bg-surface0 rounded-md m-8 md:mx-16 lg:mx-24 xl:mx-72 p-4">
+    <slot />
+  </div>
+</BaseLayout>

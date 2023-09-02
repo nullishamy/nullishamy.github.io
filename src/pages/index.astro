@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import { Icon } from 'astro-icon'
+import { getCollection } from 'astro:content';
+let blogEntries = await getCollection('blog')
+blogEntries = blogEntries
+	.sort((a, b) => a.data.publishedDate.getTime() - b.data.publishedDate.getTime())
+	.slice(0, 9)
+
+let projectEntries = await getCollection('project')
+projectEntries = projectEntries
+	.sort((a, b) => a.data.priority - b.data.priority)
+	.slice(0, 5)
+---
+<Layout title="Amy Erskine">
+	 <div class="flex flex-row items-center self-center gap-4 mt-4">
+		 <h1 class="text-5xl font-medium">Hello</h1>
+		<Icon class="w-12 h-12" name="twemoji:smiling-face-with-sunglasses"></Icon>
+	 </div>
+
+	 <div class="flex flex-col items-center mb-12 mt-4 text-lg">
+		<div class="flex flex-row items-center">
+			<span class="mx-2">
+				I'm Amy, a professional hobbyist based in the UK
+			</span>
+			<Icon class="w-[1.65rem] h-[1.65rem]" name="flagpack:GB-UKM"></Icon>
+		</div>
+		<br>
+		<span>
+			Most commonly, I am working on various personal projects, but also spend time
+		</span>
+		<span>
+			contributing to open source. I help out over at <a class="text-teal underline" href="https://github.com/catppuccin/catppuccin">Catppuccin</a>, and help develop
+		</span>
+		<span>
+			various internal and external tools for <a class="text-teal underline" href="https://github.com/TheCodingDen">The Coding Den</a>.
+		</span>
+	 </div>
+
+	 <main class="grid grid-cols-1 w-auto mx-8 gap-16">
+		<div>
+			<h2 class="text-3xl text-center font-medium mb-2">See what I've been working on</h2>
+			<ul role="list" class="grid grid-cols-1 grid-flow-row gap-6 justify-items-center">
+				{projectEntries.map(entry => (
+					<li class="
+						rounded-md bg-surface0 w-96 flex flex-col relative
+						transition ease-in-out border-2 border-surface0 hover:-translate-y-1 hover:scale-105 hover:border-maroon duration-150
+					">
+					<a class="m-2" href={entry.data.repoUrl} target="_blank" >
+						<p class="text-teal">{entry.data.name}</p>
+					 <p class="font-light text-sm">{entry.data.brief}</p>
+					</a>
+					<a class="absolute right-1 top-1 text-teal underline transition ease-in-out hover:text-blue" href={`/project/${entry.slug}`}>Post</a>
+					</li>
+				))}
+			</ul>
+		</div>
+
+		<div>
+			<h2 class="text-3xl text-center font-medium mb-2">Check out my latest posts</h2>
+			<ul role="list" class="grid grid-cols-1 grid-flow-row gap-6 justify-items-center">
+				{blogEntries.map(entry => (
+					<a href={`/post/${entry.slug}`} class="
+						rounded-md bg-surface0 w-96 p-2 flex flex-col 
+						transition ease-in-out border-2 border-surface0 hover:-translate-y-1 hover:scale-105 hover:border-maroon duration-150
+					">
+						<li>
+							<p class="text-teal" >{entry.data.title}</p>
+							<p class="text-sm">Tags: {entry.data.tags.join(', ') || 'None'}</p>
+							<time class="text-sm" datetime={entry.data.publishedDate.toISOString()}>
+								Published on {entry.data.publishedDate.toDateString()}
+							</time>	
+						</li>
+					</a>
+				))}
+			</ul>
+		</div>
+
+	</main>
+</Layout>
