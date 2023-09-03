@@ -1,5 +1,7 @@
 ---
 import Icon from 'astro-icon'
+import '@fontsource-variable/urbanist';
+import '@fontsource-variable/martian-mono';
 import { SEO } from 'astro-seo';
  
 interface Props {
@@ -7,12 +9,13 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const description = 'Check out my personal website. I share my current work, and any interesting tidbits of information I find'
+const description = 'Check out my personal website. I share my current work, and any interesting tidbits of information I find.'
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<title>{title}</title>
 		<SEO
 			title,
 			description={description},
@@ -53,7 +56,7 @@ const description = 'Check out my personal website. I share my current work, and
 	<body class="mocha text-text bg-base flex flex-col h-screen overflow-auto">
 		<nav class="w-full h-12 mb-4 p-2">
 			<a href="/" class="w-content text-text">
-				<Icon class="w-8 h-8" name="mdi:home-export-outline"></Icon>
+				<Icon class="w-6 h-6 md:w-8 md:h-8" name="mdi:home-export-outline"></Icon>
 			</a>
 		</nav>
 
@@ -65,16 +68,20 @@ const description = 'Check out my personal website. I share my current work, and
 			<div class="flex flex-col items-center gap-2">
 				<p class="text-lg">Made with great pain by Amy</p>
 				<div class="flex flex-row justify-items-center gap-6 mb-2">
-					<a class="group" href="https://github.com/nullishamy">
+					<a class="group" target="_blank" href="https://github.com/nullishamy">
 						<Icon class="w-12 h-12 text-surface2 group-hover:text-pink" name="mdi:github"></Icon>
 					</a>
 
-					<a class="group" href="discord://-/users/637032376731566082">
+					<a class="group" target="_blank" href="discord://-/users/637032376731566082">
 						<Icon class="w-12 h-12 text-surface2 group-hover:text-pink" name="ic:baseline-discord"></Icon>
 					</a>
 
-					<a class="group" href="https://git.amy.mov">
+					<a class="group" target="_blank" href="https://git.amy.mov">
 						<Icon class="w-12 h-12 text-surface2 group-hover:text-pink" name="cib:gitea"></Icon>
+					</a>
+
+					<a class="group" target="_blank" href="mailto:contact@amyerskine.me">
+						<Icon class="w-12 h-12 text-surface2 group-hover:text-pink" name="mdi:email-fast-outline"></Icon>
 					</a>
 				</div>
 			</div>
