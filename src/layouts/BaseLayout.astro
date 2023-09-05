@@ -54,11 +54,17 @@ const description = 'Check out my personal website. I share my current work, and
 		/>
 	</head>
 	<body class="mocha text-text bg-base flex flex-col h-screen overflow-auto">
-		<nav class="w-full h-12 mb-4 p-2">
-			<a href="/" class="w-content text-text">
-				<Icon class="w-6 h-6 md:w-8 md:h-8" name="mdi:home-export-outline"></Icon>
-			</a>
-		</nav>
+		<div class="self-center w-full max-w-xl lg:max-w-3xl xl:max-w-6xl my-4">
+			<div class="flex flex-row justify-between px-4 py-2">
+				<a href="/" class="w-content text-text">
+					<Icon class="w-6 h-6 md:w-8 md:h-8" name="mdi:home-export-outline"></Icon>
+				</a>
+	
+				<nav>
+					<a class="self-end text-xl" href="/post">Blog</a>
+				</nav>
+			</div>
+		</div>
 
 		<slot />
 

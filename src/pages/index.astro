@@ -13,20 +13,22 @@ projectEntries = projectEntries
 	.slice(0, 5)
 ---
 <Layout title="Amy Erskine">
-		<h1 class="text-4xl md:text-5xl font-medium self-center">Hello
-		<div class="inline-block">
-			<Icon class="w-10 h-10 md:w-12 md:h-12 inline-block align-bottom  transition  hover:animate-spin" name="twemoji:smiling-face-with-sunglasses"></Icon>
-		</div>
-		</h1>
-
-	 <div class="flex flex-col items-center mb-12 mt-4 mx-4 font-light text-md md:text-lg max-w-4/5 md:w-1/3 self-center text-center">
-		 <span>
+	 <div class="flex flex-col self-center items-center mb-4 w-full">
+		 <h1 class="text-4xl md:text-5xl font-semibold mb-2">Hello
+		 <div class="inline-block">
+			 <Icon class="w-10 h-10 md:w-12 md:h-12 inline-block align-bottom  transition  hover:animate-spin" name="twemoji:smiling-face-with-sunglasses"></Icon>
+		 </div>
+		 </h1>
+ 
+		 <span class="text-lg md:text-xl lg:text-xl w-4/5 text-center font-medium">
 			 I'm Amy, a professional hobbyist based in the UK
 			 <div class="inline-block">
 				 <Icon class="w-[1.35rem] h-[1.35rem] md:w-[1.65rem] md:h-[1.65rem] align-bottom inline-block ml-1" name="flagpack:GB-UKM"></Icon>
 			 </div>
 		 </span>
-		<br>
+	 </div>
+
+	 <div class="flex flex-col items-center mb-16 mx-4 font-light text-md md:text-lg md:w-1/3 self-center text-center">
 		<span>Most commonly, I am working on various personal projects, but also spend time
 			contributing to open source. 
 			<br/><br/>
@@ -48,7 +50,7 @@ projectEntries = projectEntries
 							<p class="text-sky">{entry.data.name}</p>
 							<Icon class="h-4 w-4 text-surface2" name="mdi:external-link"/>
 						</div>
-					 	<p class="font-light text-sm">{entry.data.brief}</p>
+					 	<p class="font-light text-sm">{entry.data.blurb}</p>
 					</a>
 					<a class="w-8 h-8 absolute right-1 top-1 transition ease-in-out hover:text-sky" href={`/project/${entry.slug}`}>
 						<Icon  name="iconoir:post"></Icon>

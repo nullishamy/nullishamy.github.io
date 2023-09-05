@@ -1,7 +1,7 @@
 ---
 name: args.ts
 tags: [typescript]
-brief: Argument parsing, built for TypeScript
+blurb: Argument parsing, built for TypeScript
 repoUrl: https://github.com/nullishamy/args-ts
 priority: 1
 ---

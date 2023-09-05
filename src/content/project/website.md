@@ -1,7 +1,7 @@
 ---
 name: nullishamy.github.io
 tags: [frontend, astro, typescript]
-brief: This website!
+blurb: This website!
 repoUrl: https://github.com/nullishamy/nullishamy.github.io 
 priority: 2
 ---
