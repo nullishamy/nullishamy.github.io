@@ -1,6 +1,6 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -11,7 +11,7 @@
     in 
       pkgs.mkShell {
         packages = with pkgs; [
-          nodejs-18_x
+          nodejs_20
           nodePackages.npm
         ];
       };
