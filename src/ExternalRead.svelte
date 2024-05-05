@@ -5,8 +5,8 @@
 </script>
 
 <div class="w-full h-40 bg-mantle rounded-md mx-4 p-3 relative drop-shadow-md">
-	<h2 class="text-lg font-medium mb-1">"{post.title}" by {post.author}</h2>
-	<p class="text-ellipsis text-sm">{post.blurb}</p>
+	<h2 class="text-lg font-medium mb-1 font-mono">"{post.title}" by {post.author}</h2>
+	<p class="text-ellipsis text-sm font-mono">{post.blurb}</p>
 
 	<a href={post.externalLink} target="_blank"
 		><Icon
