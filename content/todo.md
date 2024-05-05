@@ -13,7 +13,26 @@ This is my test post, it has nothing in it, and is yet to be written.
 2) Hello
 2) Welcome
 
+```js
+function testMe(args) {
+  console.log(args)
+}
+```
+
 I have filled the rest with lorem to make sure all the layout tools work correctly
+
+**Yes**, *no*, ***maybe***
+
+> Hmmmm
+> very suspicious indeed
+> ?
+>> Said the mayor
+
+My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
+
+<https://www.markdownguide.org>
+
+***
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Arcu bibendum at varius vel pharetra vel turpis. Integer quis auctor elit sed vulputate.

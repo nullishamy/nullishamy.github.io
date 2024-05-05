@@ -15,9 +15,9 @@
 	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
-<section class="flex flex-col items-center justify-items-center gap-8 mt-4">
-	<h1 class="text-6xl font-title">{data.title}</h1>
-	<div class="text-lg font-mono rounded-md p-4 max-w-screen-lg prose prose-ctp">
+<section class="flex flex-col items-center justify-items-center gap-8 mt-4 mx-4">
+	<h1 class="text-4xl lg:text-6xl font-title">{data.title}</h1>
+	<div class="text-md lg:text-lg font-mono rounded-md p-4 max-w-screen-lg prose  lg:prose-lg prose-ctp">
 		<SvelteMarkdown source={data.content} />
 	</div>
 </section>

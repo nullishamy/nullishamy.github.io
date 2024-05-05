@@ -1,7 +1,7 @@
 import ctp from "@catppuccin/tailwindcss"
 import typography from '@tailwindcss/typography'
 
-const accent = "mauve";
+const accent = "sky";
 const linkColor = "blue";
 
 /** @type {import('tailwindcss').Config} */
@@ -24,8 +24,8 @@ export default {
             "--tw-prose-quote-borders": theme(`colors.${accent}.DEFAULT`),
             "--tw-prose-captions": theme(`colors.${accent}.DEFAULT`),
             "--tw-prose-code": theme(`colors.${accent}.DEFAULT`),
-            "--tw-prose-pre-code": theme(`colors.${accent}.DEFAULT`),
-            "--tw-prose-pre-bg": theme(`colors.base.DEFAULT`),
+            "--tw-prose-pre-code": "#000000",
+            "--tw-prose-pre-bg": theme(`colors.mantle.DEFAULT`),
             "--tw-prose-th-borders": theme(`colors.${accent}.DEFAULT`),
             "--tw-prose-td-borders": theme(`colors.${accent}.DEFAULT`),
     
@@ -43,8 +43,8 @@ export default {
             ),
             "--tw-prose-invert-captions": theme(`colors.${accent}.DEFAULT`),
             "--tw-prose-invert-code": theme(`colors.${accent}.DEFAULT`),
-            "--tw-prose-invert-pre-code": theme(`colors.${accent}.DEFAULT`),
-            "--tw-prose-invert-pre-bg": theme(`colors.base.DEFAULT`),
+            "--tw-prose-invert-pre-code": "#000000",
+            "--tw-prose-invert-pre-bg": theme(`colors.mantle.DEFAULT`),
             "--tw-prose-invert-th-borders": theme(`colors.${accent}.DEFAULT`),
             "--tw-prose-invert-td-borders": theme(`colors.${accent}.DEFAULT`),
           },
