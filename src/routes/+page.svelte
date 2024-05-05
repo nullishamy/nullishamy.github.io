@@ -5,6 +5,16 @@
 
 </script>
 
+<svelte:head>
+	<title>Amy Erskine</title>
+	<meta property="og:title" content="Amy Erskine" />
+	<meta property="og:site_name" content="Amy's Site" />
+	<meta property="og:url" content="https://amy.is-a.dev/" />
+	<meta property="og:description" content="My own little corner of the internet" />
+	<meta property="og:type" content="article" />
+	<meta name="twitter:card" content="summary_large_image" />
+</svelte:head>
+
 <div class="flex flex-row mx-6 gap-6">
 	<header class="flex flex-col basis-5/6 gap-8">
 		<h1
