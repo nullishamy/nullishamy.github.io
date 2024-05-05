@@ -2,7 +2,6 @@
 	import ExternalRead from '../ExternalRead.svelte';
 	import WorkingOnCard from '../WorkingOnCard.svelte';
   import { externalReads, posts } from '../data'
-
 </script>
 
 <svelte:head>

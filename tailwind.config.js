@@ -53,7 +53,7 @@ export default {
     },
     fontFamily: {
       'title': 'Lily Script One',
-      'mono': 'JetBrains Mono',
+      'mono': 'JetBrains Mono Variable',
     }
   },
   plugins: [
