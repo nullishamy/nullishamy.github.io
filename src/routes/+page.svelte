@@ -1,7 +1,10 @@
 <script lang="ts">
 	import ExternalRead from '../ExternalRead.svelte';
 	import WorkingOnCard from '../WorkingOnCard.svelte';
+	import ContactDesktop from '$lib/assets/contact-desktop.svelte'
+	import ContactMobile from '$lib/assets/contact-mobile.svelte'
 	import { externalReads, posts } from '../data';
+	import MediaQuery from '../MediaQuery.svelte';
 </script>
 
 <svelte:head>
@@ -49,13 +52,24 @@
 	</header>
 
 	<section class="bg-mantle p-2 my-4 rounded-md basis-2/6 font-mono drop-shadow-md">
-		<h2 class="text-center text-md lg:text-xl min-h-32">You can find me in other places:</h2>
+		<h2 class="text-center text-md lg:text-xl flex flex-col items-center">
+			You can find me in other places:
+			<MediaQuery query="(max-width: 480px)" let:matches>
+				{#if matches}
+				<ContactMobile />
+				{:else}
+					<ContactDesktop />
+				{/if}
+			</MediaQuery>
+		</h2>
 	</section>
 </div>
 
 <main class="flex flex-col lg:flex-row mt-8 gap-6 mx-3 lg:mx-6 mb-2">
 	<section class="flex flex-col w-full lg:w-1/2 basis-2/3">
-		<h2 class="text-lg lg:text-2xl my-2 lg:my-6 underline self-center lg:self-baseline font-medium font-mono">
+		<h2
+			class="text-lg lg:text-2xl my-2 lg:my-6 underline self-center lg:self-baseline font-medium font-mono"
+		>
 			What I've been up to lately
 		</h2>
 
@@ -69,7 +83,9 @@
 	</section>
 
 	<section class="flex flex-col w-full lg:w-1/2 basis-2/3">
-		<h2 class="text-lg lg:text-2xl my-2 lg:my-6 underline self-center lg:self-end font-medium font-mono">
+		<h2
+			class="text-lg lg:text-2xl my-2 lg:my-6 underline self-center lg:self-end font-medium font-mono"
+		>
 			Interesting reads I've found
 		</h2>
 

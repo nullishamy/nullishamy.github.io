@@ -7,16 +7,16 @@
 
 <div class="w-full h-40 bg-mantle rounded-md mx-4 p-3 relative drop-shadow-md">
 	<h2 class="text-lg font-medium mb-1 font-mono">{post.title}</h2>
-  <p class="text-ellipsis text-sm w-2/3 font-mono">{post.blurb}</p>
+	<p class="text-ellipsis text-sm w-2/3 font-mono">{post.blurb}</p>
 
 	<div class="grid grid-cols-2 grid-rows-2 absolute right-0 bottom-0 m-2 gap-2">
-    {#each post.tags as tag}
-		<Tag
-			tag={{
-				name: tag
-			}}
-		/>
-    {/each}
+		{#each post.tags as tag}
+			<Tag
+				tag={{
+					name: tag
+				}}
+			/>
+		{/each}
 	</div>
 
 	<a href={`/post/${post.slug}`}

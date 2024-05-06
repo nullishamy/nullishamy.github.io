@@ -19,8 +19,8 @@ const config = {
 			fallback: undefined,
 			precompress: false,
 			strict: true
-		}),
-	},
+		})
+	}
 };
 
 export default config;
