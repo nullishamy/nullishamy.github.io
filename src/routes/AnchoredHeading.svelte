@@ -1,0 +1,27 @@
+<script>
+	import Icon from '@iconify/svelte';
+	import { Slugger } from 'marked';
+
+  export let depth
+  export let raw
+  export let text
+
+  const slugger = new Slugger()
+  $: id = slugger.slug(text)
+</script>
+
+{#if depth === 1}
+  <h1 {id} class="flex flex-row items-center justify-items-center gap-6"><slot></slot> <a href="#{id}" class="text-sky"><Icon icon='ph:hash'/></a></h1>
+{:else if depth === 2}
+  <h2 {id} class="flex flex-row items-center justify-items-center gap-6"><slot></slot> <a href="#{id}" class="text-sky"><Icon icon='ph:hash'/></a></h2>
+{:else if depth === 3}
+  <h3 {id} class="flex flex-row items-center justify-items-center gap-6"><slot></slot> <a href="#{id}" class="text-sky"><Icon icon='ph:hash'/></a></h3>
+{:else if depth === 4}
+  <h4 {id} class="flex flex-row items-center justify-items-center gap-6"><slot></slot> <a href="#{id}" class="text-sky"><Icon icon='ph:hash'/></a></h4>
+{:else if depth === 5}
+  <h5 {id} class="flex flex-row items-center justify-items-center gap-6"><slot></slot> <a href="#{id}" class="text-sky"><Icon icon='ph:hash'/></a></h5>
+{:else if depth === 6}
+  <h6 {id} class="flex flex-row items-center justify-items-center gap-6"><slot></slot> <a href="#{id}" class="text-sky"><Icon icon='ph:hash'/></a></h6>
+{:else}
+  {raw}
+{/if}

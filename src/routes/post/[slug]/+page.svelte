@@ -3,6 +3,7 @@
 	import type { Post } from '../../../types';
 	import SvelteMarkdown from 'svelte-markdown';
 	import HighlightedCode from './HighlightedCode.svelte';
+	import AnchoredHeading from '../../AnchoredHeading.svelte';
 
 	export let data: Post;
 </script>
@@ -15,8 +16,11 @@
 	<meta property="og:description" content={data.blurb} />
 	<meta property="og:type" content="article" />
 	<meta property="og:image" content="https://amy.is-a.dev/favicon.png" />
+
 	<meta name="twitter:card" content="summary_large_image" />
+
 	<meta name="theme-color" content="#EA76CB" />
+	<meta name="description" content="{data.blurb}">
 	<meta name="color-scheme" content="light" />
 </svelte:head>
 
@@ -32,12 +36,13 @@
 	</div>
 
 	<div
-		class="text-md lg:text-lg font-mono rounded-md p-4 max-w-screen-lg prose z lg:prose-lg prose-ctp w-full"
+		class="text-md lg:text-lg font-mono rounded-md p-4 max-w-screen-lg prose z lg:prose-lg prose-ctp w-full md-content"
 	>
 		<SvelteMarkdown
 			source={data.content}
 			renderers={{
-				code: HighlightedCode
+				code: HighlightedCode,
+				heading: AnchoredHeading
 			}}
 		/>
 	</div>

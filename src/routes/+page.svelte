@@ -15,8 +15,11 @@
 	<meta property="og:description" content="My own little corner of the internet" />
 	<meta property="og:type" content="article" />
 	<meta property="og:image" content="https://amy.is-a.dev/favicon.png" />
+
 	<meta name="twitter:card" content="summary_large_image" />
+
 	<meta name="theme-color" content="#EA76CB" />
+	<meta name="description" content="My own little corner of the internet">
 	<meta name="color-scheme" content="light" />
 </svelte:head>
 

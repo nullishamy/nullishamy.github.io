@@ -8,12 +8,11 @@
 	<h2 class="text-lg font-medium mb-1 font-mono">"{post.title}" by {post.author}</h2>
 	<p class="text-ellipsis text-sm font-mono">{post.blurb}</p>
 
-	<a href={post.externalLink} target="_blank" aria-label={`An external article, ${post.blurb}`}
-		><Icon
-			width="24"
-			height="24"
-			icon="ph:arrow-square-out"
-			class="absolute right-0 top-0 m-2 text-blue"
-		></Icon></a
+	<a
+		href={post.externalLink}
+		target="_blank"
+		aria-label={`An external article, ${post.blurb}`}
+		class="absolute right-0 top-0 m-2 text-blue focus:outline-black focus:outline focus:outline-2 focus:rounded-md"
+		tabindex={0}><Icon width="24" height="24" icon="ph:arrow-square-out"></Icon></a
 	>
 </div>
