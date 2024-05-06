@@ -3,7 +3,7 @@
 Choosing the right framework to iterate on my website was challenging, given the fruitful choice of tools available in the
 web development space today.
 
-Previously, I had used [Astro](https://astro.build/), and whilst it was sufficient for the goals I had, I felt too limited in scope.
+Previously, I had used [Astro](https://astro.build/), and whilst it was sufficient for the goals I had, it felt too limited in scope.
 I wanted something more flexible, something more mature, but still keeping to some common goals:
 
 1. SSG (Static Site Generation) is a must
