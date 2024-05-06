@@ -10,7 +10,7 @@
 
 <svelte:head>
 	<title>Amy | {data.title}</title>
-	<meta property="og:title" content="Amy | {data.title}" />
+	<meta property="og:title" content="amy | {data.title}" />
 	<meta property="og:site_name" content="amy.is-a.dev" />
 	<meta property="og:url" content="https://amy.is-a.dev/post/{data.slug}" />
 	<meta property="og:description" content={data.blurb} />

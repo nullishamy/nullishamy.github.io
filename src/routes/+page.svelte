@@ -9,7 +9,7 @@
 
 <svelte:head>
 	<title>Amy Erskine</title>
-	<meta property="og:title" content="Amy" />
+	<meta property="og:title" content="amy" />
 	<meta property="og:site_name" content="amy.is-a.dev" />
 	<meta property="og:url" content="https://amy.is-a.dev/" />
 	<meta property="og:description" content="My own little corner of the internet" />
@@ -30,7 +30,7 @@
         text-transparent py-3 bg-gradient-to-r from-maroon to-pink
       "
 		>
-			Hello, I’m Amy
+			hello, i’m amy
 		</h1>
 		<section
 			class="bg-mantle text-sm lg:text-lg p-3 my-4 rounded-md mt-auto font-mono drop-shadow-md"
