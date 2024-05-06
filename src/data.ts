@@ -15,7 +15,16 @@ const TODO_READ: ExternalPost = {
 	blurb: "I haven't filled this one out yet!"
 };
 
-export const externalReads: ExternalPost[] = [TODO_READ, TODO_READ, TODO_READ];
+export const externalReads: ExternalPost[] = [
+	{
+		title: 'optimizing my sveltekit blog',
+		externalLink: 'https://www.refact0r.dev/blog/optimizing-sveltekit',
+		author: 'refact0r',
+		blurb: 'Improving performance on a static SvelteKit site by optimising images, fonts, and markup.'
+	},
+	TODO_READ,
+	TODO_READ
+];
 
 export const posts: Post[] = [
 	{
