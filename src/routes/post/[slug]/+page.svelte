@@ -19,7 +19,7 @@ import type { Post } from '../../../types';
 	<meta name="color-scheme" content="light" />
 </svelte:head>
 
-<section class="flex flex-col items-center justify-items-center gap-8 mt-4 mx-4">
+<section class="flex flex-col items-center justify-items-center gap-8 mt-4 mb-36">
 	<div class="grid grid-cols-4 lg:grid-cols-5 items-center justify-items-center">
 		<a href="/"><Icon icon='ph:house' width=35 height=35/></a>
 		<h1 class="text-4xl lg:text-6xl font-title col-span-3 lg:col-span-3 text-center">
