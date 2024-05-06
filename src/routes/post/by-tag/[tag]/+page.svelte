@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 	import type { Post } from '../../../../types';
-	import RenderPost from '../../[slug]/+page.svelte';
 
 	export let data: { posts: Post[]; query: string };
 </script>

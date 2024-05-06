@@ -24,7 +24,7 @@
 </svelte:head>
 
 <section class="flex flex-col items-center justify-items-center gap-8 mt-4 mb-36">
-	<div class="grid grid-cols-4 md:grid-cols-5 items-center justify-items-center">
+	<div class="grid grid-cols-4 md:grid-cols-5 items-center justify-items-center min-w-full">
 		<a href="/" aria-label="Go to the home page"><Icon icon="ph:house" width="35" height="35" /></a>
 		<h1 class="text-3xl lg:text-5xl font-mono col-span-3 row-span-2 md:row-span-1 text-center">
 			{data.title}

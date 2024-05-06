@@ -5,7 +5,7 @@
 </script>
 
 <div class="w-full h-40 bg-mantle rounded-md mx-4 p-3 relative drop-shadow-md">
-	<h2 class="text-lg font-medium mb-1 font-mono">"{post.title}" by {post.author}</h2>
+	<h2 class="text-lg font-medium mb-1 font-mono mr-6">"{post.title}" by {post.author}</h2>
 	<p class="text-ellipsis text-sm font-mono">{post.blurb}</p>
 
 	<a
