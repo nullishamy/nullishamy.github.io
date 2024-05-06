@@ -19,7 +19,7 @@
 		{/each}
 	</div>
 
-	<a href={`/post/${post.slug}`}
+	<a href={`/post/${post.slug}`} aria-label={`A blog post, ${post.blurb}`}
 		><Icon
 			width="24"
 			height="24"

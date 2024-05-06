@@ -8,7 +8,7 @@
 	<h2 class="text-lg font-medium mb-1 font-mono">"{post.title}" by {post.author}</h2>
 	<p class="text-ellipsis text-sm font-mono">{post.blurb}</p>
 
-	<a href={post.externalLink} target="_blank"
+	<a href={post.externalLink} target="_blank" aria-label={`An external article, ${post.blurb}`}
 		><Icon
 			width="24"
 			height="24"

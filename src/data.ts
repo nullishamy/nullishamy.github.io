@@ -32,7 +32,7 @@ export const posts: Post[] = [
 	{
 		title: 'building my site with SvelteKit',
 		content: 'N/A',
-		publishDate: new Date("05/05/2024"),
+		publishDate: new Date('05/05/2024'),
 		blurb: 'Exploring new tools and technologies for fun and profit',
 		slug: 'building-my-new-site',
 		tags: []

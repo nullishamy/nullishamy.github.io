@@ -1,6 +1,6 @@
 export interface Post {
 	title: string;
-	publishDate: Date,
+	publishDate: Date;
 	content: string;
 	blurb: string;
 	slug: string;
