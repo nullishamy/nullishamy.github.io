@@ -8,7 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>Amy Erskine</title>
+	<title>amy</title>
 	<meta property="og:title" content="amy" />
 	<meta property="og:site_name" content="amy.is-a.dev" />
 	<meta property="og:url" content="https://amy.is-a.dev/" />
