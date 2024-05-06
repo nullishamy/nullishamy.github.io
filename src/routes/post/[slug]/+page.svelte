@@ -30,7 +30,7 @@
 	</div>
 
 	<div
-		class="text-md lg:text-lg font-mono rounded-md p-4 max-w-screen-lg prose z lg:prose-lg prose-ctp"
+		class="text-md lg:text-lg font-mono rounded-md p-4 max-w-screen-lg prose z lg:prose-lg prose-ctp w-full"
 	>
 		<SvelteMarkdown
 			source={data.content}
