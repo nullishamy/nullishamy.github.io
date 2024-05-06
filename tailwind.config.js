@@ -50,8 +50,8 @@ export default {
 			})
 		},
 		fontFamily: {
-			title: 'Lily Script One',
-			mono: 'JetBrains Mono Variable'
+			title: 'Lily Script One, sans-serif',
+			mono: 'JetBrains Mono Variable, monospace'
 		}
 	},
 	plugins: [
