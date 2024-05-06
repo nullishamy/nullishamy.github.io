@@ -15,7 +15,6 @@
 	<meta property="og:url" content="https://amy.is-a.dev/post/{data.slug}" />
 	<meta property="og:description" content={data.blurb} />
 	<meta property="og:type" content="article" />
-	<meta property="og:image" content="https://amy.is-a.dev/favicon.png" />
 
 	<meta name="twitter:card" content="summary_large_image" />
 

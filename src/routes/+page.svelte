@@ -14,7 +14,6 @@
 	<meta property="og:url" content="https://amy.is-a.dev/" />
 	<meta property="og:description" content="My own little corner of the internet" />
 	<meta property="og:type" content="article" />
-	<meta property="og:image" content="https://amy.is-a.dev/favicon.png" />
 
 	<meta name="twitter:card" content="summary_large_image" />
 
