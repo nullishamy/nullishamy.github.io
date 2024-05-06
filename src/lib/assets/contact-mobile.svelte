@@ -19,7 +19,7 @@
 	<a href="mailto:contact@amyerskine.me"
 		><text x="-5" y="185" class="external">contact@amyerskine.me</text></a
 	>
-	<a href="https://google.com"><text x="139" y="193" class="external">@amy.codes</text></a>
+	<a href="discord://-/users/637032376731566082"><text x="139" y="193" class="external">@amy.codes</text></a>
 	<path
 		d="M88.4401 1.76069C87.0146 0.07302 84.4908 -0.139504 82.8032 1.286C81.1155 2.71151 80.903 5.23524 82.3285 6.9229C83.754 8.61057 86.2777 8.8231 87.9654 7.39759C89.6531 5.97208 89.8656 3.44836 88.4401 1.76069ZM84.9003 3.76884L7.43048 69.2045L8.3984 70.3504L85.8682 4.91476L84.9003 3.76884Z"
 		fill="black"
