@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-import type { Post } from '../../../types';
+	import type { Post } from '../../../types';
 	import SvelteMarkdown from 'svelte-markdown';
+	import HighlightedCode from './HighlightedCode.svelte';
 
 	export let data: Post;
 </script>
@@ -21,7 +22,7 @@ import type { Post } from '../../../types';
 
 <section class="flex flex-col items-center justify-items-center gap-8 mt-4 mb-36">
 	<div class="grid grid-cols-4 lg:grid-cols-5 items-center justify-items-center">
-		<a href="/"><Icon icon='ph:house' width=35 height=35/></a>
+		<a href="/"><Icon icon="ph:house" width="35" height="35" /></a>
 		<h1 class="text-4xl lg:text-6xl font-title col-span-3 lg:col-span-3 text-center">
 			{data.title}
 		</h1>
@@ -30,6 +31,11 @@ import type { Post } from '../../../types';
 	<div
 		class="text-md lg:text-lg font-mono rounded-md p-4 max-w-screen-lg prose z lg:prose-lg prose-ctp"
 	>
-		<SvelteMarkdown source={data.content} />
+		<SvelteMarkdown
+			source={data.content}
+			renderers={{
+				code: HighlightedCode
+			}}
+		/>
 	</div>
 </section>

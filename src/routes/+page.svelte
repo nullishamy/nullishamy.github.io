@@ -1,8 +1,8 @@
 <script lang="ts">
 	import ExternalRead from '../ExternalRead.svelte';
 	import WorkingOnCard from '../WorkingOnCard.svelte';
-	import ContactDesktop from '$lib/assets/contact-desktop.svelte'
-	import ContactMobile from '$lib/assets/contact-mobile.svelte'
+	import ContactDesktop from '$lib/assets/contact-desktop.svelte';
+	import ContactMobile from '$lib/assets/contact-mobile.svelte';
 	import { externalReads, posts } from '../data';
 	import MediaQuery from '../MediaQuery.svelte';
 </script>
@@ -59,7 +59,7 @@
 			You can find me in other places:
 			<MediaQuery query="(max-width: 480px)" let:matches>
 				{#if matches}
-				<ContactMobile />
+					<ContactMobile />
 				{:else}
 					<ContactDesktop />
 				{/if}

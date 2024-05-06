@@ -1,14 +1,14 @@
 ## choosing a framework
 
-Choosing the right framework to iterate on my website was challenging, given the fruitful choice of tools available in the 
+Choosing the right framework to iterate on my website was challenging, given the fruitful choice of tools available in the
 web development space today.
 
 Previously, I had used [Astro](https://astro.build/), and whilst it was sufficient for the goals I had, I felt too limited in scope.
 I wanted something more flexible, something more mature, but still keeping to some common goals:
 
-1) SSG (Static Site Generation) is a must
-2) TypeScript support is a must
-3) TailwindCSS support would be nice
+1. SSG (Static Site Generation) is a must
+2. TypeScript support is a must
+3. TailwindCSS support would be nice
 
 With these choices in mind, and given the opinions and shared thoughts from others, I settled on [Svelte](https://svelte.dev/) (with [SvelteKit](https://kit.svelte.dev/)).
 I chose it to try something new, as I have never written Svelte before, alongside seeing some quality results from both an aesthetics and code quality perspective.
@@ -19,7 +19,7 @@ After getting started with their `npm` creation tool, I had no issue getting the
 was at first rather confusing, with various symbols in the file names and odd suffixes scattered throughout.
 
 I immediately jumped to the docs to make sense of this, to which I found some excellent information. Svelte uses the `+` prefix on a `.svelte` file to denote
-that it has semantic meaning. For example, `+page.svelte` represents the page that will be rendered at that path. 
+that it has semantic meaning. For example, `+page.svelte` represents the page that will be rendered at that path.
 The path is determined by the file system structure of your project, as it appears in code.
 
 Alongside `+page.svelte` lay `+page.ts`, which I found out relates to the configuration of the page, instructing Svelte what to do with respect to pre-rendering -
@@ -27,7 +27,7 @@ ie static generation (!) -, hydration, etc. Once I understood this basic layout,
 
 ## further development
 
-Once the basics were out of the way, the workflow felt quite similar to Astro, with the 'layout' system denoting re-usable wrappers for your content, and the 
+Once the basics were out of the way, the workflow felt quite similar to Astro, with the 'layout' system denoting re-usable wrappers for your content, and the
 frontmatter type scripting within pages & components. Familiar but still distinct, Svelte's editor integrations and overall cleanliness really showed here.
 Keeping things organised was pretty easy, keeping each part of the site separate in its own folder, and keeping each page's separate configuration separate too.
 
@@ -35,7 +35,7 @@ Once I had my layout sorted, it was time to polish it up ready for content. For 
 for fonts I used [FontSource](https://fontsource.org/docs/guides/svelte), and for Markdown rendering I grabbed [svelte-markdown](https://www.npmjs.com/package/svelte-markdown).
 
 The ease of integration and widespread availability of these modules reminds me of the React ecosystem, where just about anything you could need has already been
-made, and will generally work well out of the box. 
+made, and will generally work well out of the box.
 This was very different to my experience with Astro, where the framework would try and vendor these types of features, leading to integration headaches for me.
 
 Once I had the main area sorted out, I looked toward building the content system. I opted for a fairly simple hand-rolled approach, using JS objects to configure

@@ -16,7 +16,7 @@ This is my test post, it has nothing in it, and is yet to be written.
 2. Hello
 3. Welcome
 
-```js
+```javascript
 function testMe(args) {
 	console.log(args);
 }

@@ -1,5 +1,7 @@
 <script>
 	import './styles.css';
+	import './catppuccin-highlightjs.css';
+
 	import '@fontsource/lily-script-one';
 	import '@fontsource-variable/jetbrains-mono';
 </script>

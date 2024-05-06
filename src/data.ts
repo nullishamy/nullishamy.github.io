@@ -20,7 +20,8 @@ export const externalReads: ExternalPost[] = [
 		title: 'optimizing my sveltekit blog',
 		externalLink: 'https://www.refact0r.dev/blog/optimizing-sveltekit',
 		author: 'refact0r',
-		blurb: 'Improving performance on a static SvelteKit site by optimising images, fonts, and markup.'
+		blurb:
+			'Improving performance on a static SvelteKit site by optimising images, fonts, and markup.'
 	},
 	TODO_READ,
 	TODO_READ
