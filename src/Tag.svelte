@@ -6,5 +6,9 @@
 <div
 	class="rounded-full min-w-12 h-6 bg-crust text-black flex flex-col items-center justify-center outline-blue outline-1 outline"
 >
-	<p class="text-xs">{tag.name}</p>
+	<a
+		class="text-xs"
+		href={`/post/by-tag/${tag.name}`}
+		aria-label={`Search for posts with tag '${tag.name}'`}>{tag.name}</a
+	>
 </div>

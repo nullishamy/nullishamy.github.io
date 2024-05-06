@@ -35,7 +35,7 @@ export const posts: Post[] = [
 		publishDate: new Date('05/05/2024'),
 		blurb: 'Exploring new tools and technologies for fun and profit',
 		slug: 'building-my-new-site',
-		tags: []
+		tags: ['svelte', 'web']
 	},
 	TODO_POST,
 	TODO_POST,
