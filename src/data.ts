@@ -17,4 +17,17 @@ const TODO_READ: ExternalPost = {
 
 export const externalReads: ExternalPost[] = [TODO_READ, TODO_READ, TODO_READ];
 
-export const posts: Post[] = [TODO_POST, TODO_POST, TODO_POST, TODO_POST, TODO_POST, TODO_POST];
+export const posts: Post[] = [
+	{
+		title: 'building my site with SvelteKit',
+		content: 'N/A',
+		blurb: 'Exploring new tools and technologies for fun and profit',
+		slug: 'building-my-new-site',
+		tags: []
+	},
+	TODO_POST,
+	TODO_POST,
+	TODO_POST,
+	TODO_POST,
+	TODO_POST
+];
