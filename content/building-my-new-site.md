@@ -23,12 +23,46 @@ that it has semantic meaning. For example, `+page.svelte` represents the page th
 The path is determined by the file system structure of your project, as it appears in code.
 
 Alongside `+page.svelte` lay `+page.ts`, which I found out relates to the configuration of the page, instructing Svelte what to do with respect to pre-rendering -
-ie static generation (!) -, hydration, etc. Once I understood this basic layout, I got to work.
+ie static generation (!) -, hydration, etc.
+
+```typescript
+// Whether or not pages should be server-rendered
+export const ssr = false;
+
+// Whether to load the SvelteKit client
+export const csr = true;
+
+// Whether to prerender pages at build time, instead of per-request
+export const prerender = true;
+
+// Whether to strip, add, or ignore trailing slashes in URLs
+export const trailingSlash = 'ignore';
+```
+
+Once I understood this basic layout, I got to work.
 
 ## further development
 
 Once the basics were out of the way, the workflow felt quite similar to Astro, with the 'layout' system denoting re-usable wrappers for your content, and the
-frontmatter type scripting within pages & components. Familiar but still distinct, Svelte's editor integrations and overall cleanliness really showed here.
+frontmatter type scripting within pages & components.
+
+```xml
+<-- 'Frontmatter' scripts for setting up the component -->
+<script>
+	import './styles.css';
+	import './catppuccin-highlightjs.css';
+
+	import '@fontsource/lily-script-one';
+	import '@fontsource-variable/jetbrains-mono';
+</script>
+
+<-- Main component -->
+<main class="max-w-screen-2xl m-auto">
+	<slot />
+</main>
+```
+
+Familiar but still distinct, Svelte's editor integrations and overall cleanliness really showed here.
 Keeping things organised was pretty easy, keeping each part of the site separate in its own folder, and keeping each page's separate configuration separate too.
 
 Once I had my layout sorted, it was time to polish it up ready for content. For icons, I grabbed [@iconify/svelte](https://www.npmjs.com/package/@iconify/svelte),
@@ -39,7 +73,58 @@ made, and will generally work well out of the box.
 This was very different to my experience with Astro, where the framework would try and vendor these types of features, leading to integration headaches for me.
 
 Once I had the main area sorted out, I looked toward building the content system. I opted for a fairly simple hand-rolled approach, using JS objects to configure
-articles alongside Markdown files for the contents. I had used something similar in my Astro project, and aimed to replicate that functionality here, without the
+articles alongside Markdown files for the contents.
+
+```typescript
+import type { ExternalPost, Post } from './types';
+
+const TODO_POST: Post = {
+	title: 'Coming soon:tm:',
+	content: 'N/A',
+	publishDate: new Date(),
+	blurb: "I haven't written this one yet!",
+	slug: 'todo',
+	tags: []
+};
+
+const TODO_READ: ExternalPost = {
+	title: 'TBD',
+	author: 'Unknown',
+	externalLink: 'https://google.com',
+	blurb: "I haven't filled this one out yet!"
+};
+
+export const externalReads: ExternalPost[] = [
+	{
+		title: 'optimizing my sveltekit blog',
+		externalLink: 'https://www.refact0r.dev/blog/optimizing-sveltekit',
+		author: 'refact0r',
+		blurb:
+			'Improving performance on a static SvelteKit site by optimising images, fonts, and markup.'
+	},
+	TODO_READ,
+	TODO_READ
+];
+
+export const posts: Post[] = [
+	// This page!
+	{
+		title: 'building my site with SvelteKit',
+		content: 'N/A',
+		publishDate: new Date('05/05/2024'),
+		blurb: 'Exploring new tools and technologies for fun and profit',
+		slug: 'building-my-new-site',
+		tags: []
+	},
+	TODO_POST,
+	TODO_POST,
+	TODO_POST,
+	TODO_POST,
+	TODO_POST
+];
+```
+
+I had used something similar in my Astro project, and aimed to replicate that functionality here, without the
 pains of course. I was pleasantly surprised to see Svelte coming out of the box with dynamic routing (with SSG support!), and easy ways to plug in to the build
 steps, which I needed to load up the Markdown files.
 

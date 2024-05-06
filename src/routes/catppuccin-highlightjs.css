@@ -1,6 +1,6 @@
 code.hljs {
 	color: rgb(var(--ctp-text));
-	background: rgb(var(--ctp-mantle));
+	background: rgb(var(--ctp-base));
 }
 code .hljs-keyword {
 	color: rgb(var(--ctp-mauve));

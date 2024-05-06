@@ -3,6 +3,7 @@ import type { ExternalPost, Post } from './types';
 const TODO_POST: Post = {
 	title: 'Coming soon:tm:',
 	content: 'N/A',
+	publishDate: new Date(),
 	blurb: "I haven't written this one yet!",
 	slug: 'todo',
 	tags: []
@@ -31,6 +32,7 @@ export const posts: Post[] = [
 	{
 		title: 'building my site with SvelteKit',
 		content: 'N/A',
+		publishDate: new Date("05/05/2024"),
 		blurb: 'Exploring new tools and technologies for fun and profit',
 		slug: 'building-my-new-site',
 		tags: []

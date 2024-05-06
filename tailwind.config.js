@@ -25,7 +25,7 @@ export default {
 						'--tw-prose-captions': theme(`colors.${accent}.DEFAULT`),
 						'--tw-prose-code': theme(`colors.${accent}.DEFAULT`),
 						'--tw-prose-pre-code': '#000000',
-						'--tw-prose-pre-bg': theme(`colors.mantle.DEFAULT`),
+						'--tw-prose-pre-bg': theme(`colors.base.DEFAULT`),
 						'--tw-prose-th-borders': theme(`colors.${accent}.DEFAULT`),
 						'--tw-prose-td-borders': theme(`colors.${accent}.DEFAULT`),
 
@@ -42,7 +42,7 @@ export default {
 						'--tw-prose-invert-captions': theme(`colors.${accent}.DEFAULT`),
 						'--tw-prose-invert-code': theme(`colors.${accent}.DEFAULT`),
 						'--tw-prose-invert-pre-code': '#000000',
-						'--tw-prose-invert-pre-bg': theme(`colors.mantle.DEFAULT`),
+						'--tw-prose-invert-pre-bg': theme(`colors.base.DEFAULT`),
 						'--tw-prose-invert-th-borders': theme(`colors.${accent}.DEFAULT`),
 						'--tw-prose-invert-td-borders': theme(`colors.${accent}.DEFAULT`)
 					}
