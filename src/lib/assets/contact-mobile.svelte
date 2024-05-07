@@ -7,14 +7,13 @@
 >
 	<style>
 		.external {
-			font: 10px JetBrains Mono Variable;
-			text-decoration-line: underline;
+			font: 11px Inclusive Sans, sans-serif;
 			--tw-text-opacity: 1;
 			fill: rgba(var(--ctp-blue), var(--tw-text-opacity));
 		}
 	</style>
 
-	<a href="https://jvm.social/@amy"><text x="-30" y="137" class="external">@amy@jvm.social</text></a
+	<a href="https://jvm.social/@amy"><text x="-33" y="140" class="external">@amy@jvm.social</text></a
 	>
 	<a href="mailto:contact@amyerskine.me"
 		><text x="-5" y="185" class="external">contact@amyerskine.me</text></a

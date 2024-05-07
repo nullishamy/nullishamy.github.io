@@ -14,7 +14,7 @@
 	</div>
 
 	{#each data.posts as post}
-		<a href="/post/{post.slug}" class="rounded-md p-2 m-2 bg-base shadow-md grid grid-cols-[auto_auto] gap-y-1 gap-x-12 font-mono">
+		<a href="/post/{post.slug}" class="rounded-md p-2 m-2 bg-base shadow-md grid grid-cols-[auto_auto] gap-y-1 gap-x-12 font-inclusive">
       <p class="text-subtext1 text-lg row-span-2">{post.publishDate.toLocaleDateString()}</p>
       <h2 class="text-lg">{post.title}</h2>
 			<p class="text-sm text-subtext1 ">{post.blurb}</p>

@@ -22,11 +22,11 @@
 	<meta name="color-scheme" content="light" />
 </svelte:head>
 
-<header class="grid grid-cols-1 grid-flow-row lg:grid-rows-[auto_auto] gap-4 mx-4">
+<header class="grid grid-cols-1 md:grid-flow-row xl:grid-cols-6 xl:grid-rows-[auto_auto] gap-4 m-4">
 	<h1
 		class="
-			text-5xl text-center lg:text-left lg:text-7xl mt-4 font-title bg-clip-text
-			text-transparent py-3 bg-gradient-to-r from-maroon to-pink
+			text-5xl text-center lg:text-left md:text-6xl lg:text-7xl font-header bg-clip-text
+			text-transparent py-3 bg-gradient-to-r from-maroon to-pink md:col-span-2 
 			lg:col-span-3
 		"
 	>
@@ -34,7 +34,7 @@
 	</h1>
 
 	<section
-		class="bg-mantle text-sm lg:text-lg p-3 my-4 rounded-md mt-auto font-mono drop-shadow-md lg:row-start-2 lg:col-span-5"
+		class="bg-mantle text-sm md:text-base md:text-black py-4 lg:text-lg px-4 rounded-md md:h-full font-inclusive drop-shadow-md lg:row-start-2 lg:col-span-4 md:pb-16 md:pt-4"
 	>
 		<p>A hobbyist software developer, based in the UK.</p>
 		<br />
@@ -56,10 +56,10 @@
 		</p>
 	</section>
 
-	<section class="bg-mantle p-2 my-4 rounded-md basis-2/6 font-mono drop-shadow-md lg:col-start-6 lg:col-span-2 lg:row-span-2">
-		<h2 class="text-center text-md lg:text-xl flex flex-col items-center">
+	<section class="bg-mantle p-2 rounded-md font-inclusive drop-shadow-md h-full lg:col-start-5 lg:col-span-2 lg:row-span-2">
+		<h2 class="text-center lg:text-xl flex flex-col items-center">
 			You can find me in other places:
-			<MediaQuery query="(max-width: 480px)" let:matches>
+			<MediaQuery query="(max-width: 767px)" let:matches>
 				{#if matches}
 					<ContactMobile />
 				{:else}
