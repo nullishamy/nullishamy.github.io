@@ -5,7 +5,10 @@
 	export let post: Post;
 </script>
 
-<div class="w-full h-40 bg-mantle rounded-md mx-4 p-3 relative drop-shadow-md">
+
+<div
+	class="w-full h-40 bg-mantle rounded-md mx-4 p-3 relative drop-shadow-md outline outline-1 outline-peach"
+>
 	<h2 class="text-lg font-medium mb-1 font-inclusive mr-6">{post.title}</h2>
 	<p class="text-ellipsis text-sm font-inclusive">{post.blurb}</p>
 

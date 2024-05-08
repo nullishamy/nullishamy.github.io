@@ -26,7 +26,8 @@
 	<h1
 		class="
 			text-5xl text-center lg:text-left md:text-6xl lg:text-7xl font-header bg-clip-text
-			text-transparent py-3 bg-gradient-to-r from-maroon to-pink md:col-span-2 
+			text-transparent py-3 bg-gradient-to-r from-yellow via-peach to-pink md:col-span-2 
+			bg-300% animate-gradient
 			lg:col-span-3
 		"
 	>
@@ -34,7 +35,11 @@
 	</h1>
 
 	<section
-		class="bg-mantle text-sm md:text-base md:text-black py-4 lg:text-lg px-4 rounded-md md:h-full font-inclusive drop-shadow-md lg:row-start-2 lg:col-span-4 md:pb-16 md:pt-4"
+		class="
+			bg-mantle text-sm md:text-base md:text-black py-4 lg:text-lg px-4 
+			rounded-md md:h-full font-inclusive drop-shadow-md lg:row-start-2 lg:col-span-4 md:pb-16 md:pt-4
+			outline outline-maroon outline-1
+		"
 	>
 		<p>A hobbyist software developer, based in the UK.</p>
 		<br />
@@ -56,7 +61,7 @@
 		</p>
 	</section>
 
-	<section class="bg-mantle p-2 rounded-md font-inclusive drop-shadow-md h-full lg:col-start-5 lg:col-span-2 lg:row-span-2">
+	<section class="bg-mantle p-2 rounded-md font-inclusive drop-shadow-md h-full lg:col-start-5 lg:col-span-2 lg:row-span-2 outline outline-1 outline-pink">
 		<h2 class="text-center lg:text-xl flex flex-col items-center">
 			You can find me in other places:
 			<MediaQuery query="(max-width: 767px)" let:matches>
