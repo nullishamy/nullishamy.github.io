@@ -12,27 +12,27 @@
 
 {#if depth === 1}
 	<h1 {id} class="flex flex-row items-center justify-items-center gap-6">
-		<a href="#{id}" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
+		<a href="#{id}" aria-label="Link to the {id} section of the article" class="text-sky min-h-15 min-w-15"><Icon icon="ph:hash" /></a><slot></slot>
 	</h1>
 {:else if depth === 2}
 	<h2 {id} class="flex flex-row items-center justify-items-center gap-6">
-		<a href="#{id}" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
+		<a href="#{id}" aria-label="Link to the {id} section of the article" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
 	</h2>
 {:else if depth === 3}
 	<h3 {id} class="flex flex-row items-center justify-items-center gap-6">
-		<a href="#{id}" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
+		<a href="#{id}" aria-label="Link to the {id} section of the article" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
 	</h3>
 {:else if depth === 4}
 	<h4 {id} class="flex flex-row items-center justify-items-center gap-6">
-		<a href="#{id}" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
+		<a href="#{id}" aria-label="Link to the {id} section of the article" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
 	</h4>
 {:else if depth === 5}
 	<h5 {id} class="flex flex-row items-center justify-items-center gap-6">
-		<a href="#{id}" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
+		<a href="#{id}" aria-label="Link to the {id} section of the article" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
 	</h5>
 {:else if depth === 6}
 	<h6 {id} class="flex flex-row items-center justify-items-center gap-6">
-		<a href="#{id}" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
+		<a href="#{id}" aria-label="Link to the {id} section of the article" class="text-sky"><Icon icon="ph:hash" /></a><slot></slot>
 	</h6>
 {:else}
 	{raw}
