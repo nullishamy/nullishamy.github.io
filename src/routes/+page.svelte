@@ -12,13 +12,13 @@
 	<meta property="og:title" content="amy" />
 	<meta property="og:site_name" content="amy.is-a.dev" />
 	<meta property="og:url" content="https://amy.is-a.dev/" />
-	<meta property="og:description" content="My own little corner of the internet" />
+	<meta property="og:description" content="my own little corner of the internet" />
 	<meta property="og:type" content="article" />
 
 	<meta name="twitter:card" content="summary_large_image" />
 
 	<meta name="theme-color" content="#EA76CB" />
-	<meta name="description" content="My own little corner of the internet" />
+	<meta name="description" content="my own little corner of the internet" />
 	<meta name="color-scheme" content="light" />
 </svelte:head>
 
