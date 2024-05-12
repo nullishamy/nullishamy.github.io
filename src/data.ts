@@ -4,7 +4,7 @@ const TODO_POST: Post = {
 	title: 'Coming soon:tm:',
 	content: 'N/A',
 	publishDate: new Date(),
-	blurb: "I haven't written this one yet!",
+	blurb: "i haven't written this one yet!",
 	slug: 'todo',
 	tags: []
 };
@@ -13,7 +13,7 @@ const TODO_READ: ExternalPost = {
 	title: 'TBD',
 	author: 'Unknown',
 	externalLink: 'https://google.com',
-	blurb: "I haven't filled this one out yet!"
+	blurb: "i haven't filled this one out yet!"
 };
 
 export const externalReads: ExternalPost[] = [
