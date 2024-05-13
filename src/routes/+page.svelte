@@ -69,12 +69,12 @@
 	</h1>
 
 	<div
-		class="md:col-start-4 lg:col-start-4 lg:row-start-1 font-inclusive place-self-center flex flex-row lg:flex-col lg:gap-2 xl:flex-row xl:gap-8 gap-8 items-center"
+		class="md:col-start-4 lg:col-start-4 lg:row-start-1 font-inclusive place-self-center flex flex-row lg:flex-col lg:gap-2 xl:flex-row xl:gap-6 gap-8 items-center"
 	>
 		<div class="flex flex-row gap-8">
 			<a href="https://ctp-webr.ing/amy/previous"><Icon width="30" icon="ph:caret-double-left" /></a
 			>
-			<a target="_blank" href="https://ctp-webr.ing/"><Icon width="30" icon="ph:info" /></a>
+			<a target="_blank" href="https://ctp-webr.ing/"><Icon width="30" icon="ph:fediverse-logo" /></a>
 			<a href="https://ctp-webr.ing/amy/next"><Icon width="30" icon="ph:caret-double-right" /></a>
 		</div>
 		<button on:click={handleThemeChange}><Icon width="30" icon="ph:lightbulb" /></button>
