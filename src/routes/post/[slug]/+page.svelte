@@ -1,9 +1,9 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import type { Post } from '../../../types';
+	import type { Post } from '$lib/types';
 	import SvelteMarkdown from 'svelte-markdown';
 	import HighlightedCode from './HighlightedCode.svelte';
-	import AnchoredHeading from '../../AnchoredHeading.svelte';
+	import AnchoredHeading from './AnchoredHeading.svelte';
 
 	export let data: Post;
 </script>

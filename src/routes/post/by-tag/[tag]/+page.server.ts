@@ -1,5 +1,5 @@
-import { posts } from '../../../../data';
-import type { Post } from '../../../../types';
+import { posts } from '../../../../lib/content';
+import type { Post } from '../../../../lib/types';
 import fs from 'fs';
 
 export function load({ params }): { posts: Post[], query: string } {

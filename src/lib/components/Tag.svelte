@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type Tag } from './types';
+	import { type Tag } from '../types';
 	export let tag: Tag;
 </script>
 

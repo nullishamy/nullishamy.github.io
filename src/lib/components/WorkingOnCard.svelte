@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
 	import Tag from './Tag.svelte';
-	import { type Post } from './types';
+	import { type Post } from '../types';
 	export let post: Post;
 </script>
 

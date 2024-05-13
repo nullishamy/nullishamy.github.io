@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import type { Post } from '../../../../types';
+	import type { Post } from '$lib/types';
 
 	export let data: { posts: Post[]; query: string };
 </script>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import { type ExternalPost } from './types';
+	import { type ExternalPost } from '../types';
 	export let post: ExternalPost;
 </script>
 

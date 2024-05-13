@@ -1,10 +1,10 @@
 <script lang="ts">
-	import ExternalRead from '../ExternalRead.svelte';
-	import WorkingOnCard from '../WorkingOnCard.svelte';
+	import ExternalRead from '$lib/components/ExternalRead.svelte';
+	import WorkingOnCard from '$lib/components/WorkingOnCard.svelte';
 	import ContactDesktop from '$lib/assets/contact-desktop.svelte';
 	import ContactMobile from '$lib/assets/contact-mobile.svelte';
-	import { externalReads, posts } from '../data';
-	import MediaQuery from '../MediaQuery.svelte';
+	import { externalReads, posts } from '$lib/content';
+	import MediaQuery from '$lib/components/MediaQuery.svelte';
 	import Icon from '@iconify/svelte';
 	import { onMount } from 'svelte';
 
