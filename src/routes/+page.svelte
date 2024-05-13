@@ -112,9 +112,9 @@
 			You can find me in other places:
 			<MediaQuery query="(max-width: 767px)" let:matches>
 				{#if matches}
-					<ContactMobile />
+					<ContactMobile classList="fill-black dark:fill-text" />
 				{:else}
-					<ContactDesktop />
+					<ContactDesktop classList="fill-black dark:fill-text"/>
 				{/if}
 			</MediaQuery>
 		</h2>

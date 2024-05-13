@@ -1,8 +1,12 @@
+<script lang="ts">
+	export let classList: string
+</script>
 <svg
 	width="300"
 	height="250"
 	viewBox="-40 0 250 220"
 	fill="none"
+	class={classList}
 	xmlns="http://www.w3.org/2000/svg"
 >
 	<style>
@@ -10,16 +14,6 @@
 			font: 11px Inclusive Sans, sans-serif;
 			--tw-text-opacity: 1;
 			fill: rgba(var(--ctp-blue), var(--tw-text-opacity));
-		}
-
-		path {
-			fill: rgba(var(--ctp-text))
-		}
-
-		@media (prefers-color-scheme: light) {
-			path {
-				fill: black
-			}
 		}
 	</style>
 
