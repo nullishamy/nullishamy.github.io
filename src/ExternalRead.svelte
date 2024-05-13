@@ -12,7 +12,7 @@
 		href={post.externalLink}
 		target="_blank"
 		aria-label={`An external article, ${post.blurb}`}
-		class="absolute right-0 top-0 m-2 text-blue focus:outline-black focus:outline focus:outline-2 focus:rounded-md"
+		class="absolute right-0 top-0 m-2 text-blue dark:focus:outline-white focus:outline-black focus:outline focus:outline-2 focus:rounded-md"
 		tabindex={0}><Icon width="24" height="24" icon="ph:arrow-square-out"></Icon></a
 	>
 </div>

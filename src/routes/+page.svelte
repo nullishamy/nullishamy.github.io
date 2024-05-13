@@ -5,7 +5,35 @@
 	import ContactMobile from '$lib/assets/contact-mobile.svelte';
 	import { externalReads, posts } from '../data';
 	import MediaQuery from '../MediaQuery.svelte';
-	import Icon from '@iconify/svelte'
+	import Icon from '@iconify/svelte';
+	import { onMount } from 'svelte';
+
+	const setTheme = (newTheme: 'light' | 'dark' | string) => {
+		if (
+			localStorage.theme === 'dark' ||
+			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+		) {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+	};
+
+	const handleThemeChange = () => {
+		const currentTheme = localStorage.getItem('theme') ?? 'light';
+		if (currentTheme === 'light') {
+			localStorage.setItem('theme', 'dark');
+			setTheme('dark');
+		} else {
+			localStorage.setItem('theme', 'light');
+			setTheme('light');
+		}
+	};
+
+	onMount(() => {
+		const currentTheme = localStorage.getItem('theme') ?? 'light';
+		setTheme(currentTheme);
+	});
 </script>
 
 <svelte:head>
@@ -23,11 +51,13 @@
 	<meta name="color-scheme" content="light" />
 </svelte:head>
 
-<header class="grid grid-cols-1 md:grid-cols-4 md:grid-flow-row xl:grid-cols-6 xl:grid-rows-[auto_auto] gap-4 m-4">
+<header
+	class="grid grid-cols-1 md:grid-cols-4 md:grid-flow-row xl:grid-cols-6 xl:grid-rows-[auto_auto] gap-4 m-4"
+>
 	<h1
 		class="
 			text-5xl text-center md:text-left md:text-6xl lg:text-7xl font-header bg-clip-text
-			text-transparent py-3 bg-gradient-to-r from-yellow via-peach to-pink lg:col-span-3 
+			text-transparent py-3 bg-gradient-to-r from-yellow via-peach to-pink lg:col-span-3
 			md:col-span-3
 			bg-300% animate-gradient
 		"
@@ -35,15 +65,21 @@
 		hello, i’m amy
 	</h1>
 
-	<div class="md:col-start-4 lg:col-start-4 lg:row-start-1 font-inclusive place-self-center flex flex-row gap-8">
-		<a href="https://ctp-webr.ing/amy/previous"><Icon width=30 icon='ph:caret-double-left'/></a>
-		<a target="_blank" href="https://ctp-webr.ing/"><Icon width=30 icon='ph:info'/></a>
-		<a href="https://ctp-webr.ing/amy/next"><Icon width=30 icon='ph:caret-double-right'/></a>
+	<div
+		class="md:col-start-4 lg:col-start-4 lg:row-start-1 font-inclusive place-self-center flex flex-row lg:flex-col lg:gap-2 xl:flex-row xl:gap-8 gap-8 items-center"
+	>
+		<div class="flex flex-row gap-8">
+			<a href="https://ctp-webr.ing/amy/previous"><Icon width="30" icon="ph:caret-double-left" /></a
+			>
+			<a target="_blank" href="https://ctp-webr.ing/"><Icon width="30" icon="ph:info" /></a>
+			<a href="https://ctp-webr.ing/amy/next"><Icon width="30" icon="ph:caret-double-right" /></a>
+		</div>
+		<button on:click={handleThemeChange}><Icon width="30" icon="ph:lightbulb" /></button>
 	</div>
 
 	<section
 		class="
-			bg-mantle text-sm md:text-base md:text-black py-4 lg:text-lg px-4 
+			bg-mantle text-sm py-4 lg:text-lg px-4
 			rounded-md md:h-full font-inclusive drop-shadow-md md:col-start-1 lg:row-start-2 lg:col-span-4 md:pb-16 md:pt-4
 			md:col-span-2
 			outline outline-maroon outline-1
@@ -69,7 +105,9 @@
 		</p>
 	</section>
 
-	<section class="bg-mantle p-2 rounded-md font-inclusive drop-shadow-md h-full md:col-start-3 md:col-span-2 lg:col-start-5 lg:col-span-2 lg:row-span-2 outline outline-1 outline-pink">
+	<section
+		class="bg-mantle p-2 rounded-md font-inclusive drop-shadow-md h-full md:col-start-3 md:col-span-2 lg:col-start-5 lg:col-span-2 lg:row-span-2 outline outline-1 outline-pink"
+	>
 		<h2 class="text-center lg:text-xl flex flex-col items-center">
 			You can find me in other places:
 			<MediaQuery query="(max-width: 767px)" let:matches>
