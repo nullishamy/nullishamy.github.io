@@ -52,7 +52,7 @@
 </svelte:head>
 
 <header
-	class="grid grid-cols-1 md:grid-cols-4 md:grid-flow-row xl:grid-cols-6 xl:grid-rows-[auto_auto] gap-4 m-4"
+	class="grid grid-cols-1 md:grid-cols-4 md:grid-flow-row xl:grid-cols-6 xl:grid-rows-[auto_auto] gap-4 m-4 mx-2 lg:mx-4 xl:mx-0"
 >
 	<h1
 		class="
@@ -121,7 +121,7 @@
 	</section>
 </header>
 
-<main class="flex flex-col lg:flex-row mt-8 gap-6 mx-3 lg:mx-6 mb-2">
+<main class="flex flex-col lg:flex-row mt-8 gap-6 mx-2 lg:mx-4 xl:mx-0 mb-2">
 	<section class="flex flex-col w-full lg:w-1/2 basis-2/3">
 		<h2
 			class="text-lg lg:text-2xl my-2 lg:my-6 underline self-center lg:self-baseline font-medium font-mono"
