@@ -5,7 +5,7 @@
 </script>
 
 <section
-	class="grid grid-cols-2 auto-rows-max gap-4 justify-items-center h-full w-full pb-10"
+	class="grid md:grid-cols-2 auto-rows-max gap-4 justify-items-center h-full w-full pb-10"
 	in:fly={{ opacity: 0, y: 300, easing: backOut }}
 >
 	<Account

@@ -112,7 +112,7 @@
 		class="
 			md:col-start-3 md:col-span-2 lg:col-start-5 lg:col-span-2 lg:row-span-2
 			bg-mantle p-2 rounded-md font-inclusive drop-shadow-md outline outline-1 outline-pink
-			min-h-[26rem] h-full relative
+			min-h-[21rem] md:min-h-[26rem] h-full relative
 		"
 	>
 		{#if contactFlipped}
