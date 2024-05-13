@@ -1,7 +1,7 @@
 import type { ExternalPost, Post } from './types';
 
 const TODO_POST: Post = {
-	title: 'Coming soon:tm:',
+	title: 'coming soon:tm:',
 	content: 'N/A',
 	publishDate: new Date(),
 	blurb: "i haven't written this one yet!",
