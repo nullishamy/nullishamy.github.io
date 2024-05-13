@@ -25,13 +25,18 @@ export const externalReads: ExternalPost[] = [
 			'improving performance on a static SvelteKit site by optimising images, fonts, and markup.'
 	},
 	{
+		title: 'making fediverse apps for everyone',
+		externalLink: 'https://stefanbohacek.com/blog/making-fediverse-apps-for-everyone/',
+		author: 'Stefan Bohacek',
+		blurb: "a guide to increasing your app's compatibility with non-Mastodon fediverse servers."
+	},
+	{
 		title: 'the beauty of pingu',
 		externalLink:
 			'https://web.archive.org/web/20230314101532/https://goudham.me/blog/non-tech/the-beauty-of-pingu.html',
 		author: 'goudham suresh',
-		blurb: '[shitpost] The Beauty Of Pingu'
-	},
-	TODO_READ
+		blurb: '[shitpost] The Beauty Of Pingu.'
+	}
 ];
 
 export const posts: Post[] = [
