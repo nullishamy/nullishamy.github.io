@@ -1,16 +1,15 @@
 <script lang="ts">
 	import ExternalRead from '$lib/components/ExternalRead.svelte';
 	import WorkingOnCard from '$lib/components/WorkingOnCard.svelte';
-	import ContactDesktop from '$lib/assets/contact-desktop.svelte';
-	import ContactMobile from '$lib/assets/contact-mobile.svelte';
 	import { externalReads, posts } from '$lib/content';
-	import MediaQuery from '$lib/components/MediaQuery.svelte';
 	import Icon from '@iconify/svelte';
 	import { onMount } from 'svelte';
+	import ContactCardBack from '$lib/components/ContactCardBack.svelte';
+	import ContactCardFront from '$lib/components/ContactCardFront.svelte';
 
-	const setTheme = (newTheme: 'light' | 'dark' | string) => {
+	const refreshTheme = () => {
 		if (
-			localStorage.theme === 'dark' ||
+			localStorage.getItem('theme') === 'dark' ||
 			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
 		) {
 			document.documentElement.classList.add('dark');
@@ -23,17 +22,21 @@
 		const currentTheme = localStorage.getItem('theme') ?? 'light';
 		if (currentTheme === 'light') {
 			localStorage.setItem('theme', 'dark');
-			setTheme('dark');
+			refreshTheme();
 		} else {
 			localStorage.setItem('theme', 'light');
-			setTheme('light');
+			refreshTheme();
 		}
 	};
 
 	onMount(() => {
-		const currentTheme = localStorage.getItem('theme') ?? 'light';
-		setTheme(currentTheme);
+		refreshTheme();
 	});
+
+	let contactFlipped = false;
+	const handleContactFlip = () => {
+		contactFlipped = !contactFlipped;
+	};
 </script>
 
 <svelte:head>
@@ -52,7 +55,7 @@
 </svelte:head>
 
 <header
-	class="grid grid-cols-1 md:grid-cols-4 md:grid-flow-row xl:grid-cols-6 xl:grid-rows-[auto_auto] gap-4 m-4 mx-2 lg:mx-4 xl:mx-0"
+	class="grid grid-cols-1 md:grid-cols-4 md:grid-flow-row xl:grid-cols-6 xl:grid-rows-[auto_auto] gap-4 m-4 mx-2 lg:mx-4 2xl:mx-0"
 >
 	<h1
 		class="
@@ -105,23 +108,31 @@
 		</p>
 	</section>
 
-	<section
-		class="bg-mantle p-2 rounded-md font-inclusive drop-shadow-md h-full md:col-start-3 md:col-span-2 lg:col-start-5 lg:col-span-2 lg:row-span-2 outline outline-1 outline-pink"
+	<div
+		class="
+			md:col-start-3 md:col-span-2 lg:col-start-5 lg:col-span-2 lg:row-span-2
+			bg-mantle p-2 rounded-md font-inclusive drop-shadow-md outline outline-1 outline-pink
+			min-h-[26rem] h-full relative
+		"
 	>
-		<h2 class="text-center lg:text-xl flex flex-col items-center">
-			You can find me in other places:
-			<MediaQuery query="(max-width: 767px)" let:matches>
-				{#if matches}
-					<ContactMobile classList="fill-black dark:fill-text" />
-				{:else}
-					<ContactDesktop classList="fill-black dark:fill-text"/>
-				{/if}
-			</MediaQuery>
-		</h2>
-	</section>
+		{#if contactFlipped}
+			<ContactCardBack />
+		{:else}
+			<ContactCardFront />
+
+			{/if}
+			<button
+				on:click={handleContactFlip}
+				class="bg-crust w-full h-10 grid grid-cols-3 items-center justify-items-center rounded-md absolute bottom-0 left-0"
+			>
+				<Icon icon="ph:arrow-up-right" />
+				<Icon icon="ph:arrow-up-right" />
+				<Icon icon="ph:arrow-up-right" />
+			</button>
+	</div>
 </header>
 
-<main class="flex flex-col lg:flex-row mt-8 gap-6 mx-2 lg:mx-4 xl:mx-0 mb-2">
+<main class="flex flex-col lg:flex-row mt-8 gap-6 mx-2 lg:mx-4 2xl:mx-0 mb-2">
 	<section class="flex flex-col w-full lg:w-1/2 basis-2/3">
 		<h2
 			class="text-lg lg:text-2xl my-2 lg:my-6 underline self-center lg:self-baseline font-medium font-mono"
