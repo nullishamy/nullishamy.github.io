@@ -34,7 +34,7 @@ export const externalReads: ExternalPost[] = [
 		title: 'the beauty of pingu',
 		externalLink:
 			'https://web.archive.org/web/20230314101532/https://goudham.me/blog/non-tech/the-beauty-of-pingu.html',
-		author: 'goudham suresh',
+		author: 'Goudham Suresh',
 		blurb: '[shitpost] The Beauty Of Pingu.'
 	}
 ];
