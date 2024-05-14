@@ -21,7 +21,7 @@ export default {
 				'300%': '300%',
 			},
 			animation: {
-				gradient: 'animatedgradient 4s infinite alternate',
+				gradient: 'animatedgradient 2s infinite alternate',
 			},
 			typography: ({ theme }) => ({
 				'ctp-dark': {
