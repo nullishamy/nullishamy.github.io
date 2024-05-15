@@ -12,7 +12,7 @@
   }
 </script>
 {#if serviceIcon}
-<span class="flex flex-row items-center gap-2 lg:text-lg"><Icon icon={serviceIcon} width={iconSize} /> <a class="text-blue" href="{url}">{facade}</a></span>
+<span class="flex flex-row items-center gap-2 lg:text-lg underline"><Icon icon={serviceIcon} width={iconSize} /> <a class="text-blue" href="{url}">{facade}</a></span>
 {:else}
-<span class="lg:text-lg">{service}: <a class="text-blue" href="{url}">{facade}</a></span>
+<span class="lg:text-lg underline">{service}: <a class="text-blue" href="{url}">{facade}</a></span>
 {/if}
