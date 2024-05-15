@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ExternalRead from '$lib/components/ExternalRead.svelte';
 	import WorkingOnCard from '$lib/components/WorkingOnCard.svelte';
-	import { externalReads, posts } from '$lib/content';
+	import { externalReads, posts } from '../content';
 	import Icon from '@iconify/svelte';
 	import { onMount } from 'svelte';
 	import ContactCardBack from '$lib/components/ContactCardBack.svelte';

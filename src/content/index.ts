@@ -1,4 +1,4 @@
-import type { ExternalPost, Post } from './types';
+import type { ExternalPost, Post } from '../lib/types';
 
 const TODO_POST: Post = {
 	title: 'coming soon:tm:',
@@ -48,7 +48,14 @@ export const posts: Post[] = [
 		slug: 'building-my-new-site',
 		tags: ['svelte', 'web']
 	},
-	TODO_POST,
+	{
+		title: 'into the fediverse',
+		content: 'N/A',
+		publishDate: new Date('05/15/2024'),
+		blurb: 'my journey on the fediverse, and my summary after a few months of use',
+		slug: 'into-the-fediverse',
+		tags: []
+	},
 	TODO_POST,
 	TODO_POST,
 	TODO_POST,

@@ -1,4 +1,4 @@
-import { posts } from '../../../lib/content';
+import { posts } from '../../../content';
 import type { Post } from '../../../lib/types';
 import fs from 'fs';
 
@@ -8,7 +8,7 @@ export function load({ params }): Post {
 		throw new TypeError(`no post '${params.slug}' found`);
 	}
 
-	const content = fs.readFileSync(`./content/${post.slug}.md`, 'utf-8');
+	const content = fs.readFileSync(`./src/content/${post.slug}.md`, 'utf-8');
 	post.content = content;
 
 	return post;
