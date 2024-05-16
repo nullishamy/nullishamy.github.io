@@ -31,11 +31,11 @@ export const externalReads: ExternalPost[] = [
 		blurb: "a guide to increasing your app's compatibility with non-Mastodon fediverse servers."
 	},
 	{
-		title: 'the beauty of pingu',
+		title: 'giscus',
 		externalLink:
-			'https://web.archive.org/web/20230314101532/https://goudham.me/blog/non-tech/the-beauty-of-pingu.html',
-		author: 'Goudham Suresh',
-		blurb: '[shitpost] The Beauty Of Pingu.'
+			'https://giscus.app/',
+		author: 'Giscus',
+		blurb: 'a library / tool to enable website commenting through a GitHub Discussion backend'
 	}
 ];
 
