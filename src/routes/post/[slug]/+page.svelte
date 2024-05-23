@@ -35,7 +35,7 @@
 	</div>
 
 	<div
-		class="text-md lg:text-lg font-inclusive rounded-md p-4 max-w-screen-lg prose lg:prose-lg prose-ctp-light dark:prose-ctp-dark w-full md-content"
+		class="text-md lg:text-lg font-inclusive rounded-md p-4 max-w-screen-lg prose lg:prose-lg prose-ctp-light dark:prose-ctp-dark w-full md-content break-words"
 	>
 		<SvelteMarkdown
 			source={data.content}
