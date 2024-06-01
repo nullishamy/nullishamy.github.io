@@ -1,0 +1,88 @@
+==================================================================
+https://keybase.io/amycodes
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://amy.is-a.dev
+  * I am amycodes (https://keybase.io/amycodes) on keybase.
+  * I have a public key with fingerprint 831F C1C9 6CEB B323 9AEF  C748 5BAB 63DC C2BF 4F58
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120451aec753bec4319018926637ff816a3245bc768370071616d214e86b1cbdcc00a",
+      "fingerprint": "831fc1c96cebb3239aefc7485bab63dcc2bf4f58",
+      "host": "keybase.io",
+      "key_id": "5bab63dcc2bf4f58",
+      "kid": "0101c7f365ecb82514a510c691d671eec72338cded803c6a50ec9e9f90c6d830c9360a",
+      "uid": "a388a77e051b99f02caa307dc585bc19",
+      "username": "amycodes"
+    },
+    "merkle_root": {
+      "ctime": 1717254419,
+      "hash_meta": "21c8e99c4a09239ba723da76a14e650c33d929a558e7acaa4ec0664004ffaeb7",
+      "seqno": 25782311
+    },
+    "revoke": {
+      "sig_ids": [
+        "6429635a690610f631185621e6cde99b3aeab5c1d7f30b1498a34d83b61324600f"
+      ]
+    },
+    "service": {
+      "hostname": "amy.is-a.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1717254513,
+  "expire_in": 157680000,
+  "prev": "f166dac0cf8ad5e788bd74b18f9d863f0a80591b60c40cb3135394634958e60f",
+  "seqno": 46,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.13
+Comment: https://keybase.io/crypto
+
+yMQHAnicbZN9TBRHGMYBta0oYqwBraSka7ESEWd2dmd3zogBa7/BVk0lcnrOzs7C
+AXd73B0oUqBqWwNiapvaaDRCoB9+lFpNKx62RUFJiVRtFWvVCNqq1RTPfvmFqZ0j
+tU2T7j+bnX3e533e38wcjBsSFRudt4OdbW+bkxt9uH1paZSVR0oqJMM2yyVHhVTE
+B1+82OSBoKvIbUoOCUAZKCqknGkqMjhTECQA6kTGGGmWpUNMkayoBtOwjjQANIgh
+NmWocB0bkBkmYwBQKU2y3N587vf53d6gsNURtBhkBDNuGEhGhHKLaYquGtTASBTJ
+hqVYqi4KC+xApEKEM2iAp7ttsSY+XIPx/kd/PzeATLMQVjkzdFmFClUhYJhAE2uQ
+i3FkhHRmclMHiGGqAs4IJxYRGlNHgBGEB3OXDtpRpOtU0zhQoUGIBWRGKQKayVQR
+mUESEQa430s9PKL2lDNbQJQq0yQP9xcVc5fftoMRuCzojkigBjVZVRRIxIA0UODy
+8CAVlTJkOieEKRQQQcWgIqZJNUwFUKwChpBJZEJVVecaFRkUzgDGCgCKZVFuaCJH
+gJd4bckhq5ouIwhFBD8vs4t4pHvAnS+4BSRHnoQVmWCkUkwAhsDCQqqrWIYcCyiE
+GIhyaqgMmgIiMKBCdIoUQcbAUGw4BsCSFlVGuvnL3GzQPLJR/wJIdwem0nSTl4lI
+Pr8dtJldLP4UBIO+gCMCJljui0iXcsP1t4nLcHtNcUxERRn3B9y2V4ASyv8yUyFK
+k/gyn9vPXe6IQhVHD4gn0ke0c0gWxNikDDBLp6bKNV03TE0xoG4RU8fIAlQHKoEG
+BkwBzEAQqYgoGClEYMVisH8gKljkpPnCU5Dz0mCpn0uV7QecQ6OiY6MeGBYTuT9R
+scNH379VvY3x97J3XQ/JGw5mOFP6q6o/H5iauDn0yI2sM7HNP2ZlxlVPuDqt+0rM
+rpvxG79/6kTN+taLqtOqWPR04s7G3xsOzY2J6X91TX9K1VlpwfKWc7H7ok/614Km
+1HG+2iPN7/Z1j1u5vukoAtUjpowId184npPO7navPc06WmzntuLvlu4ZmlaybObE
+S09suDY/HL7UGnj/9Mo1nT1KY2fWNN8POakDoc7VV+DilK9K5o1Xz+yrN2csic+L
+ee/x5zwZE7LvrfGG2/pPhHuytx13Hl18zfHi7N4/qnBCTZG/9OtXylLfPLiwMPeX
+27d+81bu6djz5KlTnVdG1o1dOH7y6CyQ/Gzd9C+OP5Qwa1jozvJj9SsKHg725O++
+sX/W5nX5TYWfXCKhC72zk42365JzMoe8sPHD5szXOlfcfbRq/0/1RxZ7luRGNTiT
+ntm782Zrx7kx2yeGHzt0c/LLA1tWTXC3l++YltE1akPG67I2Ky4+ITU0XXNd7lzf
+M/5YQ82Md7YaP/NNp1pzG1etuzWp8MCcppN00oNJzV1DyhJOPP/l5fnh/G+6aj0b
+s7bdnr7ppc9aXCO347brWy+27Ki4fmxv+tiTM6cMJF1+a2BL24XEZnNObE1DV87w
+vlD8mKraNyZ9dPh86orqhXV3ZpR+MG9d3qjUQr0juu/eOLsrs3LT6j8/TorbPfbT
+ZDXxV2fit31XM7q656ac3zcvs3fBX9E1Bts=
+=WTMj
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/amycodes
+
+==================================================================
