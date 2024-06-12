@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 @layer base {
-  a {
-    @apply decoration-through
-  }
+	a {
+		@apply decoration-through;
+	}
 }
 
 @layer utilities {
-  .decoration-through {
-    text-decoration-skip-ink: none
-  }
+	.decoration-through {
+		text-decoration-skip-ink: none;
+	}
 
-  .decoration-break {
-    text-decoration-skip-ink: auto
-  }
+	.decoration-break {
+		text-decoration-skip-ink: auto;
+	}
 }

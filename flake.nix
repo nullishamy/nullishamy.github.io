@@ -13,6 +13,7 @@
         packages = with pkgs; [
           nodejs_20
           nodePackages.npm
+          nodePackages.svelte-language-server
         ];
       };
   });

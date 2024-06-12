@@ -2,7 +2,7 @@ import { posts } from '../../../../content';
 import type { Post } from '../../../../lib/types';
 import fs from 'fs';
 
-export function load({ params }): { posts: Post[], query: string } {
+export function load({ params }): { posts: Post[]; query: string } {
 	const foundPosts = posts.filter((p) => p.tags.includes(params.tag));
 
 	for (const post of foundPosts) {

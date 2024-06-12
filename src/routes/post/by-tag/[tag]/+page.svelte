@@ -14,10 +14,15 @@
 	</div>
 
 	{#each data.posts as post}
-		<a href="/post/{post.slug}" class="rounded-md p-2 m-2 bg-base shadow-md grid grid-cols-4 gap-y-2 font-inclusive w-full md:w-3/5 lg:w-2/5">
-      <p class="text-subtext1 text-lg row-span-2">{post.publishDate.toLocaleDateString()}</p>
-      <h2 class="text-lg col-start-3 col-span-2 text-right">{post.title}</h2>
-			<p class="text-sm text-subtext1 col-start-3 col-span-2 row-start-2 text-right">{post.blurb}</p>
+		<a
+			href="/post/{post.slug}"
+			class="rounded-md p-2 m-2 bg-base shadow-md grid grid-cols-4 gap-y-2 font-inclusive w-full md:w-3/5 lg:w-2/5"
+		>
+			<p class="text-subtext1 text-lg row-span-2">{post.publishDate.toLocaleDateString()}</p>
+			<h2 class="text-lg col-start-3 col-span-2 text-right">{post.title}</h2>
+			<p class="text-sm text-subtext1 col-start-3 col-span-2 row-start-2 text-right">
+				{post.blurb}
+			</p>
 		</a>
 	{/each}
 </section>

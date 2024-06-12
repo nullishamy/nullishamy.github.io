@@ -1,6 +1,6 @@
 <script>
 	import './styles.css';
-	import './fonts.css'
+	import './fonts.css';
 	import './catppuccin-highlightjs.css';
 	import '@fontsource/inclusive-sans';
 </script>

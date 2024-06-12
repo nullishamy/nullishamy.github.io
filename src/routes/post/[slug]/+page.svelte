@@ -4,8 +4,21 @@
 	import SvelteMarkdown from 'svelte-markdown';
 	import HighlightedCode from './HighlightedCode.svelte';
 	import AnchoredHeading from './AnchoredHeading.svelte';
+	import Giscus from '@giscus/svelte';
+	import { onMount } from 'svelte';
 
 	export let data: Post;
+
+	function makeGiscusAssetRoot() {
+		const url = new URL(document.URL);
+		return `${url.origin}/giscus/`;
+	}
+
+	let url = '';
+	onMount(() => {
+		const suffix = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+		url = makeGiscusAssetRoot() + `${suffix}.css`;
+	});
 </script>
 
 <svelte:head>
@@ -19,7 +32,7 @@
 	<meta name="twitter:card" content="summary_large_image" />
 
 	<meta name="theme-color" content="#EA76CB" />
-	<meta name="description" content="{data.blurb}">
+	<meta name="description" content={data.blurb} />
 	<meta name="color-scheme" content="light" />
 </svelte:head>
 
@@ -43,6 +56,24 @@
 				code: HighlightedCode,
 				heading: AnchoredHeading
 			}}
+		/>
+	</div>
+	<div class="w-full h-full m-2 px-4">
+		<Giscus
+			id="comments"
+			term="Leave a comment!"
+			repo="nullishamy/nullishamy.github.io"
+			repoId="R_kgDOHbb9xA"
+			category="Announcements"
+			categoryId="DIC_kwDOHbb9xM4CgCvv"
+			mapping="pathname"
+			strict="1"
+			reactionsEnabled="1"
+			emitMetadata="1"
+			inputPosition="top"
+			theme={url}
+			lang="en"
+			loading="lazy"
 		/>
 	</div>
 </section>

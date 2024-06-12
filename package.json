@@ -44,6 +44,7 @@
 		"@fontsource-variable/jetbrains-mono": "^5.0.21",
 		"@fontsource/inclusive-sans": "^5.0.3",
 		"@fontsource/lily-script-one": "^5.0.13",
+		"@giscus/svelte": "^3.0.0",
 		"svelte-markdown": "^0.4.1"
 	}
 }

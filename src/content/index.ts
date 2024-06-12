@@ -32,8 +32,7 @@ export const externalReads: ExternalPost[] = [
 	},
 	{
 		title: 'giscus',
-		externalLink:
-			'https://giscus.app/',
+		externalLink: 'https://giscus.app/',
 		author: 'Giscus',
 		blurb: 'a library / tool to enable website commenting through a GitHub Discussion backend'
 	}

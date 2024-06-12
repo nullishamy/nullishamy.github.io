@@ -4,7 +4,6 @@
 	import ContactDesktop from '$lib/assets/contact-desktop.svelte';
 	import { fly } from 'svelte/transition';
 	import { backOut } from 'svelte/easing';
-
 </script>
 
 <section
@@ -20,5 +19,4 @@
 			<ContactDesktop classList="fill-black dark:fill-text" />
 		{/if}
 	</MediaQuery>
-
 </section>

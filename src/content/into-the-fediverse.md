@@ -36,7 +36,7 @@ of platforms.
 Whilst meow.lgbt was fine, I did want something a little more active. I never really had a reason to move, until I tried logging in one day and found
 the SSL certificate had expired! This prompted me to start looking for a new instance (combined with the general unavailablility of the admins).
 
-I wanted to try out some new software, as Mastodon felt a little boring for me. I wanted something that had 'all the cool features' 
+I wanted to try out some new software, as Mastodon felt a little boring for me. I wanted something that had 'all the cool features'
 (proper quotes, reactions, etc.), and wanted a more active community to go with it. Knowing yassie was on [labyrinth.zone](https://labyrinth.zone),
 I checked them out. They seemed to fit the bill quite nicely, so I applied for an account, and got started on the migration.
 
@@ -49,9 +49,10 @@ Once it was all finished, I started exploring this new software, and couldn't he
 
 Whilst fedi was built by queers, for queers, it was very interesting to me to learn about the ongoing diversity issues people of colour face on fedi,
 and my post on fedi wouldn't be complete and honest if I didn't mention it. Learning just how dismissive some parts of fedi are of these struggles was
-quite the eye opener to how shielded things could be from 'my side' of fedi. 
+quite the eye opener to how shielded things could be from 'my side' of fedi.
 
 Some posts I grabbed from my old account that highlight the issue:
+
 - https://chaosfem.tw/@DivineKestrel/112129747561870153
 - https://girlcock.club/@clewd/112044616466236983
 
@@ -61,5 +62,5 @@ I think fediverse is here to stay, for me. It really is everything I'd want from
 initial barrier to entry, but in the long run it's definitely worth it. The freedom to get involved in any discussion I find interesting, follow anyone
 I want, and star whatever I please with no ill effect on my timeline has really changed the way I see social media.
 
-No longer is it a race to the bottom to see who can farm the most engagement with the least entertaining content, but a system designed to build 
-community and friendships that last. People interact with your posts *because they want to*, and that's really nice.
+No longer is it a race to the bottom to see who can farm the most engagement with the least entertaining content, but a system designed to build
+community and friendships that last. People interact with your posts _because they want to_, and that's really nice.

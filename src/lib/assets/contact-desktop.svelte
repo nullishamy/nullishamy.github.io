@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let classList: string;
 </script>
+
 <svg
 	width="360"
 	height="325"

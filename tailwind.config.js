@@ -14,14 +14,14 @@ export default {
 				animatedgradient: {
 					'0%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' },
-					'100%': { backgroundPosition: '0% 50%' },
-				},
+					'100%': { backgroundPosition: '0% 50%' }
+				}
 			},
 			backgroundSize: {
-				'300%': '300%',
+				'300%': '300%'
 			},
 			animation: {
-				gradient: 'animatedgradient 2s infinite alternate',
+				gradient: 'animatedgradient 2s infinite alternate'
 			},
 			typography: ({ theme }) => ({
 				'ctp-dark': {
@@ -106,8 +106,5 @@ export default {
 			inclusive: 'Inclusive Sans, sans-serif'
 		}
 	},
-	plugins: [
-		ctp({}),
-		typography
-	]
+	plugins: [ctp({}), typography]
 };
