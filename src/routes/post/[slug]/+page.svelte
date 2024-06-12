@@ -64,7 +64,7 @@
 			term="Leave a comment!"
 			repo="nullishamy/nullishamy.github.io"
 			repoId="R_kgDOHbb9xA"
-			category="Announcements"
+			category="Comments"
 			categoryId="DIC_kwDOHbb9xM4CgCvv"
 			mapping="pathname"
 			strict="1"
