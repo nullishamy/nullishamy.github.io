@@ -9,15 +9,10 @@
 
 	export let data: Post;
 
-	function makeGiscusAssetRoot() {
-		const url = new URL(document.URL);
-		return `${url.origin}/giscus/`;
-	}
-
 	let url = '';
 	onMount(() => {
-		const suffix = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-		url = makeGiscusAssetRoot() + `${suffix}.css`;
+		const suffix = document.documentElement.classList.contains('dark') ? 'mocha' : 'latte';
+		url = `https://giscus.catppuccin.com/themes/${suffix}.css`;
 	});
 </script>
 
