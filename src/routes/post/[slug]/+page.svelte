@@ -12,7 +12,7 @@
 	let url = '';
 	onMount(() => {
 		const suffix = document.documentElement.classList.contains('dark') ? 'mocha' : 'latte';
-		url = `https://giscus.catppuccin.com/themes/${suffix}.css`;
+		url = `https://giscus.catppuccin.com/themes/${suffix}-no-loader.css`;
 	});
 </script>
 
