@@ -9,6 +9,8 @@
 	<a
 		class="text-xs"
 		href={`/post/by-tag/${tag.name}`}
-		aria-label={`Search for posts with tag '${tag.name}'`}>{tag.name}</a
+		aria-label={`Search for posts with tag '${tag.name}'`}
 	>
+		{tag.name}
+	</a>
 </div>

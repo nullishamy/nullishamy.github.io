@@ -2,11 +2,22 @@
 	import ExternalRead from '$lib/components/ExternalRead.svelte';
 	import WorkingOnCard from '$lib/components/WorkingOnCard.svelte';
 	import { externalReads, posts } from '../content';
-	import Icon from '@iconify/svelte';
 	import { onMount } from 'svelte';
 	import ContactCardBack from '$lib/components/ContactCardBack.svelte';
 	import ContactCardFront from '$lib/components/ContactCardFront.svelte';
 	import MediaQuery from '$lib/components/MediaQuery.svelte';
+	import { Icon } from '@steeze-ui/svelte-icon';
+	import {
+		CaretDoubleLeft,
+		CaretDoubleRight,
+		CaretDown,
+		CaretUp,
+		Graph,
+		Lightbulb,
+		List,
+		Notepad,
+		SealQuestion
+	} from '@steeze-ui/phosphor-icons';
 
 	const refreshTheme = () => {
 		if (
@@ -47,17 +58,44 @@
 
 <svelte:head>
 	<title>amy</title>
-	<meta property="og:title" content="amy" />
-	<meta property="og:site_name" content="amy.is-a.dev" />
-	<meta property="og:url" content="https://amy.is-a.dev/" />
-	<meta property="og:description" content="my own little corner of the internet" />
-	<meta property="og:type" content="article" />
+	<meta
+		property="og:title"
+		content="amy"
+	/>
+	<meta
+		property="og:site_name"
+		content="amy.is-a.dev"
+	/>
+	<meta
+		property="og:url"
+		content="https://amy.is-a.dev/"
+	/>
+	<meta
+		property="og:description"
+		content="my own little corner of the internet"
+	/>
+	<meta
+		property="og:type"
+		content="article"
+	/>
 
-	<meta name="twitter:card" content="summary_large_image" />
+	<meta
+		name="twitter:card"
+		content="summary_large_image"
+	/>
 
-	<meta name="theme-color" content="#EA76CB" />
-	<meta name="description" content="my own little corner of the internet" />
-	<meta name="color-scheme" content="light" />
+	<meta
+		name="theme-color"
+		content="#EA76CB"
+	/>
+	<meta
+		name="description"
+		content="my own little corner of the internet"
+	/>
+	<meta
+		name="color-scheme"
+		content="light"
+	/>
 </svelte:head>
 
 <header
@@ -74,10 +112,19 @@
 		hello, i’m amy
 	</h1>
 
-	<MediaQuery query="(max-width: 767px)" let:matches>
+	<MediaQuery
+		query="(max-width: 767px)"
+		let:matches
+	>
 		{#if matches}
-			<button class="absolute top-9 right-5" on:click={handleHamburger}>
-				<Icon width="30" icon="ph:list" />
+			<button
+				class="absolute top-9 right-5"
+				on:click={handleHamburger}
+			>
+				<Icon
+					src={List}
+					width="30"
+				/>
 			</button>
 			{#if hamburgerOpen}
 				<div
@@ -86,23 +133,72 @@
             grid grid-cols-4 grid-rows-2 gap-6 z-10
           "
 				>
-					<a title="Webring previous" href="https://ctp-webr.ing/amy/previous"
-						><Icon width="25" icon="ph:caret-double-left" /></a
+					<a
+						title="Webring previous"
+						href="https://ctp-webr.ing/amy/previous"
 					>
-					<a title="Webring info" target="_blank" href="https://ctp-webr.ing/"
-						><Icon width="25" icon="ph:fediverse-logo" /></a
+						<Icon
+							src={CaretDoubleLeft}
+							width="25"
+						/>
+					</a>
+					<a
+						title="Webring info"
+						target="_blank"
+						href="https://ctp-webr.ing/"
 					>
-					<a title="Webring next" href="https://ctp-webr.ing/amy/next"
-						><Icon width="25" icon="ph:caret-double-right" /></a
+						<Icon
+							src={Graph}
+							width="25"
+						/>
+					</a>
+					<a
+						title="Webring info"
+						target="_blank"
+						href="https://ctp-webr.ing/"
 					>
-					<button title="Theme toggle" on:click={handleThemeChange}
-						><Icon width="25" icon="ph:lightbulb" /></button
+						<Icon
+							src={CaretDoubleRight}
+							width="25"
+						/>
+					</a>
+					<button
+						title="Theme toggle"
+						on:click={handleThemeChange}
 					>
+						<Icon
+							src={Lightbulb}
+							width="25"
+						/>
+					</button>
 
-					<button title="Undecided content"><Icon width="25" icon="ph:seal-question" /></button>
-					<button title="Undecided content"><Icon width="25" icon="ph:seal-question" /></button>
-					<button title="Undecided content"><Icon width="25" icon="ph:seal-question" /></button>
-					<a title="All blog posts" href="/post/list"><Icon width="25" icon="ph:notepad" /></a>
+					<button title="Undecided content">
+						<Icon
+							src={SealQuestion}
+							width="25"
+						/>
+					</button>
+					<button title="Undecided content">
+						<Icon
+							src={SealQuestion}
+							width="25"
+						/>
+					</button>
+					<button title="Undecided content">
+						<Icon
+							src={SealQuestion}
+							width="25"
+						/>
+					</button>
+					<a
+						title="All blog posts"
+						href="/post/list"
+					>
+						<Icon
+							src={Notepad}
+							width="25"
+						/>
+					</a>
 				</div>
 			{/if}
 		{:else}
@@ -112,23 +208,72 @@
           grid grid-cols-4 grid-rows-2 gap-6
         "
 			>
-				<a title="Webring previous" href="https://ctp-webr.ing/amy/previous"
-					><Icon width="30" icon="ph:caret-double-left" /></a
+				<a
+					title="Webring previous"
+					href="https://ctp-webr.ing/amy/previous"
 				>
-				<a title="Webring info" target="_blank" href="https://ctp-webr.ing/"
-					><Icon width="30" icon="ph:fediverse-logo" /></a
+					<Icon
+						src={CaretDoubleLeft}
+						width="30"
+					/>
+				</a>
+				<a
+					title="Webring info"
+					target="_blank"
+					href="https://ctp-webr.ing/"
 				>
-				<a title="Webring next" href="https://ctp-webr.ing/amy/next"
-					><Icon width="30" icon="ph:caret-double-right" /></a
+					<Icon
+						src={Graph}
+						width="30"
+					/>
+				</a>
+				<a
+					title="Webring next"
+					href="https://ctp-webr.ing/amy/next"
 				>
-				<button title="Theme toggle" on:click={handleThemeChange}
-					><Icon width="30" icon="ph:lightbulb" /></button
+					<Icon
+						src={CaretDoubleRight}
+						width="30"
+					/>
+				</a>
+				<button
+					title="Theme toggle"
+					on:click={handleThemeChange}
 				>
+					<Icon
+						src={Lightbulb}
+						width="30"
+						icon="ph:lightbulb"
+					/>
+				</button>
 
-				<button title="Undecided content"><Icon width="30" icon="ph:seal-question" /></button>
-				<button title="Undecided content"><Icon width="30" icon="ph:seal-question" /></button>
-				<button title="Undecided content"><Icon width="30" icon="ph:seal-question" /></button>
-				<a title="All blog posts" href="/post/list"><Icon width="30" icon="ph:notepad" /></a>
+				<button title="Undecided content">
+					<Icon
+						src={SealQuestion}
+						width="30"
+					/>
+				</button>
+				<button title="Undecided content">
+					<Icon
+						src={SealQuestion}
+						width="30"
+					/>
+				</button>
+				<button title="Undecided content">
+					<Icon
+						src={SealQuestion}
+						width="30"
+					/>
+				</button>
+				<a
+					title="All blog posts"
+					href="/post/list"
+				>
+					<Icon
+						src={Notepad}
+						width="30"
+					/>
+				</a>
 			</div>
 		{/if}
 	</MediaQuery>
@@ -150,9 +295,18 @@
 		<p>
 			I help out over at <a
 				href="https://github.com/catppuccin/catppuccin"
-				class="text-blue underline">Catppuccin</a
-			>, and help develop various internal and external tools for
-			<a href="https://github.com/TheCodingDen/" class="text-blue underline">The Coding Den</a>.
+				class="text-blue underline"
+			>
+				Catppuccin
+			</a>
+			, and help develop various internal and external tools for
+			<a
+				href="https://github.com/TheCodingDen/"
+				class="text-blue underline"
+			>
+				The Coding Den
+			</a>
+			.
 		</p>
 		<br />
 		<p>
@@ -177,9 +331,33 @@
 			on:click={handleContactFlip}
 			class="bg-crust w-full h-10 grid grid-cols-3 items-center justify-items-center rounded-md absolute bottom-0 left-0"
 		>
-			<Icon icon="ph:arrow-up-right" />
-			<Icon icon="ph:arrow-up-right" />
-			<Icon icon="ph:arrow-up-right" />
+			{#if contactFlipped}
+				<Icon
+					size="30"
+					src={CaretDown}
+				/>
+				<Icon
+					size="30"
+					src={CaretDown}
+				/>
+				<Icon
+					size="30"
+					src={CaretDown}
+				/>
+			{:else}
+				<Icon
+					size="30"
+					src={CaretUp}
+				/>
+				<Icon
+					size="30"
+					src={CaretUp}
+				/>
+				<Icon
+					size="30"
+					src={CaretUp}
+				/>
+			{/if}
 		</button>
 	</div>
 </header>

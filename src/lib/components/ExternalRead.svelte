@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
+	import { Icon } from '@steeze-ui/svelte-icon';
 	import { type ExternalPost } from '../types';
+	import { ArrowSquareOut } from '@steeze-ui/phosphor-icons';
 	export let post: ExternalPost;
 </script>
 
@@ -15,6 +16,12 @@
 		target="_blank"
 		aria-label={`An external article, ${post.blurb}`}
 		class="absolute right-0 top-0 m-2 text-blue dark:focus:outline-white focus:outline-black focus:outline focus:outline-2 focus:rounded-md"
-		tabindex={0}><Icon width="24" height="24" icon="ph:arrow-square-out"></Icon></a
+		tabindex={0}
 	>
+		<Icon
+			src={ArrowSquareOut}
+			width="24"
+			height="24"
+		></Icon>
+	</a>
 </div>

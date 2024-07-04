@@ -1,11 +1,21 @@
 <script lang="ts">
-	import Icon from '@iconify/svelte';
 	import { posts } from '../../../content';
+	import { House } from '@steeze-ui/phosphor-icons';
+	import { Icon } from '@steeze-ui/svelte-icon';
 </script>
 
 <section class="flex flex-col items-center justify-items-center gap-8 m-4 mb-36">
 	<div class="grid grid-cols-4 md:grid-cols-5 items-center justify-items-center">
-		<a href="/" aria-label="Go to the home page"><Icon icon="ph:house" width="35" height="35" /></a>
+		<a
+			href="/"
+			aria-label="Go to the home page"
+		>
+			<Icon
+				src={House}
+				width="35"
+				height="35"
+			/>
+		</a>
 		<h1 class="text-3xl lg:text-5xl font-mono col-span-3 row-span-2 md:row-span-1 text-center">
 			All posts
 		</h1>

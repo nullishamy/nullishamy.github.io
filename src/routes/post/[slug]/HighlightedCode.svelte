@@ -12,5 +12,8 @@
 </script>
 
 <div class="rounded-lg drop-shadow-lg">
-	<Highlight language={languages[langKey]} code={text} />
+	<Highlight
+		language={languages[langKey]}
+		code={text}
+	/>
 </div>

@@ -12,7 +12,10 @@
 >
 	<h2 class="text-center lg:text-xl">You can find me in other places:</h2>
 
-	<MediaQuery query="(max-width: 767px)" let:matches>
+	<MediaQuery
+		query="(max-width: 767px)"
+		let:matches
+	>
 		{#if matches}
 			<ContactMobile classList="fill-black dark:fill-text" />
 		{:else}
