@@ -55,7 +55,14 @@ export const posts: Post[] = [
 		slug: 'into-the-fediverse',
 		tags: []
 	},
-	TODO_POST,
+	{
+		title: 'the display invasion',
+		content: 'N/A',
+		publishDate: new Date('07/19/2024'),
+		blurb: 'help, displays are invading my motor vehicle',
+		slug: 'screens-in-cars',
+		tags: []
+	},
 	TODO_POST,
 	TODO_POST,
 	TODO_POST
