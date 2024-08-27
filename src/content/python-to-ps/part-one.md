@@ -1,4 +1,4 @@
-In this part, we will explore the very basics of PS, and link them to their Python counterparts.
+In this part, we will explore the very basics of PowerShell, and link them to their Python counterparts.
 
 For those more experienced with programming in general, this may be all intuitive enough, but I urge you
 to explore the sections further down as we lay the groundwork for the more power user (heh) features present in PS.
