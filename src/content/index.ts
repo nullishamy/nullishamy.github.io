@@ -9,12 +9,14 @@ const TODO_POST: Post = {
 	tags: []
 };
 
-const TODO_READ: ExternalPost = {
-	title: 'TBD',
-	author: 'Unknown',
-	externalLink: 'https://google.com',
-	blurb: "i haven't filled this one out yet!"
-};
+/** 
+	const TODO_READ: ExternalPost = {
+		title: 'TBD',
+		author: 'Unknown',
+		externalLink: 'https://google.com',
+		blurb: "i haven't filled this one out yet!"
+	};
+*/
 
 export const externalReads: ExternalPost[] = [
 	{
@@ -38,32 +40,60 @@ export const externalReads: ExternalPost[] = [
 	}
 ];
 
+function psArticle (): Pick<Post, 'content' | 'blurb' | 'tags'> {
+	return {
+		content: 'N/A',
+		blurb: 'turn your snakes into shells',
+		tags: ['python', 'powershell']
+	}
+}
+
+function article(): Pick<Post, 'content' | 'tags'> {
+	return {
+		content: 'N/A',
+		tags: []
+	}
+}
+
 export const posts: Post[] = [
 	{
+		...article(),
 		title: 'building my site with SvelteKit',
-		content: 'N/A',
 		publishDate: new Date('05/05/2024'),
 		blurb: 'exploring new tools and technologies for fun and profit',
 		slug: 'building-my-new-site',
 		tags: ['svelte', 'web']
 	},
 	{
+		...article(),
 		title: 'into the fediverse',
-		content: 'N/A',
 		publishDate: new Date('05/15/2024'),
 		blurb: 'my journey on the fediverse, and my summary after a few months of use',
 		slug: 'into-the-fediverse',
-		tags: []
+		tags: ['fediverse']
 	},
 	{
+		...article(),
 		title: 'the display invasion',
-		content: 'N/A',
 		publishDate: new Date('07/19/2024'),
 		blurb: 'help, displays are invading my motor vehicle',
 		slug: 'screens-in-cars',
-		tags: []
+		tags: ['automotive']
+	},
+	{
+		...psArticle(),
+		title: 'Python to PS',
+		slug: 'python-to-ps',
+		path: 'python-to-ps/index',
+		publishDate: new Date('08/27/2024'),
 	},
 	TODO_POST,
 	TODO_POST,
-	TODO_POST
+	{
+		...psArticle(),
+		title: 'Python to PS (part 1)',
+		blurb: 'turn your snakes into shells',
+		slug: 'python-to-ps/part-one',
+		publishDate: new Date('08/27/2024'),
+	},
 ];
