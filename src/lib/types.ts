@@ -4,6 +4,7 @@ export interface Post {
 	content: string;
 	blurb: string;
 	slug: string;
+	path?: string;
 	tags: string[];
 }
 

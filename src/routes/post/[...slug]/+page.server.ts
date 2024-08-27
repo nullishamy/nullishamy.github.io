@@ -8,7 +8,7 @@ export function load({ params }): Post {
 		throw new TypeError(`no post '${params.slug}' found`);
 	}
 
-	const content = fs.readFileSync(`./src/content/${post.slug}.md`, 'utf-8');
+	const content = fs.readFileSync(`./src/content/${post.path ?? post.slug}.md`, 'utf-8');
 	post.content = content;
 
 	return post;
