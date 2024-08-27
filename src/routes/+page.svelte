@@ -373,7 +373,7 @@
 		<div
 			class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:grid-rows-3 lg:gap-6 items-center justify-items-center drop-shadow-md"
 		>
-			{#each posts as post}
+			{#each posts.slice(0, 6) as post}
 				<WorkingOnCard {post} />
 			{/each}
 		</div>
