@@ -27,10 +27,10 @@ I have filled the rest with lorem to make sure all the layout tools work correct
 **Yes**, _no_, **_maybe_**
 
 > Hmmmm
-> very suspicious indeed
-> ?
+> waaaaaaaa
+> ? newline
 >
-> > Said the mayor
+> > double double quote
 
 My favorite search engine is [Duck Duck Go](https://duckduckgo.com).
 
