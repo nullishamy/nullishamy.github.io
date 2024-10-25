@@ -80,20 +80,7 @@ export const posts: Post[] = [
 		slug: 'screens-in-cars',
 		tags: ['automotive']
 	},
-	{
-		...psArticle(),
-		title: 'Python to PS',
-		slug: 'python-to-ps',
-		path: 'python-to-ps/index',
-		publishDate: new Date('08/27/2024'),
-	},
 	TODO_POST,
 	TODO_POST,
-	{
-		...psArticle(),
-		title: 'Python to PS (part 1)',
-		blurb: 'turn your snakes into shells',
-		slug: 'python-to-ps/part-one',
-		publishDate: new Date('08/27/2024'),
-	},
+	TODO_POST,
 ];
