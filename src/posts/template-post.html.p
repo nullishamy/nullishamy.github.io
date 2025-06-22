@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>◊select['h1 doc]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" type="text/css" media="screen"/>
+  </head>
+
+  <body class="flex flex-col h-screen p-4 max-w-4xl m-auto prose">
+    <nav class="mb-12">
+      <a href="/" class="text-lg"><- Home</a>
+    </nav>
+    
+    <h1 class="text-6xl">◊select['title doc]</h1>
+
+    <span class="text-3xl mb-2">
+      ◊select['subtitle doc]
+      <hr class="mt-2 border border-rose-500 border-dashed w-full not-prose"></hr>
+    </span>
+    
+    <main>
+      ◊(->html (select* 'content doc))
+    </main>
+  </body>
+</html>

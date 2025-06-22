@@ -1,0 +1,4 @@
+.direnv/
+compiled/
+node_modules/
+*.html
