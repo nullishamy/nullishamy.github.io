@@ -35,10 +35,21 @@
     ◊hr[#:class "mt-6 border border-rose-500 border-dashed"]{}
 
     ◊div[#:class "flex flex-row gap-4 my-6 w-full justify-center"]{
-      ◊img[#:src "https://cyber.dabamos.de/88x31/designedbymac.gif"]{}
-   	  ◊img[#:src "https://cyber.dabamos.de/88x31/designedbymac.gif"]{}
-	  ◊img[#:src "https://cyber.dabamos.de/88x31/designedbymac.gif"]{}
-	  ◊img[#:src "https://cyber.dabamos.de/88x31/designedbymac.gif"]{}
+	  ◊a[#:href "https://linus.dev" #:target "_blank"]{
+        ◊img[#:src "https://linus.dev/images/88x31.png" #:alt "An 88x31 button. A cartoonish penguin is on the left. Next to it is the text 'linus' in white letters."]
+      }
+
+	  ◊a[#:href "https://theresnotime.co.uk" #:target "_blank"]{
+        ◊img[#:src "https://www.theresnotime.co.uk/button.png" #:alt "An 88x31 button. It features a cartoon fox face with the words 'TheresNoTime' on the bottom."]
+      }
+
+	  ◊img[#:src "https://aprl.cat/88x31/queercoded.png" #:alt "An 88x31 button. It has a rainbow background with the text 'you're telling me a queer coded this'? prominently."]
+	  
+	  ◊img[#:src "/assets/88x31/trans.png" #:alt "An 88x31 button. It is the trans flag"]
+	  
+	  ◊img[#:src "/assets/88x31/ace.png" #:alt "An 88x31 button. It is the asexual flag"]
+
+	  ◊img[#:src "/assets/88x31/racket.png" #:alt "An 88x31 button. It has the racket language logo, with the text 'powered by racket' next to it."]
     }
   }
 
