@@ -25,7 +25,6 @@
 	  ◊hr[#:class "mt-6 border border-rose-500 border-dashed"]{}
     }
 
-
 	◊div[#:class "flex flex-row items-center justify-center gap-4"]{
 	  ◊a[#:href "https://ctp-webr.ing/amy/previous"]{<-}
 	  ◊span{webring}
