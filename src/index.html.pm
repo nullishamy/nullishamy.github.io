@@ -49,6 +49,14 @@
 	  ◊img[#:src "/assets/88x31/ace.png" #:alt "An 88x31 button. It is the asexual flag"]
 
 	  ◊img[#:src "/assets/88x31/racket.png" #:alt "An 88x31 button. It has the racket language logo, with the text 'powered by racket' next to it."]
+
+	  ◊a[#:href "https://slatecave.net/resources/badges/volpeon-ink.svg" #:target "_blank"]{
+	    ◊img[#:src "https://volpeon.ink/" #:alt "An 88x31 button. It has a dragon on the right, silhouetted, with the text 'volpeon' to the left of it."]
+	  }
+
+	  ◊a[#:href "https://codeberg.org/" #:target "_blank"]{
+	   ◊img[#:src "https://slatecave.net/resources/badges/88x31_codeberg-org.png" #:alt "An 88x31 button. It contains the codeberg logo."]
+	  }
     }
   }
 
