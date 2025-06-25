@@ -6,6 +6,7 @@
 (provide post-card)
 (provide personal-link)
 (provide post-heading)
+(provide codeblock)
 
 (define (post-card #:to to #:title title #:description [description "???"])
   `(a ((class "border border-rose-500 p-2 flex flex-col gap-3") (href ,to))
@@ -21,3 +22,12 @@
 (define (post-heading #:heading heading #:id id)
   (define ref (string-append "#" id))
   `(h2 ((id ,id)) (a ((class "text-blue-500 underline") (href ,ref)) "# " ,heading)))
+
+(define (trim-first L)
+  (if (regexp-match-exact? #px"\\s*" (list-ref L 0)) (rest L) L))
+
+(define (codeblock . lines)
+  (define container-classes "font-monospace whitespace-pre text-black bg-gray-100 rounded-md p-2 block my-2 text-wrap")
+  `(span ((class ,container-classes))
+         (span ,@(trim-first lines))))
+

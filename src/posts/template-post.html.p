@@ -26,7 +26,7 @@
 	 <meta name="twitter:image" content="https://amy.is-a.dev/assets/og.png">
   </head>
 
-  <body class="flex flex-col h-screen p-2 lg:p-4 lg:max-w-4xl m-auto prose prose-xl">
+  <body class="flex flex-col h-screen p-2 lg:p-4 lg:max-w-4xl m-auto prose prose-xl prose-a:text-blue-500">
     <nav class="mb-12">
       <a href="/" class="text-lg"><- Home</a>
     </nav>

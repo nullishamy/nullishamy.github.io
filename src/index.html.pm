@@ -66,14 +66,15 @@
 
     ◊div[#:class "grid grid-cols-2 grid-rows-2 gap-2 flex-1"]{
 	  ◊post-card[
-	    #:to "/posts/test-post.html"
-		#:description "just a test post to make sure everything is working"
-		#:title "test post"
+	    #:to "/posts/pollenating.html"
+		#:title "pollenating your blog"
+		#:description "embrace your inner PL nerd with Pollen"
       ]
 	  
 	  ◊post-card[
-	    #:to "/post-1.html"
-		#:title "???"
+	    #:to "/posts/test-post.html"
+		#:description "just a test post to make sure everything is working"
+		#:title "test post"
       ]
 	  
 	  ◊post-card[

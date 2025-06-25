@@ -16,4 +16,4 @@ dev:
 
 # Render the website
 build:
-	raco pollen render src; raco pollen render src/posts
+	raco pollen render src && raco pollen render src/posts
