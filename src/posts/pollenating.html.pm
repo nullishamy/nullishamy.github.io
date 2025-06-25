@@ -116,4 +116,15 @@
   ◊p{
 	Hopefully this adventure can turn into its own little meta-SSG for bloggers to utilise.
   }
+
+  ◊post-heading[
+    #:heading "cool resources to check out"
+	#:id "resources"
+  ]
+
+  ◊ul{
+    ◊li{◊a[#:href "https://www.jonashietala.se/blog/2020/05/03/how_i_wrote_my_book_using_pollen/"]{https://www.jonashietala.se/blog/2020/05/03/how_i_wrote_my_book_using_pollen/}}
+	◊li{◊a[#:href "https://docs.racket-lang.org/pollen/index.html"]{https://docs.racket-lang.org/pollen/index.html}}
+	◊li{◊a[#:href "https://github.com/tailwindlabs/tailwindcss-typography"]{https://github.com/tailwindlabs/tailwindcss-typography}}
+  }
 }
