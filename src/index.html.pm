@@ -2,7 +2,7 @@
 
 ◊(define-meta template "template-index.html")
 
-◊main[#:class "grid md-grid-cols-1 lg:grid-rows-2 lg:grid-cols-2 gap-8 h-full w-full lg:m-2 lg:px-36 lg:py-38"]{
+◊main[#:class "grid grid-cols-1 lg:grid-rows-2 lg:grid-cols-2 gap-8 h-full w-full lg:m-2 lg:px-36 lg:py-38"]{
   ◊section[#:class "row-span-2 border border-rose-400 p-2 flex flex-col bg-neutral-50"]{
     ◊h1[#:class "text-4xl mb-4"]{
       hello, i'm amy
