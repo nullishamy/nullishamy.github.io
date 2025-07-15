@@ -1,0 +1,42 @@
+{
+  "name": "amy erskine",
+  "description": "my little blog",
+  "url": "https://amy.is-a.dev",
+  "author": {
+    "name": "Amy Erskine",
+    "email": "contact@amyerskine.me"
+  },
+  "defaultSocialImage": "/images/default-social-image.png",
+  "headerLinks": [
+    {
+      "text": "Blog",
+      "url": "/blog",
+      "external": false
+    },
+    {
+      "text": "About",
+      "url": "/about",
+      "external": false
+    }
+  ],
+  "socialLinks": [
+    {
+      "text": "GitHub",
+      "url": "https://github.com/nullishamy",
+      "external": true
+    },
+    {
+      "text": "Fediverse",
+      "url": "https://jvm.social/@amy",
+      "external": true
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "RSS",
+      "url": "/feed.xml",
+      "external": true
+    }
+  ],
+  "showFooterAttribution": true
+}
