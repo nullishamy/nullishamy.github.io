@@ -10,8 +10,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Build
-        uses: TartanLlama/actions-eleventy@master
+      - name: Set Node.js 18.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+          
+      - name: Build site
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
   
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
