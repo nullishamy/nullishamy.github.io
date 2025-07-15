@@ -1,8 +1,13 @@
 :root {
-  --accent: #0074d9;
-  --background: #fffffe;
-  --color: rgb(41, 41, 41);
-  --color-80: rgba(41, 41, 41, .8);
-  --color-30: rgba(41, 41, 41, .3);
-  --color-10: rgba(41, 41, 41, .1);
+  color-scheme: light dark;
+  --header: light-dark(rgb(3, 3, 3), rgb(252, 252, 252));
+  --header-tinted: light-dark(rgb(3, 3, 3, .8), rgb(252, 252, 252, .8));
+  --accent: light-dark(#0074d9, #0074d9);
+  --background: light-dark(rgb(255,255,254), rgb(41, 41, 41));
+  --color: light-dark(rgb(41, 41, 41), rgb(255,255,254));
+  --color-80: light-dark(rgba(41, 41, 41, .8), rgb(255,255,254, .8));
+  --color-30: light-dark(rgba(41, 41, 41, .3), rgb(255,255,254, .3));
+  --color-10: light-dark(rgba(41, 41, 41, .1), rgb(255,255,254, .1));
+  --muted: light-dark(rgb(117, 117, 117), rgb(175, 175, 175));
+  --muted-hover: light-dark(rgb(41, 41, 41), rgb(210, 210, 210));
 }
