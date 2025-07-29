@@ -1,5 +1,5 @@
 ---
-title: tidbits: a new post series
+title: "tidbits: a new post series"
 description: useful knowledge nuggets from me
 permalink: posts/{{ title | slug }}/index.html
 date: '2025-07-29'
