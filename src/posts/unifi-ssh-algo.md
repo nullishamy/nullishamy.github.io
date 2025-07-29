@@ -3,7 +3,7 @@ title: accessing older UniFi devices over ssh
 description: what to do when you have difficulty connecting to older UniFi kit
 permalink: posts/{{ title | slug }}/index.html
 date: '2025-07-29'
-tags: [tidbit, networks]
+tags: [tidbits, networks]
 ---
 For some older UniFi devices (those ones you have in the back of the shelf), modern ssh clients might complain when you try and connect to them.
 
