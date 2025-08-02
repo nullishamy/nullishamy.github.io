@@ -1,7 +1,7 @@
 ---
 title: accessing older UniFi devices over ssh
 description: what to do when you have difficulty connecting to older UniFi kit
-permalink: posts/{{ title | slug }}/index.html
+permalink: posts/{{ title | slugify }}/index.html
 date: '2025-07-29'
 tags: [tidbits, networks]
 ---
