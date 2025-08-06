@@ -2,7 +2,7 @@
 title: ensure your EDR's state with Intune
 description: how to get your EDR as a compliance requirement
 permalink: posts/{{ title | slugify }}/index.html
-date: '2025-07-29'
+date: '2025-08-06'
 tags: [tidbits, intune]
 ---
 As you delve further into Intune, you may want to experiment with different compliance policies. For example, ensuring your company EDR is installed and active.
