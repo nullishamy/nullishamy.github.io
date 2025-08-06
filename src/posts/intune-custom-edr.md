@@ -9,7 +9,7 @@ As you delve further into Intune, you may want to experiment with different comp
 
 Most of the time the builtin "Antivirus" indicator, but in my experience it can be flakey. It also does not check *which* solution is active, only that *a* solution is active.
 
-To check for your own EDR, you can write a custom compliance scraper. I found this template and tweaked it to my needs: https://github.com/Jeroen-J-Bakker/Intune/tree/main/CustomCompliance. This is what I have under "Rules":
+To check for your own EDR, you can write a custom compliance scraper. I found this template and tweaked it to my needs: [Jeroen-J-Bakker/Intune](https://github.com/Jeroen-J-Bakker/Intune/tree/main/CustomCompliance). This is what I have under "Rules":
 ```json
 { 
     "SettingName":"AntiVirusProductName",
