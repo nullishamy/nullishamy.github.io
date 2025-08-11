@@ -5,13 +5,11 @@ permalink: posts/{{ title | slugify }}/index.html
 date: '2025-08-11'
 tags: [tidbits, networking, fortinet]
 ---
-SSLVPN is one of Fortinet's free VPN offerings, integrating into their firewall hardware, it provides access to your internal network through the firewall.
+SSLVPN is one of Fortinet's free VPN offerings, integrating into their firewall hardware, it provides access to your internal network like any other corporate VPN solution.
 
 It does this by provisioning an IP address from the firewall for each client, attached to a virtual ethernet adapter on the device.
 
-![a diagram showing the architecture of the vpn, as described above, in picture form. it shows the traffic flowing through the firewall to an internal server](/images/posts/fortinet/vpn-architecture.png)
-
-This generally works well, though the VPN connection can be unstable with slower networks or networks with unstable latency to the firewall.
+![a diagram showing the architecture of the vpn, as described above, in picture form. it shows the traffic flowing through the firewall to an internal server](/images/posts/fortinet/vpn-architecture.png "traffic flowing from a client device, to the firewall, and to an internal server")
 
 ## the problem
 
