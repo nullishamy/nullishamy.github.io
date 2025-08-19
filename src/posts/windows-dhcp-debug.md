@@ -1,5 +1,5 @@
 ---
-title: debugging Window DHCP
+title: debugging Windows DHCP
 description: ipconfig intensifies
 permalink: posts/{{ title | slugify }}/index.html
 date: '2025-08-19'
