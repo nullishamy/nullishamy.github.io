@@ -175,7 +175,7 @@ code,
 kbd {
   color: var(--accent);
   font-feature-settings: normal;
-  background: var(--color-30);
+  background: var(--color-10);
   color: var(--accent);
   padding: 1px 6px;
   margin: 0 2px;

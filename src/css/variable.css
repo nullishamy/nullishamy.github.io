@@ -2,7 +2,7 @@
   color-scheme: light dark;
   --header: light-dark(rgb(3, 3, 3), rgb(252, 252, 252));
   --header-tinted: light-dark(rgb(3, 3, 3, .8), rgb(252, 252, 252, .8));
-  --accent: light-dark(#0074d9, #0074d9);
+  --accent: light-dark(#0074d9, #5ca9ec);
   --background: light-dark(rgb(255,255,254), rgb(41, 41, 41));
   --color: light-dark(rgb(41, 41, 41), rgb(255,255,254));
   --color-80: light-dark(rgba(41, 41, 41, .8), rgb(255,255,254, .8));
