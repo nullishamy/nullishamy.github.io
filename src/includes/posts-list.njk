@@ -1,6 +1,6 @@
 <ul class="post-list">
   {% for post in postslist | reverse %}
-    {% if post.draft !== true %}
+    {% if post.data.draft !== true %}
       <li class="post-list__item">
         <div>
           <div class="post-list__meta">
