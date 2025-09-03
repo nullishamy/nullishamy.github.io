@@ -26,6 +26,11 @@ body {
   font-style: normal;
 }
 
+pre,
+code {
+  font-family: "JetBrains Mono", monospace;
+}
+
 h1,
 h2,
 h3,

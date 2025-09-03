@@ -204,11 +204,6 @@ pre::-webkit-scrollbar-thumb {
   background-color: var(--color-80);
 }
 
-pre,
-code {
-  font-family: "Inconsolata", monospace;
-}
-
 pre code {
   background: transparent;
   padding: 0;
