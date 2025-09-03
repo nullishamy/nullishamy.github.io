@@ -16,7 +16,8 @@ If only.
 The first thing we set out to do was automate our deployment of the agent. We have ~300 user endpoints to do, so automation is a must. We currently use [PDQ Deploy](https://www.pdq.com/pdq-deploy/) for this, a fairly standard tool.
 
 Cloudflare provides an MSI, configured through variables. Great, we'll just set the variables, run the installer and. Oh, we already have our first problem.
-<img src="/images/posts/warp/warp-webview-error.png" alt="an error box which reads 'Microsoft Edge can't read and write to it's data directory' title="The WebView2 error" style="width: 75%; margin: auto;">
+
+<img src="/images/posts/warp/warp-webview-error.png" alt="an error box which reads 'Microsoft Edge can't read and write to it's data directory'" title="The WebView2 error" style="width: 75%; margin: auto;">
 
 WARP uses Microsoft's [WebView2](https://developer.microsoft.com/en-us/Microsoft-edge/webview2/) to render its sign-in prompts, but when deployed through PDQ, it tries to write into the domain admin account used for installation.
 
