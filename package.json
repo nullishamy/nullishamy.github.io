@@ -1,43 +1,55 @@
 {
-  "name": "eleventy-duo",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "@11ty/eleventy-img": "^4.0.2",
-    "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-    "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.4",
-    "@fullhuman/postcss-purgecss": "^6.0.0",
-    "autoprefixer": "^10.4.20",
-    "babel-loader": "^9.1.3",
-    "css-loader": "^7.1.2",
-    "cssnano": "^7.0.6",
-    "eleventy-plugin-reading-time": "^0.0.1",
-    "mini-css-extract-plugin": "^2.9.1",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.45",
-    "postcss-import": "^16.1.0",
-    "postcss-loader": "^8.1.1",
-    "postcss-preset-env": "^10.0.2",
-    "terser-webpack-plugin": "^5.3.10",
-    "webpack": "^5.94.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-manifest-plugin": "^5.0.0"
-  },
+  "name": "eleventy-plus-vite",
+  "version": "1.2.0",
+  "type": "module",
+  "description": "A clean and simple Eleventy 2 Starter Kit with Vite",
+  "browserslist": [
+    "> 0.5%",
+    "not IE 11"
+  ],
   "scripts": {
-    "dev": "run-p dev:*",
-    "start": "eleventy --serve",
-    "build": "run-s clean build:assets build:site",
-    "dev:assets": "env ELEVENTY_ENV=development webpack --mode production --watch",
-    "dev:site": "env ELEVENTY_ENV=development eleventy --serve",
-    "build:assets": "webpack --mode production",
-    "build:site": "env ELEVENTY_ENV=production eleventy",
-    "clean": "rm -rf ./public"
+    "start": "env ELEVENTY_ENV=development eleventy --serve",
+    "watch": "env ELEVENTY_ENV=development eleventy --watch",
+    "serve": "env ELEVENTY_ENV=development eleventy --serve",
+    "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+    "build": "env ELEVENTY_ENV=production eleventy",
+    "clean": "del-cli _site",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
-    "remove": "^0.1.5"
+  "repository": {
+    "type": "git",
+    "url": "git+https://matthiasott@github.com/matthiasott/11ty22.git"
+  },
+  "author": "Matthias Ott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthiasott/11ty22/issues"
+  },
+  "homepage": "https://github.com/matthiasott/11ty22#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0-beta.1",
+    "@11ty/eleventy-img": "^4.0.2",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "@11ty/eleventy-plugin-vite": "^5.0.0-alpha.1",
+    "@types/markdown-it": "^14.1.2",
+    "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.5",
+    "cssremedy": "^0.1.0-beta.2",
+    "del-cli": "^5.1.0",
+    "eleventy-plugin-reading-time": "^0.0.1",
+    "eslint": "^8.57.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "luxon": "^3.5.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "postcss-nesting": "^13.0.0",
+    "vite": "^5.4.1"
   }
 }

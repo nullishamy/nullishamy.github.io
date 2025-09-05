@@ -1,133 +1,127 @@
-const { DateTime } = require('luxon');
-const readingTime = require('eleventy-plugin-reading-time');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const fs = require('fs');
-const path = require('path');
+import markdownIt from 'markdown-it'
+import markdownItAnchor from 'markdown-it-anchor'
 
-const isDev = process.env.ELEVENTY_ENV === 'development';
-const isProd = process.env.ELEVENTY_ENV === 'production'
+import EleventyPluginNavigation from '@11ty/eleventy-navigation';
+import EleventyPluginRss from '@11ty/eleventy-plugin-rss'
+import EleventyPluginSyntaxhighlight from '@11ty/eleventy-plugin-syntaxhighlight'
+import EleventyVitePlugin from '@11ty/eleventy-plugin-vite'
+import EleventyReadingTimePlugin from 'eleventy-plugin-reading-time'
 
-const manifestPath = path.resolve(
-  __dirname,
-  'public',
-  'assets',
-  'manifest.json'
-);
+import filters from './utils/filters.js'
+import transforms from './utils/transforms.js'
+import shortcodes from './utils/shortcodes.js'
 
-const manifest = isDev
-  ? {
-      'main.js': '/assets/main.js',
-      'main.css': '/assets/main.css',
-    }
-  : JSON.parse(fs.readFileSync(manifestPath, { encoding: 'utf8' }));
+export default function (eleventyConfig) {
+	eleventyConfig.setServerPassthroughCopyBehavior('copy');
+	eleventyConfig.addPassthroughCopy("public");
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(readingTime);
-  eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(syntaxHighlight);
+	// Plugins
+	eleventyConfig.addPlugin(EleventyPluginNavigation)
+	eleventyConfig.addPlugin(EleventyPluginRss)
+	eleventyConfig.addPlugin(EleventyPluginSyntaxhighlight)
+	eleventyConfig.addPlugin(EleventyReadingTimePlugin)
+	
+	eleventyConfig.addPlugin(EleventyVitePlugin, {
+		tempFolderName: '.11ty-vite', // Default name of the temp folder
 
-  // setup mermaid markdown highlighter
-  const highlighter = eleventyConfig.markdownHighlighter;
-  eleventyConfig.addMarkdownHighlighter((str, language) => {
-    if (language === 'mermaid') {
-      return `<pre class="mermaid">${str}</pre>`;
-    }
-    return highlighter(str, language);
-  });
+		// Vite options (equal to vite.config.js inside project root)
+		viteOptions: {
+			publicDir: 'public',
+			clearScreen: false,
+			server: {
+				mode: 'development',
+				middlewareMode: true,
+			},
+			appType: 'custom',
+			assetsInclude: ['**/*.xml', '**/*.txt'],
+			build: {
+				mode: 'production',
+				sourcemap: 'true',
+				manifest: true,
+				// This puts CSS in subfolders
+				rollupOptions: {
+					output: {
+						assetFileNames: 'assets/css/main.[hash].css'
+					},
+					plugins: []
+				}
+			}
+		}
+	})
 
-  eleventyConfig.setDataDeepMerge(true);
-  eleventyConfig.addPassthroughCopy({ 'src/images': 'images' });
-  eleventyConfig.setBrowserSyncConfig({ files: [manifestPath] });
+    // Filters
+	Object.keys(filters).forEach((filterName) => {
+		eleventyConfig.addFilter(filterName, filters[filterName])
+	})
 
-  eleventyConfig.addShortcode('bundledcss', function () {
-    return manifest['main.css']
-      ? `<link href="${manifest['main.css']}" rel="stylesheet" />`
-      : '';
-  });
+	// Transforms
+	Object.keys(transforms).forEach((transformName) => {
+		eleventyConfig.addTransform(transformName, transforms[transformName])
+	})
 
-  eleventyConfig.addShortcode('bundledjs', function () {
-    return manifest['main.js']
-      ? `<script src="${manifest['main.js']}"></script>`
-      : '';
-  });
+	// Shortcodes
+	Object.keys(shortcodes).forEach((shortcodeName) => {
+		eleventyConfig.addShortcode(shortcodeName, shortcodes[shortcodeName])
+	})
 
-  eleventyConfig.addFilter('excerpt', (post) => {
-    const content = post.replace(/(<([^>]+)>)/gi, '');
-    return content.substr(0, content.lastIndexOf(' ', 200)) + '...';
-  });
+	eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`)
 
-  eleventyConfig.addFilter('readableDate', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat(
-      'dd LLL yyyy'
-    );
-  });
+	// Customize Markdown library and settings:
+	let markdownLibrary = markdownIt({
+		html: true,
+		breaks: true,
+		linkify: true
+	}).use(markdownItAnchor, {
+		permalink: markdownItAnchor.permalink.ariaHidden({
+			placement: 'before',
+			class: 'direct-link',
+			symbol: '#',
+		}),
+		level: 2,
+		slugify: eleventyConfig.getFilter('slug')
+	})
+	eleventyConfig.setLibrary('md', markdownLibrary)
 
-  eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd');
-  });
+	// Layouts
+	eleventyConfig.addLayoutAlias('base', 'base.njk')
+	eleventyConfig.addLayoutAlias('post', 'post.njk')
 
-  eleventyConfig.addFilter('dateToIso', (dateString) => {
-    return new Date(dateString).toISOString()
-  });
+	// Copy/pass-through files
+	eleventyConfig.addPassthroughCopy('src/assets/css')
+	eleventyConfig.addPassthroughCopy('src/assets/js')
 
-  eleventyConfig.addFilter('head', (array, n) => {
-    if (n < 0) {
-      return array.slice(n);
-    }
-
-    return array.slice(0, n);
-  });
-
-  eleventyConfig.addCollection('tagList', function (collection) {
-    let tagSet = new Set();
-    collection.getAll().forEach(function (item) {
-      if ('tags' in item.data) {
-        let tags = item.data.tags;
-
-        tags = tags.filter(function (item) {
-          switch (item) {
-            case 'all':
-            case 'nav':
-            case 'post':
-            case 'posts':
-              return false;
-          }
-
-          return true;
-        });
-
-        for (const tag of tags) {
-          tagSet.add(tag);
+    // Collection of unique tags
+    eleventyConfig.addCollection('tagList', function (collection) {
+      let tagSet = new Set();
+	  const ignoreTags = [
+	    'all',
+		'nav',
+		'post',
+		'posts'
+      ]
+	  
+      collection.getAll().forEach(item => {
+        if ('tags' in item.data) {
+          item.data.tags
+		    .filter(tag => !ignoreTags.includes(tag))
+		    .forEach(tag => tagSet.add(tag))
         }
-      }
+      });
+
+      return [...tagSet];
     });
 
-    return [...tagSet];
-  });
-
-  eleventyConfig.addFilter('pageTags', (tags) => {
-    const generalTags = ['all', 'nav', 'post', 'posts'];
-
-    return tags
-      .toString()
-      .split(',')
-      .filter((tag) => {
-        return !generalTags.includes(tag);
-      });
-  });
-
-  return {
-    dir: {
-      input: 'src',
-      output: 'public',
-      includes: 'includes',
-      data: 'data',
-      layouts: 'layouts'
-    },
-    passthroughFileCopy: true,
-    templateFormats: ['html', 'njk', 'md'],
-    htmlTemplateEngine: 'njk',
-    markdownTemplateEngine: 'njk',
-  };
-};
+	return {
+		templateFormats: ['md', 'njk', 'html', 'liquid'],
+		htmlTemplateEngine: 'njk',
+		passthroughFileCopy: true,
+		dir: {
+			input: 'src',
+			// better not use "public" as the name of the output folder (see above...)
+			output: '_site',
+			includes: '_includes',
+			layouts: 'layouts',
+			data: '_data'
+		}
+	}
+}

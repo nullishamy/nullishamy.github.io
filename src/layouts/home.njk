@@ -1,7 +1,6 @@
 ---
 layout: base
 ---
-
 <header class="hero">
   <div class="hero-content">
     <div class="intro">
@@ -24,13 +23,12 @@ layout: base
       </ul>
     {% endif %}
   </div>
-
 </header>
 
 <section class="post-list__wrapper">
   <h2 class="post-list__heading">Recent Posts</h2>
 
-  {% set postslist = collections.posts | head(-10) %}
+  {% set postslist = collections.posts | head(-3) %}
   {% include "posts-list.njk" %}
 
 </section>

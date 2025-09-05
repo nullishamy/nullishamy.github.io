@@ -7,7 +7,7 @@ layout: base.njk
     <h1>{{ title }}</h1>
     <div class="post__details">
       <time datetime="{{ page.date | htmlDateString }}">
-        {{ page.date | readableDate }}
+        {{ page.date | htmlDateString }}
       </time>
       <span> | </span>
       <span>{{ content | readingTime }} read</span>

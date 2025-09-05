@@ -6,13 +6,12 @@
     <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
     <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Feed">
 
-    {% bundledcss %}
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="/assets/css/main.css">
 
     <title>
       {{  title  | escape }}
@@ -23,7 +22,7 @@
       {% endif %}
     </title>
 
-    <link rel="icon" type= “image/x-icon” href="/images/favicon.png">
+    <link rel="icon" type= “image/x-icon” href="/favicon.png">
 
     <meta property="og:title" content="{{  title or site.name | escape }}">
     <meta property="og:site_name" content="{{ site.name }}"/>
@@ -52,11 +51,6 @@
       <meta property="og:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
       <meta name="twitter:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
     {% endif %}
-
-    {# Add mermaid -- start #}
-      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-      <script>mermaid.initialize({startOnLoad:true});</script>
-    {# Add mermaid -- end #}
   </head>
   <body>
     <div class="layout-wrapper">
@@ -65,7 +59,7 @@
         <div class="header__content">
           <h1 class="site-title">
             <a href={{ "/" | url }}>
-              {{site.name}}
+              {{ site.name }}
             </a>
           </h1>
 
@@ -147,7 +141,5 @@
       </div>
 
     </footer>
-
-    {% bundledjs %}
   </body>
 </html>

@@ -1,5 +1,6 @@
 ---
-permalink: /sitemap.xml
+# /public is to let Vite know that we want to retain it. Vite overwrites the entire output dir after eleventy
+permalink: /public/sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
@@ -9,9 +10,9 @@ eleventyExcludeFromCollections: true
       <url>
         <loc>{{ site.url }}{{ item.url | url }}</loc>
         {% if item.data.updated %}
-          <lastmod>{{ item.data.updated | dateToIso }}</lastmod>
+          <lastmod>{{ item.data.updated | dateToISO }}</lastmod>
         {% else %}
-          <lastmod>{{ item.date | dateToIso }}</lastmod>
+          <lastmod>{{ item.date | dateToISO }}</lastmod>
         {% endif %}
         {% if item.data.sitemap.changefreq %}
           <changefreq>{{ item.data.sitemap.changefreq }}</changefreq>

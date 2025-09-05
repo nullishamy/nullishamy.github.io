@@ -9,7 +9,7 @@ SSLVPN is one of Fortinet's free VPN offerings, integrating into their firewall 
 
 It does this by provisioning an IP address from the firewall for each client, attached to a virtual ethernet adapter on the device.
 
-![a diagram showing the architecture of the vpn, as described above, in picture form. it shows the traffic flowing through the firewall to an internal server](/images/posts/fortinet/vpn-architecture.png "traffic flowing from a client device, to the firewall, and to an internal server")
+![a diagram showing the architecture of the vpn, as described above, in picture form. it shows the traffic flowing through the firewall to an internal server](/public/posts/fortinet-ssl-vpn-stuck/vpn-architecture.png "traffic flowing from a client device, to the firewall, and to an internal server")
 
 ## the problem
 

@@ -23,7 +23,7 @@ This was compounded by an oversight in our [IP-Helper](https://networkengineerin
 
 Once I had located the DC the requests were actually landing at, I could see the DISCOVER but no corresponding OFFER. When looking at other subnets (identified through the origin address, which was their corresponding router), I could see the entire protocol working fine. This at least indicated, combined with a distinct lack of users breaking the door down, that DHCP broadly was intact.
 
-<img src="/images/posts/dhcp/dhcp-proto.png" alt="a diagram showing the normal flow for DHCP. it shows the DISCOVEr, OFFER, REQUEST, and ACKNOWLEDGE communication" title="the flow of DHCP when it is working as intended" style="width: 50%; margin: auto;">
+<img src="/public/posts/windows-dhcp-debug/dhcp-proto.png" alt="a diagram showing the normal flow for DHCP. it shows the DISCOVEr, OFFER, REQUEST, and ACKNOWLEDGE communication" title="the flow of DHCP when it is working as intended" style="width: 50%; margin: auto;">
 
 To finally nail down the problem, the Event Log can be used.
 Go to **Applications and Services Logs** > **Microsoft** > **Windows** > **DHCP-Server** and select the Admin log. 

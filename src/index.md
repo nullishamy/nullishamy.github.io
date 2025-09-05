@@ -30,13 +30,13 @@ In the near future I intend on exploring embedded hardware & RF with some home-a
 	</a>
 	<img 
 		alt="An 88x31 button. It is the trans flag" 
-		src="/images/88x31/trans.png"
+		src="/88x31/trans.png"
 		class="home-button"
 		onerror="this.style.display='none'"
 	>
 	<img 
 		alt="An 88x31 button. It is the asexual flag" 
-		src="/images/88x31/ace.png"
+		src="/88x31/ace.png"
 		class="home-button"
 		onerror="this.style.display='none'"
 	>

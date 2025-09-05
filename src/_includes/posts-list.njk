@@ -4,7 +4,7 @@
       <div>
         <div class="post-list__meta">
           <time datetime="{{ post.date | htmlDateString }}">
-            {{ post.date | readableDate }}
+            {{ post.date | htmlDateString }}
           </time>
           <span> | </span>
           <span>{{ post | readingTime }} read</span>

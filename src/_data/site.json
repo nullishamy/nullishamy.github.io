@@ -6,7 +6,7 @@
     "name": "amy erskine",
     "email": "contact@amyerskine.me"
   },
-  "defaultSocialImage": "/images/default-social-image.png",
+  "defaultSocialImage": "/me.png",
   "headerLinks": [
     {
       "text": "Blog",
