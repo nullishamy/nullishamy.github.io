@@ -29,6 +29,11 @@
       "text": "Fediverse",
       "url": "https://jvm.social/@amy",
       "external": true
+    },
+    {
+      "text": "Email",
+      "url": "mailto:contact@amyerskine.me",
+      "external": true
     }
   ],
   "footerLinks": [
