@@ -9,12 +9,12 @@
   "defaultSocialImage": "/me.png",
   "headerLinks": [
     {
-      "text": "Blog",
+      "text": "blog",
       "url": "/blog",
       "external": false
     },
     {
-      "text": "About",
+      "text": "about",
       "url": "/about",
       "external": false
     }

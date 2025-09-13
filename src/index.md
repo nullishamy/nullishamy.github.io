@@ -1,7 +1,8 @@
 ---
 layout: home
 title: 'blog'
-description: 'my little corner of the internet'
+eleventyComputed:
+  description: "{{ site.description }}"
 ---
 
 # hello, i'm amy
