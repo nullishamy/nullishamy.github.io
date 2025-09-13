@@ -1,6 +1,7 @@
 ---
 layout: home
 title: 'blog'
+description: 'my little corner of the internet'
 ---
 
 # hello, i'm amy
