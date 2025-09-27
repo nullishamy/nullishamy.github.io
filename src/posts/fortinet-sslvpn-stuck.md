@@ -19,7 +19,6 @@ The client was uninstalled, but the registry entry for the MSI product was still
 
 This also meant that the virtual adapter was no longer present, because the uninstaller had removed it, and the upgraded client installer would not restore it. The virtual adapter would be found in the "View network connections" Control Panel area.
 
-
 I suspect this is because the upgraded client detected the "existing" installation and did not want to break it. 
 
 The effect of the adapter being missing is that the VPN connection would never succeed, always timing out after doing its initial handshake and setup. On the firewall side this appears like the client connects, waits 30s and then disconnects. On the client side it gets to 98%, stalls for 30s, then goes back to the login screen.
