@@ -94,3 +94,5 @@ https:///%.*
 We have this set to autoban, but you could always play it cautious and use the integrated Automod functionality to hold these messages for moderators to come and take action. This completely neutralises the attack, with server members never even seeing the nasty link.
 
 As noted, however, we have not seen widespread adoption of this technique. Only a handful of accounts coming in to post it. Hopefully it stays this way, but I will be sure to write about any updates!
+
+There's a lot more to cover here, such as the infrastructure surrounding these campaigns, but that's for another time...
