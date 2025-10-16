@@ -28,15 +28,15 @@ We've seen this link masking being used maliciously for a long while now, ever s
 
 Blocking the feature entirely means that if you want to obscure a link in our server, you're going to have to get creative. That's where the novel bypass comes in. It relies on some very specific markdown parse/render behaviour within Discord.
 
-Here's a sample of a link:
+Here's a sample of a link we've seen used in the wild:
 ```
-<TODO: SAMPLE>
+https:///%6e%65%74%77%6f%72%6b%2d%75%6e%69%73%77%61%70%2e%77%65%62%2e%61%70%70
 ```
 
 You might be wondering, what the hell is going on here?? This looks *kind of* link a link, but surely end users would notice the deranged formatting...
 
 They would, if it rendered like you see it here. Unfortunately, Discord actually decodes the urlencoded format and renders it properly. Shown below
-<TODO: INSERT IMAGE OF RENDER>
+<img src="/posts/moderation/link-posted.png" alt="A Discord message posted by me that has the link 'https://network-uniswap.web.app/' in it, which is what gets rendered by Discord instead of the urlencoded garbage described previously" title="The rendered link" style="width: 75%; margin: auto;">
 
 The important part of this is the triple slash, `https:///`, this is what allows the urlencoded text to be rendered in the app. I'm truthfully not very sure why this is the case, and would love some relevant specs/info on why this is the way it is.
 
@@ -57,12 +57,32 @@ We can still take this further, though. When using the urlencoded text concept, 
 
 Using all of these techniques, we can create this amusing "link":
 ```
-<TODO: INSERT HELL LINK>
+<https:///%68t
+%74p
+:/
+/e
+%78a
+%6Dp
+%6Ce
+%2Ec
+%6Fm
+/t
+%65s
+%74?
+%70a
+%
+72a
+%6D=
+%
+76a
+%
+6Cu
+%65>
 ```
 
 Either by chance or by design, you "unfortunately" can't combine link masking with the urlencoding syntax. This is the only good thing Discord has done in terms of their Markdown renderer regarding this.
 
-Naturally, I wrote a script to take a normal link and convert it to this hellish incantation, you can find it here <TODO: GIST OF PYTHON>. You can of course include parameters in your obfuscated URL, if you wanted tracking info or similar.
+Naturally, I wrote a script to take a normal link and convert it to this hellish incantation, you can find it [in a Gist here](https://gist.github.com/nullishamy/ca67c0764f8ae4cede6dde109b6da137). You can of course include parameters in your obfuscated URL, if you wanted tracking info or similar.
 
 We haven't seen this technique taken to the extreme in the real world, though other admins have made online posts showing the `<>` newline technique being used in the past.
 
