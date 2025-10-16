@@ -66,4 +66,11 @@ In the near future I intend on exploring embedded hardware & RF with some home-a
 	</a>
 </section>
 
+<a href="https://amy.is-a.dev">this blog</a> © 2025 by amy erskine is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>this includes the text, images, video and any other media posted.
+<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+
+the source code behind the blog is licensed under the [OSL 3.0](https://opensource.org/license/osl-3-0-php) license.
 ---
