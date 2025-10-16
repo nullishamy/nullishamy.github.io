@@ -19,11 +19,28 @@
 }
 
 .footer__content > * {
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+
+.footer__license {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer__license:not(:first-child) {
+  font-size: var(--text-sm);
 }
 
 .footer__attribution {
   font-size: var(--text-sm);
+}
+
+.footer__license-badge {
+  max-width: 1em;
+  max-height:1em;
+  margin-left: .2em;
+  display: inline;
 }
 
 .footer ul {
