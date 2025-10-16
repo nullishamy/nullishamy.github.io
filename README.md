@@ -6,5 +6,4 @@ based on https://github.com/yinkakun/eleventy-duo and https://github.com/matthia
 
 ## drafting procedure
 
-set `eleventyExcludeFromCollections: true` in frontmatter of post and title/URL it something
-random so that it can't be trivially found
+set `eleventyExcludeFromCollections: true` in frontmatter of post and title/URL it something random so that it can't be trivially found
