@@ -22,17 +22,13 @@
   margin-top: 1rem;
 }
 
-.footer__license {
+.footer__subtext {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
 }
 
-.footer__license:not(:first-child) {
-  font-size: var(--text-sm);
-}
-
-.footer__attribution {
+.footer__subtext > * {
   font-size: var(--text-sm);
 }
 

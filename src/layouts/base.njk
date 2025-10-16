@@ -127,18 +127,8 @@
               {% endfor %}
             {% endif %}
           </ul>
-
-          {% if site.showFooterAttribution %}
-            <p class="footer__attribution">
-          Created by
-      <a href="https://twitter.com/yinkakun" target="_blank" rel="noopener">Yinka,</a>
-       Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener">11ty,</a>
-        Checkout <a href="https://github.com/yinkakun/eleventy-duo" target="_blank" rel="noopener noreferrer">the project's github repo </a>
-            </p>
-          {% endif %}
-
-            <div class="footer__license">
-              <span>
+          <div class="footer__subtext">
+            <span>
                 <a href="https://amy.is-a.dev">this blog</a> © 2025 by amy erskine is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
                 <img class="footer__license-badge" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="CC">
                 <img class="footer__license-badge" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="BY">
@@ -147,12 +137,20 @@
               </span>
               
               <span>this includes the text, images, video and any other media posted.</span>
-              <span><a href="https://github.com/nullishamy/nullishamy.github.io/">the source code</a> behind the blog is licensed under the <a href="https://opensource.org/license/osl-3-0-php">OSL 3.0</a> license.</span>
+              <span>
+                <a href="https://github.com/nullishamy/nullishamy.github.io/">the source code</a> behind the blog is licensed under the
+                <a href="https://opensource.org/license/mit">MIT</a> license as per the upstream.
+              </span>
+              {% if site.showFooterAttribution %}
+                <p>
+                  Theme created by <a href="https://twitter.com/yinkakun" target="_blank" rel="noopener">Yinka,</a>
+                  Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener">11ty,</a>
+                  Checkout <a href="https://github.com/yinkakun/eleventy-duo" target="_blank" rel="noopener noreferrer">the project's github repo </a>
+                </p>
+              {% endif %}
           </div>
-
         </div>
       </div>
-
     </footer>
   </body>
 </html>
