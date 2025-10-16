@@ -4,7 +4,6 @@ description: a novel technique for filter bypassing
 permalink: posts/moderation/{{ title | slugify }}/index.html
 date: '2025-10-16'
 tags: [moderation]
-eleventyExcludeFromCollections: true
 ---
 A new novel technique for phishing URLs has come onto my radar recently.
 
