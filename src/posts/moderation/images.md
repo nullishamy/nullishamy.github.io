@@ -21,7 +21,7 @@ I got 3000$ from MrBeast  :thumbsup:
 [bbc.com/news/articles/c74n9wez7k8o](<bad link>)
 ```
 
-<img src="/posts/moderation/single-image-scam.png" alt="a sample of the mr beast scam showing a fake news article with a link to go to" title="sample payload" style="width: 75%; margin: auto;">
+<img src="/posts/moderation/single-image-scam.png" alt="a sample of the mr beast scam showing a fake news article with a link to go to" title="sample payload" style="width: 75%; margin: auto; margin-top: 1rem;">
 
 In line with text-based scams, this was of course sprayed everywhere in a server. Our [previously discussed mitigation](/posts/moderation/online-moderation#mitigations) of a blanket masked link ban works wonders here.
 
