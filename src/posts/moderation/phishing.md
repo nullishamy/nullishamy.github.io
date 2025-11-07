@@ -1,5 +1,5 @@
 ---
-title: being an online moderator
+title: online moderation
 description: my experiences moderating a large Discord server
 permalink: posts/moderation/{{ title | slugify }}/index.html
 date: '2025-04-27'

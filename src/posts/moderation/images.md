@@ -21,7 +21,7 @@ I got 3000$ from MrBeast  :thumbsup:
 [bbc.com/news/articles/c74n9wez7k8o](<bad link>)
 ```
 
-In line with text-based scams, this was of course sprayed everywhere in a server. Our [previously discussed mitigation](/posts/moderation/phishing#mitigations) of a blanket masked link ban works wonders here.
+In line with text-based scams, this was of course sprayed everywhere in a server. Our [previously discussed mitigation](/posts/moderation/online-moderation#mitigations) of a blanket masked link ban works wonders here.
 
 There was soon a completely image based variant though, using CDN links again:
 ```
@@ -82,6 +82,6 @@ To provide some context, the rough timeline is this:
 
 ## conclusion
 The conclusion here is unfortunately dry as I cannot share how we solved this problem. Maybe at some future point we will be able to open source it. 
-It will be interesting to see how this technique evolves further, perhaps incorporating more of the URL encoding nonsense [I shared previously](/posts/moderation/url-deception).
+It will be interesting to see how this technique evolves further, perhaps incorporating more of the URL encoding nonsense [I shared previously](/posts/moderation/discord-url-deception).
 
 I can at least share that our in-house solution now stands at 1665 cases at time of writing, with ~20% of those being the new tech we developed to target this campaign. Pretty strong stuff.
