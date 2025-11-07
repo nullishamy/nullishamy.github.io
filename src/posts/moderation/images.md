@@ -8,8 +8,8 @@ tags: [moderation]
 Welcome back for the 3rd post in [this series](/tags/moderation/) in which we will now explore a new threat. Images.
 
 Since we previously explored various textual tactics employed by bad actors, there's been an emergence in using images to deliver the payload.
-This completely changes the game of detection and removal as we can no longer use simple string tooling to do our heuristics. Whilst I can't share what we do at TCD, I can at least say that we've 
-solved the problem of images.
+
+This completely changes the game of detection and removal as we can no longer use simple string tooling to do our heuristics. Whilst I can't share what we do at TCD, I can at least say that we've solved the problem of images.
 
 There's quite a variety of payloads to look at, so let's get started.
 
@@ -32,22 +32,22 @@ https://media.discordapp.net/attachments/1294380382661116045/1379563071722229872
 ```
 
 It is important to highlight that in both cases here CDN **links** are being used. We think this has a few benefits for the bad actors:
-- Server permissions
+1. Server permissions
 It's not uncommon for new members to a server to be blocked from posting media. It is however uncommon for *embeds* to also be blocked.
 You only need the latter for your CDN links to render.
 
-- Speed of spray
+2. Speed of spray
 It takes a long time (relatively) to upload pictures.
 It's also not hard to roll the links if it for some reason gets blocked, given how easy Discord servers are to make.
 
-- Platform integration
+3. Platform integration
 Discord will compress the visuals of a CDN link to make it more appealing in the client, this reduces the chances of someone spotting it.
 
 ## additional tech
 Whilst the core payload remains the same, we've seen yet more rapid development in delivery since initially dealing with the '4 image CDN' variant. 
 These include:
 
-- posting the 3rd party links verbatim
+1. posting the 3rd party links verbatim
 ```
 https://<bad CDN>/R4HX9jZN/image.png
 https://<bad CDN>/1txYh0fn/image.png
@@ -55,7 +55,7 @@ https://<bad CDN>/z11zS2W/image.png
 https://<bad CDN>/5WCfjZ6X/image.png
 ```
 
-- masking those links to a 3rd party CDN
+2. masking those links to a 3rd party CDN
 ```
 [image.png](https://<bad CDN>/d4fhK75V/1.jpg)
 [image.png](https://<bad CDN>/v49sDYM7/2.jpg)
@@ -63,7 +63,7 @@ https://<bad CDN>/5WCfjZ6X/image.png
 [image.png](https://<bad CDN>/Y43JG9hs/image4.jpg)
 ```
 
-- using more markdown hacks to hide the links
+3. using more markdown hacks to hide the links
 I've reduced the amount of pipes for your reading pleasure, but it's about 900 pipes.
 ```
 |||||​|| _ _ _ _ _ _  https://<bad CDN>/UHlJ7jO.png
