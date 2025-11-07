@@ -226,3 +226,8 @@ mark {
   white-space: nowrap;
   width: 1px;
 }
+
+ol > li > p, li > p {
+  /* Fix broken numbered lists */
+  display: inline;
+}
