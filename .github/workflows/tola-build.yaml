@@ -18,15 +18,15 @@ jobs:
       - name: Install tailwindcss
         run: |
           npm init -y
-          npm i -g tailwindcss
+          npm i tailwindcss
           
       - name: Tola build
         run: |
           wget 'https://github.com/tola-rs/tola-ssg/releases/download/v0.6.5/tola-x86_64-linux-static.tar.gz'
           tar xzvf tola-*
-          ls -lah
           chmod +x ./tola
-          ./tola build
+          ls -lah
+          PATH="./node_modules/.bin:$PATH" ./tola build
         
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
