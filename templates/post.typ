@@ -61,7 +61,8 @@
     let tags-view = if tags.len() > 0 {
         html.div(class: "flex flex-wrap justify-center gap-2 my-4")[
             #for tag in tags {
-                html.span(
+                html.a(
+                    href: "/tags/" + tag,
                     class: "px-2 py-1 text-sm bg-surface rounded text-accent",
                 )[#tag]
             }
