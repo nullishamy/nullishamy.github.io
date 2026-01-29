@@ -4,6 +4,7 @@
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    tola.url = "github:tola-ssg/tola-ssg/v0.6.5";
   };
 
   outputs = inputs@{ flake-parts, ... }:
@@ -23,7 +24,9 @@
           };
           
           packages = with pkgs; [
-            yarn
+            inputs.tola.packages.${pkgs.system}.default
+            tailwindcss_4
+            typstyle
           ]; 
         };
       };

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import 'tailwindcss';
+
+/* Tailwind CSS v4 configuration */
+@theme {
+    /* Custom colors */
+    --color-primary: #ea76cb;
+    --color-accent: #8839ef;
+    --color-bg: #eff1f5;
+    --color-surface: #e6e9ef;
+    --color-text: #4c4f69;
+    --color-muted: #6c6f85;
+
+    --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Base styles */
+@layer base {
+    html {
+        @apply scroll-smooth bg-bg text-text;
+        color-scheme: light;
+    }
+
+    body {
+        @apply antialiased min-h-screen;
+    }
+
+    a {
+        @apply text-accent hover:underline transition-colors;
+    }
+
+    code {
+        @apply bg-surface px-1.5 py-0.5 rounded text-sm;
+    }
+
+    pre {
+        @apply bg-surface p-2 rounded-lg overflow-x-auto;
+    }
+
+    pre code {
+        @apply bg-transparent p-0;
+    }
+
+    /* Table styles */
+    table {
+        @apply w-full border-collapse border-4 border-gray-600 my-4;
+    }
+
+    th,
+    td {
+        @apply border-4 border-gray-600 p-2 text-left;
+    }
+
+    th {
+        @apply bg-surface font-semibold;
+    }
+
+    p {
+        @apply mt-4;
+    }
+}

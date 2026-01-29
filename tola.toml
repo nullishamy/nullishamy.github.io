@@ -1,0 +1,58 @@
+[base]
+title = "amy's blog"
+author = "amy erskine"
+email = "contact@amyerskine.me"
+description = "my little blog"
+language = "en"
+url = "https://amy.is-a.dev"
+
+[build]
+content = "content"
+output = "public"
+assets = "assets"
+minify = true
+
+[build.rss]
+enable = true
+path = "feed.xml"
+
+[build.sitemap]
+enable = false
+path = "sitemap.xml"
+
+[build.slug]
+path = "safe"
+fragment = "full"
+separator = "dash"
+case = "lower"
+
+[build.typst]
+use_lib = true
+
+[build.typst.svg]
+extract_type = "embedded"
+dpi = 96.0
+
+[build.css]
+auto_enhance = true
+
+# Tailwind CSS - enabled by default in this template
+# Make sure tailwindcss is installed: npm install -g tailwindcss
+[build.css.tailwind]
+enable = true
+input = "assets/styles/tailwind.css"
+command = ["tailwindcss"]
+
+[build.head]
+icon = "assets/images/favicon.ico"
+# styles = ["assets/styles/custom.css"]
+# scripts = [{ path = "assets/scripts/app.js", defer = true }]
+# elements = ['<meta name="darkreader-lock">']
+
+[serve]
+interface = "127.0.0.1"
+port = 5277
+watch = true
+
+[extra]
+# Add custom data here

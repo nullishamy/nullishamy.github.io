@@ -1,0 +1,49 @@
+on:
+  workflow_dispatch:
+  push:
+    branches: 'main'
+  
+jobs:
+  build_site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+    
+      - name: Set Node.js 24.x
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      
+      - name: Install tailwindcss
+        run: |
+          npm init -y
+          npm i -g tailwindcss
+          
+      - name: Tola build
+        run: |
+          wget 'https://github.com/tola-rs/tola-ssg/releases/download/v0.6.5/tola-x86_64-linux.tar.gz'
+          tar xzvf tola*
+          ./tola build
+        
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
+  
+  deploy:
+    needs: build_site
+    runs-on: ubuntu-latest
+  
+    permissions:
+      pages: write
+      id-token: write
+  
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+  
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
