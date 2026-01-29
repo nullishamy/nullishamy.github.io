@@ -65,11 +65,11 @@
         }
     }
 
-    html.nav(class: "max-w-3xl mx-auto mt-2 mb-2 flex flex-row items-center")[
+    html.nav(class: "max-w-3xl mx-auto mt-2 mb-2 flex flex-row items-center gap-4")[
         #html.a(href: "/")[amy erskine]
         #html.div(class: "flex-grow")
-        #html.a(class: "w-full mb-8 text-accent", href: "/posts")[posts]
-        #html.a(class: "w-full mb-8 text-accent", href: "/feed.xml")[rss]
+        #html.a(class: "mx-1", href: "/posts")[posts]
+        #html.a(class: "mx-1", href: "/feed.xml")[rss]
     ]
 
     html.main(class: "max-w-3xl mx-auto mb-16")[
