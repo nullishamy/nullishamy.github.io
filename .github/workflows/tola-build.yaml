@@ -24,6 +24,8 @@ jobs:
         run: |
           wget 'https://github.com/tola-rs/tola-ssg/releases/download/v0.6.5/tola-x86_64-linux.tar.gz'
           tar xzvf tola-*
+          ls -lah
+          chmod +x ./tola
           ./tola build
         
       - name: Upload Artifacts
