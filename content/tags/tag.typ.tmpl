@@ -1,0 +1,7 @@
+#import "/templates/tag.typ": tag-listing
+
+#let args = (
+    tag: "{TAG}"
+)
+
+#show: tag-listing.with(..args)

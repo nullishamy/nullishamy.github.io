@@ -10,22 +10,36 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
     
-      - name: Set Node.js 24.x
+      - name: Setup Node.js 24.x
         uses: actions/setup-node@v6
         with:
           node-version: 24
+          
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: lts
       
       - name: Install tailwindcss
         run: |
           npm init -y
           npm i tailwindcss @tailwindcss/cli
           
-      - name: Tola build
+      - name: Tola build (data files)
         run: |
           wget 'https://github.com/tola-rs/tola-ssg/releases/download/v0.6.5/tola-x86_64-linux-static.tar.gz'
           tar xzvf tola-*
           chmod +x ./tola
           ls -lah
+          PATH="./node_modules/.bin:$PATH" ./tola build
+          
+      - name: Tag generation
+        run: |
+          cd scripts
+          deno run -A gen-tags.ts
+          
+      - name: Tola build (final)
+        run: |
           PATH="./node_modules/.bin:$PATH" ./tola build
         
       - name: Upload Artifacts

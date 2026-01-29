@@ -27,6 +27,7 @@
             inputs.tola.packages.${pkgs.system}.default
             tailwindcss_4
             typstyle
+            deno
           ]; 
         };
       };
