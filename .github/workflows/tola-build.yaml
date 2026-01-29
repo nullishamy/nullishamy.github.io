@@ -18,7 +18,7 @@ jobs:
       - name: Install tailwindcss
         run: |
           npm init -y
-          npm i tailwindcss
+          npm i tailwindcss @tailwindcss/cli
           
       - name: Tola build
         run: |
