@@ -65,19 +65,19 @@
         }
     }
 
-    html.nav(class: "max-w-3xl mx-auto mt-2 mb-2 flex flex-row items-center gap-4")[
+    html.nav(class: "mx-4 md:max-w-3xl md:mx-auto mt-2 mb-2 flex flex-row items-center gap-4")[
         #html.a(href: "/")[amy erskine]
         #html.div(class: "flex-grow")
         #html.a(class: "mx-1", href: "/posts")[posts]
         #html.a(class: "mx-1", href: "/feed.xml")[rss]
     ]
 
-    html.main(class: "max-w-3xl mx-auto mb-16")[
+    html.main(class: "mx-4 md:max-w-3xl md:mx-auto mb-16")[
         #html.hr(class: "w-full mb-8 text-text/50")
         #body
     ]
 
-    html.footer(class: "flex flex-col max-w-3xl mx-auto mb-24")[
+    html.footer(class: "flex flex-col mx-4 md:max-w-3xl md:mx-auto mb-24")[
         #html.hr(class: "w-full mb-4 text-text/50")
         the content of #link("https://amy.is-a.dev/")[this blog] © 2025 by amy erskine is licensed under #link("https://creativecommons.org/licenses/by-nc-sa/4.0/")[CC BY-NC-SA 4.0]
         #box[#html.img(
