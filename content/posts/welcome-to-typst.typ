@@ -2,7 +2,7 @@
 #import "/utils/helpers.typ" as utils
 
 #let args = (
-    title: "hello world",
+    title: "welcome to typst",
     date: "2026-01-29",
     author: "amy erskine",
     summary: [the first post!],
