@@ -13,10 +13,15 @@ In the near future I intend on exploring embedded hardware & RF with some home-a
 
 #utils.hr
 
+#let icon-with-dest(link, dest, alt) = html.div[#html.a(href: dest, target: "_blank", style: "height: 31px; width: 88px; display: block")[#html.img(
+    src: link,
+    alt: alt,
+)]]
+
 #let icon(link, alt) = html.img(
     src: link,
     alt: alt,
-    style: "height: 31px; width: 88px",
+    style: "height: 31px; width: 88px"
 )
 
 #html.div(class: "flex flex-col gap-4")[
@@ -26,12 +31,14 @@ In the near future I intend on exploring embedded hardware & RF with some home-a
         #link("mailto:contact@amyerskine.me")[email]
     ]
     #html.div(class: "flex flex-row items-center gap-2")[
-        #icon(
+        #icon-with-dest(
             "https://linus.dev/images/88x31.png",
+            "https://linus.dev/",
             "An 88x31 button. A cartoonish penguin is on the left. Next to it is the text 'linus' in white letters.",
         )
-        #icon(
+        #icon-with-dest(
             "https://www.theresnotime.co.uk/button.png",
+            "https://www.theresnotime.co.uk/",
             "An 88x31 button. It features a cartoon fox face with the words 'TheresNoTime' on the bottom.",
         )
         #icon("/88x31/trans.png", "An 88x31 button. It is the trans flag")
