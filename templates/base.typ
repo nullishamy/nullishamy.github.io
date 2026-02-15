@@ -26,6 +26,7 @@
     )[#it.body]
     show link: it => html.a(
         href: repr(it.dest).replace("\"", ""),
+        target: "_blank"
     )[#it.body]
     show strike: it => html.del[#it.body]
     show image: html.frame

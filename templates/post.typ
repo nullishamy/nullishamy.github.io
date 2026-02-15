@@ -1,6 +1,46 @@
 #import "/templates/base.typ": base, colors
 #import "/utils/helpers.typ" as utils
 
+#let allendotes = state("endnotes", ())
+#let amt-of-endnotes = counter("amt-of-endnotes")
+
+#let endnote(cnt) = {
+    amt-of-endnotes.step(level: 2)
+    context {
+        allendotes.update(x => x + (cnt + parbreak(),))
+    
+        let currheading = counter(heading).get().first()
+        let idx = amt-of-endnotes.get().last()
+    
+        link("#fn-" + str(idx))[#super[#idx]]
+    }
+}
+
+#let showendnote(name: "references") = context {
+    if amt-of-endnotes.get().len() == 1 {
+        return
+    }
+
+    utils.hr
+
+    let currheading = counter(heading).get().first()
+    let (level, amt) = amt-of-endnotes.get()
+
+    html.ul[
+        #for idx in range(amt) {
+            let num = str(level) + "." + str(idx + 1)
+    
+            html.li(id: "fn-" + str(idx + 1))[
+                #super[#(idx + 1)]
+                #allendotes.get().at(idx) #label(num)
+            ]
+        }    
+    ]
+    
+    amt-of-endnotes.step()
+    allendotes.update(x => ())
+}
+
 #let post(
     title: none,
     date: none,
@@ -74,4 +114,6 @@
     html.article[
         #title-view #subtitle-view #tags-view #summary-view #utils.hr #body
     ]
+    
+    showendnote()
 }

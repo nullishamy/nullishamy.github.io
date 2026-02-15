@@ -2,7 +2,6 @@
 #import "/utils/helpers.typ" as utils
 #import "/utils/callout.typ" as callout
 
-
 #let args = (
     title: "Scamming as a Service",
     date: "2026-02-02",
