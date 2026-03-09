@@ -248,7 +248,7 @@
   username: none,
   gender: none,
   // Twitter
-  twitter-card: "summary_large_image",
+  twitter-card: "summary",
   twitter-site: none,
   twitter-creator: none,
 ) = context {
