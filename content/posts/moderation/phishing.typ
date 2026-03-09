@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "online moderation",
-    date: "2025-04-27",
+    date: parse-date("2025-04-27"),
     author: "amy erskine",
     summary: [my experiences moderating a large Discord server],
     tags: ("moderation",),

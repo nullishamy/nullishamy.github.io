@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "discord url deception",
-    date: "2025-10-16",
+    date: parse-date("2025-10-16"),
     author: "amy erskine",
     summary: [a novel technique for filter bypassing],
     tags: ("moderation",),

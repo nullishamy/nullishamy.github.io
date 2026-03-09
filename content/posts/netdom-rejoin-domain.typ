@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "restore Windows domain connection",
-    date: "2025-09-05",
+    date: parse-date("2025-09-05"),
     author: "amy erskine",
     summary: [reestablish the secure channel through the CLI],
     tags: ("tidbits", "windows"),

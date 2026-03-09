@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "the accounts",
-    date: "2026-02-15",
+    date: parse-date("2026-02-15"),
     author: "amy erskine",
     summary: [some analysis of the accounts posting scams],
     tags: ("moderation",),

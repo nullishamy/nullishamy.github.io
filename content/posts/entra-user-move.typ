@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "moving on-prem users to Entra",
-    date: "2025-09-05",
+    date: parse-date("2025-09-05"),
     author: "amy erskine",
     summary: [how to migrate your Active Directory users],
     tags: ("tidbits", "microsoft"),
@@ -52,7 +52,7 @@ $body = @{
 Invoke-MgGraphRequest -Method PATCH -Uri "https://graph.microsoft.com/v1.0/users/$userId" -Body $body
 ```
 
-This will **break** the on-premise link. Be sure you're operating on the right accounts.
+This will *break* the on-premise link. Be sure you're operating on the right accounts.
 
 Wait for the Exchange mailboxes to get assigned, then verify they are all set to SharedMailbox mode:
 ```powershell

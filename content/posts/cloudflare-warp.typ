@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "warp madness",
-    date: "2025-09-04",
+    date: parse-date("2025-09-04"),
     author: "amy erskine",
     summary: [trials and tribulations of cloudflare warp],
     tags: ("networking", "cloudflare"),

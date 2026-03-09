@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "debugging Windows DHCP",
-    date: "2025-08-19",
+    date: parse-date("2025-08-19"),
     author: "amy erskine",
     summary: [ipconfig intensifies],
     tags: ("tidbits", "networking", "windows"),

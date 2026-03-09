@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "SSLVPN stuck at 98%",
-    date: "2025-08-11",
+    date: parse-date("2025-08-11"),
     author: "amy erskine",
     summary: [troubleshooting Fortinet's SSLVPN],
     tags: ("tidbits", "networking", "fortinet"),

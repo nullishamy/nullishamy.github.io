@@ -1,4 +1,8 @@
-#import "/utils/helpers.typ" as utils
+// Base template with shared configuration and layout
+// Import: #import "/templates/base.typ": base, colors
+
+#import "/templates/tola.typ" as tola
+#import "/utils/tola.typ": cls
 
 #let colors = (
     accent: "text-accent",

@@ -1,10 +1,10 @@
 #import "/templates/post.typ": post, endnote
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 #import "/utils/callout.typ" as callout
 
 #let args = (
     title: "E2EE, the be all and end all of chat?",
-    date: "2026-02-15",
+    date: parse-date("2026-02-15"),
     author: "amy erskine",
     summary: [why a Discord replacement does not need E2EE],
     tags: ("encryption", "privacy", "discord"),

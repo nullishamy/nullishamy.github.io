@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "stop your ThinkPad from dozing off",
-    date: "2025-09-15",
+    date: parse-date("2025-09-15"),
     author: "amy erskine",
     summary: [modern standby and its consequences],
     tags: ("tidbits", "windows"),

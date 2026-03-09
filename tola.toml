@@ -1,4 +1,10 @@
-[base]
+# Tola configuration file (v0.7.0)
+# https://github.com/tola-rs/tola-ssg
+
+# Site metadata for feed generation and Typst templates
+# Access in Typst via `#import "@tola/site:0.0.0": info`
+# For custom fields, use `[site.info.extra]` and access via `info.extra.xxx`
+[site.info]
 title = "amy's blog"
 author = "amy erskine"
 email = "contact@amyerskine.me"
@@ -6,19 +12,62 @@ description = "my little blog"
 language = "en"
 url = "https://amy.is-a.dev"
 
-[build]
-content = "content"
-output = "public"
-assets = "assets"
-minify = true
+# SEO configuration containing feed, sitemap, and OG tag settings
+[site.seo]
+auto_og = false  # Auto-inject OG meta tags (can be overridden in Typst)
 
-[build.rss]
-enable = true
-path = "feed.xml"
+# Feed generation settings (RSS/Atom)
+[site.seo.feed]
+enable = true  # Enable feed generation
+path = "feed.xml"  # Output path for feed file
+format = "rss"  # Feed format: rss | atom
 
-[build.sitemap]
-enable = false
-path = "sitemap.xml"
+# Sitemap generation settings
+[site.seo.sitemap]
+enable = true  # Enable sitemap generation
+path = "sitemap.xml"  # Output path for sitemap file
+
+[site.header]
+# Inject a dummy script to prevent FOUC (Flash of Unstyled Content).
+# The script blocks rendering briefly, giving CSS time to load.
+no_fouc = true
+# Favicon path (relative to site root).
+icon = "assets/images/favicon.ico"
+# CSS stylesheet paths (relative to site root).
+styles = ["assets/styles/tailwind.css"]
+# Script entries (relative to site root).
+scripts = []
+# Raw HTML elements to insert into head.
+elements = []
+
+[build.assets]
+# Nested directories (preserve structure).
+# Each directory is copied to `output/{basename}/`.
+# Files inside can be referenced as `/{basename}/path/to/file`.
+# Examples:
+# - `"assets"` -> `/assets/xxx`
+# - `"assets/styles"` -> `/styles/xxx`
+# - `{ dir = "vendor", as = "lib" }` -> `/lib/xxx`
+nested = [
+  "assets/posts",
+  "assets/styles",
+  "assets/images",
+  "assets/fonts",
+  "assets/88x31"
+]
+# Flatten files (copy to output root).
+# Each file is copied directly to `output/{basename}`.
+# Examples:
+# - `"assets/CNAME"` -> `/CNAME`
+# - `{ file = "icons/fav.ico", as = "favicon.ico" }` -> `/favicon.ico`
+flatten = []
+
+# CSS processor hook (Only tailwind now)
+[build.hooks.css]
+enable = true  # Enable Tailwind CSS processing
+# Output asset path (also used as Tailwind input file location)
+path = "assets/styles/tailwind.css"  # e.g. "assets/style/tailwind.css"
+command = ["tailwindcss"]  # e.g. ["npx", "tailwindcss"] if you want
 
 [build.slug]
 path = "safe"
@@ -26,36 +75,23 @@ fragment = "full"
 separator = "dash"
 case = "lower"
 
-[build.typst]
-use_lib = true
-
-[build.typst.svg]
-extract_type = "embedded"
-dpi = 96.0
-
-[build.css]
-auto_enhance = true
-
-# Tailwind CSS - enabled by default in this template
-# Make sure tailwindcss is installed: npm install -g tailwindcss
-[build.css.tailwind]
-enable = true
-input = "assets/styles/tailwind.css"
-command = ["tailwindcss"]
-
-[build.head]
-icon = "assets/images/favicon.ico"
-# styles = ["assets/styles/custom.css"]
-# scripts = [{ path = "assets/scripts/app.js", defer = true }]
-
-# dummy script to stop FOUC
-# https://stackoverflow.com/questions/21147149/flash-of-unstyled-content-fouc-in-firefox-only-is-ff-slow-renderer
-elements = ['<script>0</script>']
-
+# Development server settings
 [serve]
+# Network interface to bind
+# - `127.0.0.1` (default): localhost only
+# - `0.0.0.0`: all interfaces (LAN accessible)
 interface = "127.0.0.1"
-port = 5277
-watch = true
+port = 5277  # HTTP port number
+watch = true  # Enable file watcher for live reload
+# Respect path_prefix from site.url during local development
+# - `false` (default): Ignore prefix, access pages at `/`
+# - `true`: Keep prefix, access at `/my-project/`
+respect_prefix = false
 
-[extra]
-# Add custom data here
+[validate.pages]
+enable = true  # Enable page link validation
+level = "error"  # Failure level: error | warn
+
+[validate.assets]
+enable = true  # Enable asset validation
+level = "error"  # Failure level: error | warn

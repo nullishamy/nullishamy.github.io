@@ -27,11 +27,11 @@ jobs:
           
       - name: Tola build (data files)
         run: |
-          wget 'https://github.com/tola-rs/tola-ssg/releases/download/v0.6.5/tola-x86_64-linux-static.tar.gz'
+          wget 'https://github.com/tola-rs/tola-ssg/releases/download/v0.7.0/tola-x86_64-linux-static.tar.gz'
           tar xzvf tola-*
           chmod +x ./tola
           ls -lah
-          PATH="./node_modules/.bin:$PATH" ./tola build
+          PATH="./node_modules/.bin:$PATH" ./tola query --output data.json
           
       - name: Tag generation
         run: |

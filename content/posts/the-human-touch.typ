@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "genai: the missing human touch",
-    date: "2025-09-13",
+    date: parse-date("2025-09-13"),
     author: "amy erskine",
     summary: [my experience on the receiving end of genai],
     tags: ("genai",),

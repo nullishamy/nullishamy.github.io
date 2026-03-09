@@ -4,7 +4,7 @@
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    tola.url = "github:tola-ssg/tola-ssg/v0.6.5";
+    tola.url = "github:tola-ssg/tola-ssg/v0.7.0";
   };
 
   outputs = inputs@{ flake-parts, ... }:

@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "welcome to typst",
-    date: "2026-01-29",
+    date: parse-date("2026-01-29"),
     author: "amy erskine",
     summary: [the first post!],
     tags: ("tutorial", "typst", "tailwind"),
@@ -85,8 +85,8 @@ You might notice we define metadata in an `args` dictionary at the top of this f
 #show: post.with(..args)
 ```
 
-**Why do we do this?**
+= Why do we do this?
 
-Defining metadata in a variable allows us to **reuse** it inside the content. for example, the date below is dynamically inserted using `args.date`:
+Defining metadata in a variable allows us to *reuse* it inside the content. for example, the date below is dynamically inserted using `args.date`:
 
 _Last updated: #(args.date)_

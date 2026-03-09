@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "accessing older UniFi devices over ssh",
-    date: "2025-07-29",
+    date: parse-date("2025-07-29"),
     author: "amy erskine",
     summary: [what to do when you have difficulty connecting to older UniFi kit],
     tags: ("tidbits", "networking"),

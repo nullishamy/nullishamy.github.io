@@ -1,10 +1,10 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 #import "/utils/callout.typ" as callout
 
 #let args = (
     title: "Scamming as a Service",
-    date: "2026-02-02",
+    date: parse-date("2026-02-02"),
     author: "amy erskine",
     summary: [the infrastructure that powers scams],
     tags: ("moderation",),
@@ -12,7 +12,7 @@
 
 #show: post.with(..args)
 
-#callout.note[this article is based on some live-posted Discord messages so can't be complete. additionally, I will add to this as I find out more (last changed: #args.date)]
+#callout.note[this article is based on some live-posted Discord messages so can't be complete. additionally, I will add to this as I find out more (last changed: #args.date.display())]
 
 Once upon a time, when we'd received a whole bunch of #link("/posts/moderation/images")[image scams], I decided to investigate the infrastructure behind them, what is actually
 going on to power these websites?

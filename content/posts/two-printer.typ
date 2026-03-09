@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "a useful CLI printing tool",
-    date: "2025-09-05",
+    date: parse-date("2025-09-05"),
     author: "amy erskine",
     summary: [printing documents within scripts],
     tags: ("tidbits", "printers"),

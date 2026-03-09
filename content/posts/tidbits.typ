@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "tidbits: a new post series",
-    date: "2025-07-29",
+    date: parse-date("2025-07-29"),
     author: "amy erskine",
     summary: [useful knowledge nuggets from me],
     tags: ("tidbits",),

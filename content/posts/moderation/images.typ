@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "beyond text ",
-    date: "2025-11-07",
+    date: parse-date("2025-11-07"),
     author: "amy erskine",
     summary: [using images to scam people],
     tags: ("moderation",),
@@ -44,7 +44,7 @@ https://media.discordapp.net/attachments/1294380382661116045/1379563071445532855
 https://media.discordapp.net/attachments/1294380382661116045/1379563071722229872/4.jpg
 ```
 
-It is important to highlight that in both cases here CDN **links** are being used. We think this has a few benefits for the bad actors:
+It is important to highlight that in both cases here CDN *links* are being used. We think this has a few benefits for the bad actors:
 
 - Server permissions
 It's not uncommon for new members to a server to be blocked from posting media. It is however uncommon for _embeds_ to also be blocked.

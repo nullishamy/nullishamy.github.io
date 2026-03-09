@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "ensure your EDR's state with Intune",
-    date: "2025-08-06",
+    date: parse-date("2025-08-06"),
     author: "amy erskine",
     summary: [how to get your EDR as a compliance requirement],
     tags: ("tidbits", "intune"),

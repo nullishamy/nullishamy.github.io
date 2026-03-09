@@ -28,7 +28,7 @@
     // HTML5 allows block elements (div, h3, p) inside anchor tags.
     html.a(
         class: "block mb-6 p-4 border border-white/10 rounded-lg bg-surface/50 hover:bg-surface transition-colors no-underline group w-full",
-        href: post.url,
+        href: post.permalink,
     )[
         #html.h3(
             class: "text-xl font-semibold mb-2 group-hover:text-accent transition-colors",
@@ -46,4 +46,13 @@
             html.p(class: "mt-2 text-muted")[#post.at("summary")]
         }
     ]
+}
+
+#let parse-date(s) = {
+  if s == none { return none }
+  if type(s) == datetime { return s }
+  let s = str(s).split("T").at(0)
+  let parts = s.split("-")
+  assert(parts.len() == 3, message: "Invalid date format: '" + s + "', expected YYYY-MM-DD")
+  datetime(year: int(parts.at(0)), month: int(parts.at(1)), day: int(parts.at(2)))
 }

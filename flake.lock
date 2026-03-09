@@ -84,16 +84,16 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1766651565,
-        "narHash": "sha256-QEhk0eXgyIqTpJ/ehZKg9IKS7EtlWxF3N7DXy42zPfU=",
+        "lastModified": 1772822230,
+        "narHash": "sha256-yf3iYLGbGVlIthlQIk5/4/EQDZNNEmuqKZkQssMljuw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3e2499d5539c16d0d173ba53552a4ff8547f4539",
+        "rev": "71caefce12ba78d84fe618cf61644dce01cf3a96",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-unstable",
+        "ref": "nixos-25.11",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -133,16 +133,16 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1766920819,
-        "narHash": "sha256-64FyQiLwLlij5oEiakI0TeDD6OuAQiMRMG1SS7/XiV4=",
+        "lastModified": 1772624117,
+        "narHash": "sha256-tgdVon+N4KOyu2fv72CdsjxgZr9gRtpt89DjgfgbJHI=",
         "owner": "tola-ssg",
         "repo": "tola-ssg",
-        "rev": "68abe449aa28ad62f4223a299a646b630098a224",
+        "rev": "cb08e0ca53d561865e756911f2304a578bab3c6c",
         "type": "github"
       },
       "original": {
         "owner": "tola-ssg",
-        "ref": "v0.6.5",
+        "ref": "v0.7.0",
         "repo": "tola-ssg",
         "type": "github"
       }

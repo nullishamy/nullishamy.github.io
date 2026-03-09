@@ -1,5 +1,6 @@
 #import "/templates/page.typ": page
 #import "/utils/helpers.typ" as utils
+#import "@tola/pages:0.0.0": pages
 
 #show: page.with(title: "home")
 
@@ -49,12 +50,11 @@ In the near future I intend on exploring embedded hardware & RF with some home-a
 #utils.hr
 
 = recent posts
-#let pages = json("/_data/pages.json")
 #let posts = (
-    pages
+    pages()
         // filter 'all posts' out
         .filter(p => p.title != "posts")
-        .filter(p => "/posts/" in p.url)
+        .filter(p => "/posts/" in p.permalink)
         .filter(p => p.at("draft", default: false) == false)
         .sorted(key: p => p.date)
         .rev()

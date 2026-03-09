@@ -1,9 +1,9 @@
 #import "/templates/post.typ": post
-#import "/utils/helpers.typ" as utils
+#import "/utils/helpers.typ": parse-date
 
 #let args = (
     title: "stop HCL Notes from taking over",
-    date: "2025-09-02",
+    date: parse-date("2025-09-02"),
     author: "amy erskine",
     summary: [managing mail defaults],
     tags: ("ibm", "windows"),
