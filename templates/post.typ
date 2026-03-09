@@ -60,6 +60,7 @@
       author: m.author,
       published: m.date,
       tags: m.tags,
+      image: "/images/avatar.png"  
     )
     #if m.title != none {
       html.title(m.title + " | " + info.title)
