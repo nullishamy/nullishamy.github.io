@@ -1,9 +1,9 @@
-#import "/templates/base.typ": base, colors
+#import "/templates/page.typ": page
 #import "/utils/helpers.typ" as utils
 #import "@tola/pages:0.0.0": pages
 
 #let tag-listing(tag: none, body) = {
-    show: base
+    show: page.with(title: "posts tagged '" + tag + "'")
     
     html.h1(class: "text-4xl font-bold text-center mb-8")[posts tagged '#tag']
     
