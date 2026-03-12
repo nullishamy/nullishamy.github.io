@@ -17,7 +17,7 @@
         let currheading = counter(heading).get().first()
         let idx = amt-of-endnotes.get().last()
     
-        link("#fn-" + str(idx))[#super[#idx]]
+        html.a(href: "#fn-" + str(idx))[#super[#idx]]
     }
 }
 
