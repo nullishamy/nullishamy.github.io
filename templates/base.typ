@@ -70,14 +70,14 @@
         }
     }
 
-    html.nav(class: "mx-4 md:max-w-3xl md:mx-auto mt-2 mb-2 flex flex-row items-center gap-4")[
+    html.nav(class: "mx-4 lg:max-w-3xl lg:mx-auto mt-4 mb-2 flex flex-row items-center gap-4")[
         #html.a(href: "/")[amy erskine]
         #html.div(class: "flex-grow")
         #html.a(class: "mx-1", href: "/posts")[posts]
         #html.a(class: "mx-1", href: "/feed.xml")[rss]
     ]
 
-    html.main(class: "mx-4 md:max-w-3xl md:mx-auto mb-16")[
+    html.main(class: "mx-4 lg:max-w-3xl lg:mx-auto mb-16")[
         #html.hr(class: "w-full mb-8 text-text/50")
         #body
     ]
