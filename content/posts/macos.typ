@@ -7,7 +7,6 @@
     author: "amy erskine",
     summary: [my hellish time trying to wipe macOS],
     tags: ("macos", "intune"),
-    draft: true
 )
 
 #show: post.with(..args)
@@ -119,11 +118,34 @@ Once the 'update' finished, the DFU recovery sat around saying 'Preparing system
 
 This time I started installing the Tahoe files, but not from the App Store.
 
+This installs the same "Application" that the App Store does, but without the hassle of cancelling the update.
+
+To grab the files for Tahoe:
+```
+softwareupdate --fetch-full-installer --full-installer-version 26.3.1
+```
+
+I then kicked off the install process, following more or less the same steps as the other USB attempt, but it actually started writing the drive! This process can take a *long* time, so be mindful of that.
+
+Whilst the USB was writing, I investigated another DFU technique I'd seen in the docs...
 
 
+== dfu 2, electric boogaloo
 
+Whilst the "Finder" interface to DFU is the most commonly documented, there is an alternative. Apple Configurator.
 
+Configurator is mainly useful for configuring devices from your phone, but can also be used as a Mac app for Mac-to-Mac restore operations.
 
+Configurator does have some of the same download corruption quirks that the Finder method has, but it at least shows you some more useful error messages!
 
+This is how I discovered I was actually using the wrong USB-C port on the dead Mac, because Configurator shows a specific error message about being unable to change the port type when it tries to install the OS. 
 
+I still don't fully understand how this is possible, since I was able to get the dead Mac into DFU mode and get the live one to talk to it, indicating the correct port.
 
+My USB was still not ready so I let Configurator do its thing and complete the restore.
+
+= closing remarks
+
+What a wild ride, all to install the Apple operating system on the Apple computer, using Apple's own protocols. You wouldn't think it would be this difficult.
+
+I did get the laptop back just in time, though, and learnt a whole lot on the way!
