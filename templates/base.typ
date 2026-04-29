@@ -70,19 +70,19 @@
         }
     }
 
-    html.nav(class: "mx-4 lg:max-w-3xl lg:mx-auto mt-4 mb-2 flex flex-row items-center gap-4")[
+    html.nav(class: "px-4 min-w-full max-w-md lg:min-w-auto lg:w-auto lg:max-w-3xl lg:mx-auto mt-4 mb-2 flex flex-row items-center gap-4")[
         #html.a(href: "/")[amy erskine]
         #html.div(class: "flex-grow")
         #html.a(class: "mx-1", href: "/posts")[posts]
         #html.a(class: "mx-1", href: "/feed.xml")[rss]
     ]
 
-    html.main(class: "mx-4 lg:max-w-3xl lg:mx-auto mb-16")[
+    html.main(class: "px-4 min-w-full h-full lg:min-w-auto lg:w-auto lg:h-auto max-w-md lg:max-w-3xl lg:mx-auto mb-16")[
         #html.hr(class: "w-full mb-8 text-text/50")
         #body
     ]
 
-    html.footer(class: "flex flex-col mx-4 md:max-w-3xl md:mx-auto mb-24")[
+    html.footer(class: "flex flex-col min-w-full lg:min-w-auto px-8 max-w-md lg:w-auto lg:max-w-3xl lg:mx-auto mb-4 lg:mb-24")[
         #html.hr(class: "w-full mb-4 text-text/50")
         the content of #link("https://amy.is-a.dev/")[this blog] © 2025 by amy erskine is licensed under #link("https://creativecommons.org/licenses/by-nc-sa/4.0/")[CC BY-NC-SA 4.0]
         #box[#html.img(
