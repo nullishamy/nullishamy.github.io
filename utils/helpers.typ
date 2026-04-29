@@ -1,10 +1,10 @@
-#let hr = html.hr(class: "border-text/50 my-4")
+#let hr = html.hr(class: "border-text/50 my-4 h-2")
 #let nav-link(href, label) = html.a(
     class: "text-muted hover:text-accent transition-colors",
     href: href,
 )[#label]
 #let tag(name) = html.span(
-    class: "px-2 py-1 text-xs bg-surface rounded text-accent",
+    class: "px-2 py-1 text-lg lg:text-xs bg-surface rounded text-accent",
 )[#name]
 #let card(title: none, body) = html.div(class: "p-4 bg-surface rounded-lg")[
     #if title != none {
@@ -31,19 +31,19 @@
         href: post.permalink,
     )[
         #html.h3(
-            class: "text-xl font-semibold mb-2 group-hover:text-accent transition-colors",
+            class: "text-3xl lg:text-xl font-semibold mb-2 group-hover:text-accent transition-colors",
         )[
             #post.title
         ]
 
         #flex-row(
             gap: "4",
-            html.span(class: "text-sm text-muted")[#date],
+            html.span(class: "text-lg lg:text-sm text-muted")[#date],
             ..post.at("tags", default: ()).map(t => tag(t)),
         )
 
         #if post.at("summary", default: none) != none {
-            html.p(class: "mt-2 text-muted")[#post.at("summary")]
+            html.p(class: "mt-2 text-muted text-2xl lg:text-lg")[#post.at("summary")]
         }
     ]
 }

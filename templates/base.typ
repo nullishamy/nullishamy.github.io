@@ -77,12 +77,12 @@
         #html.a(class: "mx-1", href: "/feed.xml")[rss]
     ]
 
-    html.main(class: "px-4 min-w-full h-full lg:min-w-auto lg:w-auto lg:h-auto max-w-md lg:max-w-3xl lg:mx-auto mb-16")[
-        #html.hr(class: "w-full mb-8 text-text/50")
+    html.main(class: "px-4 min-w-full lg:min-w-auto lg:w-auto lg:h-auto max-w-md lg:max-w-3xl lg:mx-auto mb-16")[
+        #html.hr(class: "w-full mb-8 text-text/50 h-2")
         #body
     ]
 
-    html.footer(class: "flex flex-col min-w-full lg:min-w-auto px-8 max-w-md lg:w-auto lg:max-w-3xl lg:mx-auto mb-4 lg:mb-24")[
+    html.footer(class: "flex flex-col min-w-full lg:min-w-auto px-8 max-w-md lg:w-auto lg:max-w-3xl lg:mx-auto mb-4 lg:mb-24 text-2xl lg:text-lg")[
         #html.hr(class: "w-full mb-4 text-text/50")
         the content of #link("https://amy.is-a.dev/")[this blog] © 2025 by amy erskine is licensed under #link("https://creativecommons.org/licenses/by-nc-sa/4.0/")[CC BY-NC-SA 4.0]
         #box[#html.img(

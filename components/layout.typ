@@ -4,7 +4,7 @@
 #import "/utils/tola.typ": cls
 
 /// Horizontal rule with default styling
-#let hr = html.hr(class: "border-surface my-8")
+#let hr = html.hr(class: "border-surface my-8 h-2")
 
 
 /// Flex row container with configurable gap

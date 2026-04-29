@@ -76,13 +76,13 @@
     // Show rules
     show heading.where(level: 1): it => {
       let id = heading-id(it.body)
-      html.h2(class: cls("text-2xl font-bold mt-8 mb-4", colors.accent), id: id)[
+      html.h2(class: cls("text-3xl lg:text-2xl font-bold mt-8 mb-4", colors.accent), id: id)[
         #html.a(class: "hover:underline underline-offset-4", href: "#" + id)[#it.body]
       ]
     }
     show heading.where(level: 2): it => {
       let id = heading-id(it.body)
-      html.h3(class: "text-xl font-semibold mt-6 mb-3", id: id)[
+      html.h3(class: "text-3xl lg:text-xl font-semibold mt-6 mb-3", id: id)[
         #html.a(class: "hover:underline underline-offset-4", href: "#" + id)[#it.body]
       ]
     }
@@ -108,7 +108,7 @@
           #for tag in m.tags {
               html.a(
                   href: "/tags/" + tag,
-                  class: "px-2 py-1 text-sm bg-surface rounded text-accent"
+                  class: "text-xl lg:text-lg px-2 py-1 text-sm bg-surface rounded text-accent"
               )[#tag]
           }
       ]
@@ -125,8 +125,8 @@
             let prefix = if h.level == 1 { "" } else { "→" }
             let prefix = html.span(class: cls("text-black/75", indent))[#prefix]
             let text = html.a(class: "hover:text-sky-400 hover:underline underline-offset-4", href: "#" + id)[#h.text]
-            let item-class = if h.level == 1 { "mt-5 first:mt-0" } else { "" }
-            html.div(class: item-class)[
+            let item-class = if h.level == 1 { "mt-5 first:mt-0 " } else { " " }
+            html.div(class: item-class + "text-lg")[
               #prefix#text
             ]
           }
