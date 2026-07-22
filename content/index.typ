@@ -22,7 +22,7 @@ In the near future I intend on exploring embedded hardware & RF with some home-a
 #let icon(link, alt) = html.img(
     src: link,
     alt: alt,
-    style: "height: 31px; width: 88px"
+    style: "height: 31px; width: 88px; image-rendering: crisp-edges;"
 )
 
 #html.div(class: "flex flex-col gap-4")[
@@ -32,6 +32,10 @@ In the near future I intend on exploring embedded hardware & RF with some home-a
         #link("mailto:contact@amyerskine.me")[email]
     ]
     #html.div(class: "flex flex-row items-center gap-2")[
+        #icon(
+            "/88x31/mine.png",
+            "An 88x31 button. 2 little cats are in the corners with my name, amy, written in the middle. There are 3 blue hearts near the bottom.",
+        )
         #icon-with-dest(
             "https://linus.dev/images/88x31.png",
             "https://linus.dev/",
