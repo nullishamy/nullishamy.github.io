@@ -70,14 +70,14 @@
         }
     }
 
-    html.nav(class: "px-4 min-w-full max-w-md lg:min-w-auto lg:w-auto lg:max-w-3xl lg:mx-auto mt-4 mb-2 flex flex-row items-center gap-4")[
+    html.nav(class: "px-8 min-w-full max-w-md lg:min-w-auto lg:w-auto lg:max-w-3xl lg:mx-auto mt-4 mb-2 flex flex-row items-center gap-4")[
         #html.a(href: "/")[amy erskine]
         #html.div(class: "flex-grow")
         #html.a(class: "mx-1", href: "/posts")[posts]
         #html.a(class: "mx-1", href: "/feed.xml")[rss]
     ]
 
-    html.main(class: "px-4 min-w-full lg:min-w-auto lg:w-auto lg:h-auto max-w-md lg:max-w-3xl lg:mx-auto mb-16")[
+    html.main(class: "px-8 min-w-full lg:min-w-auto lg:w-auto lg:h-auto max-w-md lg:max-w-3xl lg:mx-auto mb-16")[
         #html.hr(class: "w-full mb-8 text-text/50 h-2")
         #body
     ]

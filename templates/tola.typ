@@ -191,7 +191,7 @@
   if is-html {
     html.html[
       #html.head[#head]
-      #html.body(class: "text-3xl lg:text-xl")[#body]
+      #html.body(class: "text-3xl/12 lg:text-xl/10")[#body]
     ]
   } else {
     body

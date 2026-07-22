@@ -118,7 +118,7 @@
     let toc-view = if headings.len() > 0 {
       html.nav(class: "my-6 p-4 border border-slate-400")[
         #html.div(class: "font-bold mb-3")[Contents]
-        #html.div(class: "text-sm space-y-1")[
+        #html.div(class: "space-y-4 lg:space-y-1")[
           #for h in headings {
             let id = heading-id(h.text)
             let indent = if h.level == 1 { "" } else { "pr-2" }
@@ -126,7 +126,7 @@
             let prefix = html.span(class: cls("text-black/75", indent))[#prefix]
             let text = html.a(class: "hover:text-sky-400 hover:underline underline-offset-4", href: "#" + id)[#h.text]
             let item-class = if h.level == 1 { "mt-5 first:mt-0 " } else { " " }
-            html.div(class: item-class + "text-lg")[
+            html.div(class: item-class + "text-2xl lg:text-lg")[
               #prefix#text
             ]
           }

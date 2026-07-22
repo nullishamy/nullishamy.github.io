@@ -34,7 +34,7 @@
     }
 
     code {
-        @apply bg-surface px-1.5 py-0.5 rounded text-sm;
+        @apply bg-surface px-1.5 py-0.5 rounded text-2xl lg:text-base;
     }
 
     pre {
@@ -42,7 +42,7 @@
     }
 
     pre code {
-        @apply bg-transparent p-0;
+        @apply bg-transparent p-0 text-2xl lg:text-base;
     }
 
     /* Table styles */
@@ -63,3 +63,4 @@
         @apply mt-4;
     }
 }
+
